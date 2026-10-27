@@ -119,7 +119,7 @@ const os=require('node:os');
   await page.getByTestId('theme-select').selectOption('light');
   await page.waitForFunction(()=>document.documentElement.dataset.theme==='light');
   await page.screenshot({path:path.join(dir,'settings-light.png')});
-  await page.locator('.primary-nav .nav-item').first().click();
+  await page.locator('.view-item').first().click();
   await page.waitForTimeout(200);
   await page.screenshot({path:path.join(dir,'desktop-light.png')});
   await page.evaluate(()=>window.pes.updateSettings({theme:'dark'}));

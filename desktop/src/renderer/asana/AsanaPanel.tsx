@@ -10,8 +10,7 @@ const stamp=(value:string|null|undefined)=>value ?? 'Unavailable in catalog';
 export function AsanaNav({state,selectedStatus,onSelect}:{state:AsanaState|null;selectedStatus:string;onSelect:(status:string)=>void}) {
  const tasks=state?.snapshot?.tasks??[];
  return <section className="asana-nav" data-testid="asana-nav" aria-label="Asana HERNANDA MSS">
-  <h2 className="nav-label">ASANA · HERNANDA MSS</h2>
-  <p className="asana-nav-note">Local catalog · all cached tasks</p>
+  <h2 className="nav-label">ASANA TASKS</h2>
   <button className={`nav-item ${selectedStatus==='all'?'active':''}`} data-testid="asana-nav-all" aria-current={selectedStatus==='all'?'page':undefined} onClick={()=>onSelect('all')}><QueueListIcon/><span>All tasks</span><span className="asana-nav-count">{uniqueTasks(tasks).length}</span></button>
   <div className="asana-nav-statuses">{statusGroups(tasks,state?.snapshot?.statusOptions).map(g=><button key={g.key} className={`nav-item ${selectedStatus===g.key?'active':''}`} data-testid={`asana-status-${g.key}`} aria-current={selectedStatus===g.key?'page':undefined} onClick={()=>onSelect(g.key)}><span className="asana-raw">{g.label}</span><span className="asana-nav-count">{g.count}</span></button>)}</div>
  </section>;
@@ -74,7 +73,6 @@ export function AsanaPanel({state,status,onStatus,timezone,onNotify}:{state:Asan
    {(error||state?.lastError)&&<div role="alert" className="asana-error">{error||state?.lastError}{state?.snapshot&&' · Last-good catalog remains available.'}</div>}
    <div className="asana-search-row"><label className="asana-search"><MagnifyingGlassIcon/><span className="asana-sr-only">Search owned tasks by text or GID</span><input data-testid="asana-search" type="search" placeholder="Search task text or GID…" value={query.query} onChange={e=>change({query:e.target.value})}/><kbd>Ctrl K</kbd></label><button className="button" data-testid="asana-reset" onClick={reset}>Reset filters</button></div>
    <div className="asana-filters">
-    <Filter name="Status" value={status} options={statusGroups(tasks,state?.snapshot?.statusOptions).map(g=>[g.key,g.label])} onChange={s=>{onStatus(s);change({});}}/>
     <Filter name="Completion" value={query.completion} options={[["incomplete","Incomplete"],["completed","Completed"]]} onChange={completion=>change({completion})}/>
     <Filter name="Progress" value={query.progress} options={progress} onChange={progress=>change({progress})}/>
     <Filter name="Role" value={query.role} options={[...new Set(tasks.map(t=>t.role))].sort().map(role=>[role,role||'Unset'])} onChange={role=>change({role})}/>
