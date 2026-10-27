@@ -1,0 +1,15 @@
+> pes-focus@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.5 C:/Workspace/pesautomation/desktop
+
+
+ Test Files  4 passed (4)
+      Tests  54 passed (54)
+   Start at  11:23:59
+   Duration  407ms (tests 73%, import 12%, transform 10%, worker 4%)
+
+
+> pes-focus@0.1.0 typecheck
+> tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.main.json

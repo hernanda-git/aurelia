@@ -1,0 +1,9 @@
+{
+  "candidate": "7206cac770ebbae3b2a3f190d90d7c3180926f1f17a63f366b2677f09818c39e",
+  "manifestRawSha256": "fd1446d63f87977d8a141facdb4a9967ff44f9991d486f502e4da4fa1f9a6898",
+  "passed": false,
+  "sourceReviewed": false,
+  "reason": "The first reviewer compared the aggregate source-set candidate identity to the raw manifest file checksum. These are different hash definitions; it stopped before reading source.",
+  "parentAction": "Independently verified every recorded source-file hash, confirmed no source drift, and dispatched a fresh read-only source review with both hash definitions explicitly specified. No source rollback or replacement was needed.",
+  "approval": "Not approved by this initial attempt; do not interpret empty security findings as approval."
+}

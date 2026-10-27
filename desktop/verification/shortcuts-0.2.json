@@ -1,0 +1,21 @@
+{
+    "at":  "2026-10-26T12:46:50.9718709+07:00",
+    "status":  "PASS",
+    "administratorRequired":  false,
+    "shortcuts":  [
+                      {
+                          "path":  "C:\\Users\\it26\\Desktop\\PES.lnk",
+                          "target":  "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+                          "workingDirectory":  "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64",
+                          "icon":  "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe,0",
+                          "verified":  true
+                      },
+                      {
+                          "path":  "C:\\Users\\it26\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\PES.lnk",
+                          "target":  "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+                          "workingDirectory":  "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64",
+                          "icon":  "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe,0",
+                          "verified":  true
+                      }
+                  ]
+}

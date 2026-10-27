@@ -1,0 +1,34 @@
+{
+  "verifiedAt": "2026-10-26T13:19:31.644995+07:00",
+  "scanned": 32,
+  "changedTasks": [
+    "M03989/Task. IT/1026",
+    "M03990/Task. IT/1026"
+  ],
+  "unchangedTaskCount": 30,
+  "listStatusCounts": {
+    "Approval": 6,
+    "Update Task": 1,
+    "Solved": 25
+  },
+  "detailStatus": "Selesai",
+  "detailFinishedDate": "23-Okt-2026",
+  "discrepancies": [
+    "Store list TglSelesai=26-Okt-2026; saved detail FinishDate=23-Okt-2026",
+    "FIFO list and Info status=Update Task and list TglSelesai blank; saved detail status=Selesai, finish date=23-Okt-2026 and target table=Solved"
+  ],
+  "evidence": [
+    {
+      "path": "C:\\Workspace\\Deliverables\\evidence_base_inventory_store.png",
+      "sha256": "788ab0371bf6d4f60750b44484e419088d530dcb4f07d4b217ce08e8ec4fed70",
+      "kind": "Previously approved rendered evidence summary, not screenshot"
+    },
+    {
+      "path": "C:\\Workspace\\Deliverables\\evidence_base_inventory_fifo.png",
+      "sha256": "2afa1d37f6ad8e3950c1f1a3c1e5ff642bd97b3e81b0ece9d82b6e86d226b662",
+      "kind": "Previously approved rendered evidence summary, not screenshot"
+    }
+  ],
+  "automaticRetry": false,
+  "desktopCacheRefreshed": false
+}

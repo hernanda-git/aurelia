@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-26T13:15:53.538764+07:00",
+  "row": [
+    "11",
+    "M03989/Task. IT/1026",
+    "20-Okt-2026",
+    "MUHAMMAD HERNANDA",
+    "Programmer Back End",
+    "ITMSS",
+    "BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "Lain-Lain",
+    "1",
+    "T1",
+    "23-Okt-2026",
+    "Solved",
+    "21-Okt-2026",
+    "26-Okt-2026",
+    "evidence_base_inventory_store.png"
+  ],
+  "history": "Info Target Task\n \nTaskNo\t: M03989/Task. IT/1026\nTglInput\t: 20-Okt-2026\nTaskName\t: BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 1\nGoalTask\t: BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tSolved\t20-Oct-2026\t23-Oct-2026\t\u00a0 21-Oct-2026\t",
+  "detail": {
+    "txtTaskNo": "M03989/Task.IT/1026",
+    "ddlPIC": "3220",
+    "txtKeterangan": "BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "txtLain": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219682896357924",
+    "ddlStatus": "Selesai",
+    "txtTglTarget": "23-Okt-2026",
+    "txtTglSelesai": "23-Okt-2026"
+  }
+}

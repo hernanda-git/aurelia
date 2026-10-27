@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-26T19:40:48.263416+07:00",
+  "sourceSetSha256": "eaec47678759c3b1b3eb89a225d5a048becf32b8e38282b910a10dec14fc7c5f",
+  "manifestIdentityMatches": true,
+  "verifiedFileCount": 74,
+  "mismatches": [],
+  "unitTests": {
+    "passed": 353,
+    "failed": 0,
+    "files": 18,
+    "success": true
+  },
+  "typecheck": "PASS",
+  "build": "PASS",
+  "mcpProtocolTests": 5,
+  "mcpProtocol": "PASS",
+  "artificialChromiumContract": "PASS - not live PES",
+  "packagedObserver": "PASS",
+  "packagedDesktop": "PASS",
+  "existingReleaseReplaced": false,
+  "livePesWritesThisResume": false,
+  "independentReview": "PENDING"
+}

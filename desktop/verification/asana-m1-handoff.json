@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-26T22:45:00.481932+07:00",
+  "status": "LOCAL_VERIFIED_INDEPENDENT_REVIEW_PASSED",
+  "milestone": 1,
+  "scope": "HERNANDA MSS local catalog read UI only",
+  "sourceSetSha256": "f74011c8912b15d3db989a72fdb4c15e2c56f3b75f3cc1b3db2755158747ea9f",
+  "verifiedFileCount": 90,
+  "sourceMismatches": [],
+  "unitTests": {
+    "passed": 406,
+    "failed": 0,
+    "skipped": 1,
+    "files": 24
+  },
+  "typecheck": "PASS",
+  "build": "PASS",
+  "packagedDesktop": "PASS",
+  "package": {
+    "at": "2026-10-26T15:41:59.108Z",
+    "status": "PASS",
+    "version": "0.2.0-asana-m1.1",
+    "candidate": "C:\\Workspace\\pesautomation\\desktop\\release\\asana-milestone1\\PES-win32-x64",
+    "entries": 9278,
+    "requiredFilesMatchBuild": true,
+    "forbiddenPaths": [],
+    "exeSha256": "50c96d1603b345f228e57ec55b43df34ca377a575376f15a5576af38bbe726f3",
+    "asarSha256": "7c7e84814037bea7637cbaabee153228d1ddf97abcd373f7d2e837282af961a7",
+    "installedReleaseReplaced": false,
+    "parkedAssessmentReplaced": false,
+    "liveWrites": false,
+    "source": "catalog_only"
+  },
+  "realCache": {
+    "at": "2026-10-26T15:42:54.037Z",
+    "status": "PASS",
+    "track": "actual packaged Electron Node runtime reading existing LOCAL CATALOG, NOT live Asana",
+    "runtime": "24.22.0",
+    "owned": 180,
+    "completed": 168,
+    "incomplete": 12,
+    "placeholders": 3,
+    "sourceUpdatedAt": "2026-10-21T06:09:22.073Z",
+    "catalogUnchanged": true,
+    "catalogSha256": "8a722a52728067ee83b02cdf532b49cdbfa0d07cb5e7887a021616668135bfc5",
+    "liveAsana": false
+  },
+  "completionFilesCompared": 27,
+  "completionChanges": [],
+  "parkedAssessmentAsarSha256": "7731dd89f82907db7a2ca8c582e25212247e1f284e63cea0b0dae0c83c69677a",
+  "installedReleaseReplaced": false,
+  "liveAsana": false,
+  "livePes": false,
+  "coreReview": "PASS",
+  "finalReview": "PASS",
+  "deferred": [
+    "live API connection and refresh",
+    "comments/attachments/activity loading",
+    "advanced complete-plan facets",
+    "remote mutations not in scope"
+  ],
+  "finalReviewArtifact": "verification/asana-m1-fixes-final-review.json"
+}

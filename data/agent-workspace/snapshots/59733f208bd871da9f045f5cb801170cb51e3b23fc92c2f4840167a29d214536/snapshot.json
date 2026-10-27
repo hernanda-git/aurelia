@@ -1,0 +1,644 @@
+{
+  "id": "4e2a7848-b6d0-47e5-92e4-7a0cd4e0692c",
+  "source": "live",
+  "retrievedAt": "2026-10-26T02:58:32.749Z",
+  "scope": {
+    "from": "2026-09-01",
+    "to": "2026-11-30",
+    "pic": "MUHAMMAD HERNANDA",
+    "department": "IT Mitra Seribu Saudara"
+  },
+  "totalScanned": 32,
+  "tasks": [
+    {
+      "Row": "1",
+      "TaskNo": "M03938/Task. IT/1026",
+      "TglInput": "14-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "FE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+      "GoalTask": "FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "4",
+      "Target": "T1",
+      "Duedate": "30-Okt-2026",
+      "Status": "Approval",
+      "TglApproval": "15-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M03938/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2297 | INTP | Profile Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M03938/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M03938/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 14-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": FE | [Seller Center] ST-2297 | INTP | Profile Toko Online"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 4"
+            ],
+            [
+              "GoalTask",
+              ": FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "14-Oct-2026",
+              "30-Oct-2026",
+              "15-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "Row": "2",
+      "TaskNo": "M03939/Task. IT/1026",
+      "TglInput": "14-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+      "GoalTask": "FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "4",
+      "Target": "T1",
+      "Duedate": "30-Okt-2026",
+      "Status": "Approval",
+      "TglApproval": "15-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M03939/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M03939/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M03939/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 14-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 4"
+            ],
+            [
+              "GoalTask",
+              ": FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "14-Oct-2026",
+              "30-Oct-2026",
+              "15-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "Row": "3",
+      "TaskNo": "M03940/Task. IT/1026",
+      "TglInput": "14-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+      "GoalTask": "BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "4",
+      "Target": "T1",
+      "Duedate": "30-Okt-2026",
+      "Status": "Approval",
+      "TglApproval": "15-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M03940/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M03940/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M03940/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 14-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 4"
+            ],
+            [
+              "GoalTask",
+              ": BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "14-Oct-2026",
+              "30-Oct-2026",
+              "15-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "Row": "4",
+      "TaskNo": "M03941/Task. IT/1026",
+      "TglInput": "14-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "BE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+      "GoalTask": "BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "4",
+      "Target": "T1",
+      "Duedate": "30-Okt-2026",
+      "Status": "Approval",
+      "TglApproval": "15-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M03941/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2297 | INTP | Profile Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M03941/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M03941/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 14-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": BE | [Seller Center] ST-2297 | INTP | Profile Toko Online"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 4"
+            ],
+            [
+              "GoalTask",
+              ": BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "14-Oct-2026",
+              "30-Oct-2026",
+              "15-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "Row": "5",
+      "TaskNo": "M03989/Task. IT/1026",
+      "TglInput": "20-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+      "GoalTask": "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "1",
+      "Target": "T1",
+      "Duedate": "23-Okt-2026",
+      "Status": "Approval",
+      "TglApproval": "21-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M03989/Task. IT/1026\nTglInput\t: 20-Okt-2026\nTaskName\t: BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 1\nGoalTask\t: BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t20-Oct-2026\t23-Oct-2026\t  21-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M03989/Task. IT/1026\nTglInput\t: 20-Okt-2026\nTaskName\t: BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 1\nGoalTask\t: BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M03989/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 20-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 1"
+            ],
+            [
+              "GoalTask",
+              ": BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "20-Oct-2026",
+              "23-Oct-2026",
+              "21-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "Row": "6",
+      "TaskNo": "M03990/Task. IT/1026",
+      "TglInput": "20-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+      "GoalTask": "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "1",
+      "Target": "T1",
+      "Duedate": "23-Okt-2026",
+      "Status": "Approval",
+      "TglApproval": "21-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M03990/Task. IT/1026\nTglInput\t: 20-Okt-2026\nTaskName\t: BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 1\nGoalTask\t: BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t20-Oct-2026\t23-Oct-2026\t  21-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M03990/Task. IT/1026\nTglInput\t: 20-Okt-2026\nTaskName\t: BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 1\nGoalTask\t: BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M03990/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 20-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 1"
+            ],
+            [
+              "GoalTask",
+              ": BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "20-Oct-2026",
+              "23-Oct-2026",
+              "21-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "Row": "7",
+      "TaskNo": "M04020/Task. IT/1026",
+      "TglInput": "21-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "[Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online",
+      "GoalTask": "BE completed ST-2302 | INTP | Pengiriman Toko Online",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "2",
+      "Target": "T1",
+      "Duedate": "06-Nov-2026",
+      "Status": "Approval",
+      "TglApproval": "23-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M04020/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 2\nGoalTask\t: BE completed ST-2302 | INTP | Pengiriman Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t21-Oct-2026\t06-Nov-2026\t  23-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M04020/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 2\nGoalTask\t: BE completed ST-2302 | INTP | Pengiriman Toko Online"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M04020/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 21-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": [Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 2"
+            ],
+            [
+              "GoalTask",
+              ": BE completed ST-2302 | INTP | Pengiriman Toko Online"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "21-Oct-2026",
+              "06-Nov-2026",
+              "23-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "Row": "8",
+      "TaskNo": "M04021/Task. IT/1026",
+      "TglInput": "21-Okt-2026",
+      "Pic": "MUHAMMAD HERNANDA",
+      "Jabatan": "Programmer Back End",
+      "DeptName": "ITMSS",
+      "TaskName": "[Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online",
+      "GoalTask": "FE completed ST-2302 | INTP | Pengiriman Toko Online",
+      "AsalTask": "Lain-Lain",
+      "Bobot": "4",
+      "Target": "T1",
+      "Duedate": "06-Nov-2026",
+      "Status": "Approval",
+      "TglApproval": "23-Okt-2026",
+      "TglSelesai": "",
+      "Lampiran": "",
+      "history": {
+        "text": "Info Target Task\n \nTaskNo\t: M04021/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed ST-2302 | INTP | Pengiriman Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t21-Oct-2026\t06-Nov-2026\t  23-Oct-2026\t",
+        "tables": [
+          [
+            [
+              "TaskNo\t: M04021/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online",
+              "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed ST-2302 | INTP | Pengiriman Toko Online"
+            ]
+          ],
+          [
+            [
+              "TaskNo",
+              ": M04021/Task. IT/1026"
+            ],
+            [
+              "TglInput",
+              ": 21-Okt-2026"
+            ],
+            [
+              "TaskName",
+              ": [Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online"
+            ]
+          ],
+          [
+            [
+              "Pic",
+              ": MUHAMMAD HERNANDA"
+            ],
+            [
+              "Bobot",
+              ": 4"
+            ],
+            [
+              "GoalTask",
+              ": FE completed ST-2302 | INTP | Pengiriman Toko Online"
+            ]
+          ],
+          [
+            [
+              "Target",
+              "Status",
+              "Tanggal",
+              "Keterangan"
+            ],
+            [
+              "Input",
+              "DueDate",
+              "Approve"
+            ],
+            [
+              "1",
+              "Verifikasi",
+              "21-Oct-2026",
+              "06-Nov-2026",
+              "23-Oct-2026",
+              ""
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "diff": {
+    "added": 0,
+    "changed": 0,
+    "outOfScope": 0,
+    "scopeChanged": false
+  }
+}

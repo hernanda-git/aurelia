@@ -1,0 +1,32 @@
+{
+  "passed": false,
+  "sourceSetSha256": "5888d82847f22dcd54f5db4f74bc369ebd0c350793faab382e7a48c8611a1e40",
+  "verifiedFileCount": 90,
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "severity": "medium",
+      "location": "src/renderer/asana/view-model.ts:17-24",
+      "issue": "The Overdue filter reduces dueAt timestamps to a civil day and compares only against today. An incomplete task due at 2026-10-26T01:00:00Z is excluded at 2026-10-26T12:00:00Z in Asia/Jakarta even though its exact deadline has passed. This contradicts the plan's separate timestamp deadline semantics; date-only values may use end-of-day but timestamps must not silently do so.",
+      "evidence": "Executed the actual view-model source in memory using node:module stripTypeScriptTypes: deadlineAlreadyPassed=true, overdueMatches=0 for that example.",
+      "recommendation": "Use exact instant comparison for valid dueAt, civil-day comparison for dueOn, retain completed exclusion, and add a same-day elapsed timestamp regression."
+    },
+    {
+      "severity": "low",
+      "location": "src/renderer/asana/view-model.ts:5; src/renderer/asana/AsanaPanel.tsx:68",
+      "issue": "Whitespace-only task names are accepted and marked untitled by normalization, but taskTitle substitutes only the exact empty string. Such a task produces a visually blank and unnamed detail-opening button instead of a usable untitled title. Existing UI tests explicitly preserve this behavior rather than protecting usability.",
+      "evidence": "Executed taskTitle on name='   ': whitespaceTitleHasVisibleText=false. This is an accepted input case, not a claim that the current remote catalog contains it.",
+      "recommendation": "Provide a nonblank display placeholder including the GID for whitespace-only names while preserving canonical raw names in source data and JSON exports."
+    }
+  ],
+  "limitations": [
+    "Review is limited to the approved local-catalog milestone. Live refresh, comments, attachments/uploads and full related context are intentionally deferred, not defects. Fixtures and historical cache counts are not current remote facts.",
+    "Final review switched as requested to verification/asana-m1-cancel-fixed-source-manifest.json. All 90 entries matched before and after delta review; aggregate recomputed from actual digests was 5888d82847f22dcd54f5db4f74bc369ebd0c350793faab382e7a48c8611a1e40. Only AsanaPanel.tsx and tests/asana.desktop.e2e.cjs differ from the original inspected pin. This final verdict supersedes the earlier stale-pin review.",
+    "Cancel correction reviewed: the button now calls api().cancelReload() directly, bypassing the busy helper, and catches errors with an honest notification. The new Electron regression holds reload pending, clicks Cancel, verifies handler dispatch and waits for the reload button to re-enable. Parent reports actual RED/GREEN execution; this reviewer inspected but did not rerun that harness. The cancellation defect is resolved on this pin.",
+    "Independent typecheck passed. Six focused Asana test files passed with 36 passed and 1 skipped using --maxWorkers=1 --testTimeout=20000. The first default-timeout attempt had one 5000ms render-import timeout; the rerun passed. Green tests do not cover or negate the reported defects.",
+    "Reviewed the actual Electron harness but did not rerun it because this assignment permits only the review JSON write and the harness writes profiles, fixture databases, screenshots and other evidence. No live/network requests, release replacement, deployment or promotion was performed or authorized.",
+    "Navigation counts are explicitly labeled whole-catalog counts rather than filter-sensitive facets. Saved-view copy explicitly limits persistence to search/status/completion/progress/role/sort. These disclosed milestone boundaries are not treated as hidden full-plan completion claims.",
+    "Catalog reads remain bounded synchronous SQLite reads; cancellation can discard scheduled/publication work but cannot interrupt the synchronous query. This documented synchronous-read limitation remains after the UI cancellation correction."
+  ],
+  "summary": "Not passed: cancel correction is sound and the final 90-file source pin is verified unchanged, but two actionable date/untitled usability defects remain. Guarded owned-only IPC/export, separate provider data, read-only catalog access, plain-text rendering and honest unavailable-resource labels showed no security concern in the inspected milestone paths. No promotion or deployment approval is given."
+}

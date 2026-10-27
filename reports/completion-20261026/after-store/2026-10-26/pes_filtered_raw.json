@@ -1,0 +1,1166 @@
+{
+  "headers": [
+    "",
+    "TaskNo",
+    "TglInput",
+    "Pic",
+    "Jabatan",
+    "DeptName",
+    "TaskName",
+    "GoalTask",
+    "AsalTask",
+    "Bobot",
+    "Target",
+    "Duedate",
+    "Status",
+    "TglApproval",
+    "TglSelesai",
+    "Lampiran"
+  ],
+  "rows": [
+    {
+      "cells": [
+        "1",
+        "M03938/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "FE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_0"
+        },
+        {
+          "id": "MainContent_lst_info_0"
+        },
+        {
+          "id": "MainContent_lst_tambah_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "2",
+        "M03939/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_1"
+        },
+        {
+          "id": "MainContent_lst_info_1"
+        },
+        {
+          "id": "MainContent_lst_tambah_1"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "3",
+        "M03940/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_2"
+        },
+        {
+          "id": "MainContent_lst_info_2"
+        },
+        {
+          "id": "MainContent_lst_tambah_2"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "4",
+        "M03941/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_3"
+        },
+        {
+          "id": "MainContent_lst_info_3"
+        },
+        {
+          "id": "MainContent_lst_tambah_3"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "5",
+        "M03990/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "23-Okt-2026",
+        "Approval",
+        "21-Okt-2026",
+        "",
+        ""
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_4"
+        },
+        {
+          "id": "MainContent_lst_info_4"
+        },
+        {
+          "id": "MainContent_lst_tambah_4"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "6",
+        "M04020/Task. IT/1026",
+        "21-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online",
+        "BE completed ST-2302 | INTP | Pengiriman Toko Online",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "06-Nov-2026",
+        "Approval",
+        "23-Okt-2026",
+        "",
+        ""
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_5"
+        },
+        {
+          "id": "MainContent_lst_info_5"
+        },
+        {
+          "id": "MainContent_lst_tambah_5"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "7",
+        "M04021/Task. IT/1026",
+        "21-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online",
+        "FE completed ST-2302 | INTP | Pengiriman Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "06-Nov-2026",
+        "Approval",
+        "23-Okt-2026",
+        "",
+        ""
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_6"
+        },
+        {
+          "id": "MainContent_lst_info_6"
+        },
+        {
+          "id": "MainContent_lst_tambah_6"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "8",
+        "M03991/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11",
+        "BE completed [Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "30-Okt-2026",
+        "Solved",
+        "21-Okt-2026",
+        "23-Okt-2026",
+        "glpi-11.1.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_7"
+        },
+        {
+          "id": "MainContent_lst_info_7"
+        },
+        {
+          "id": "MainContent_lst_tambah_7"
+        },
+        {
+          "id": "MainContent_lst_lstFile_7_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_7_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "9",
+        "M03992/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11",
+        "BE completed [Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "30-Okt-2026",
+        "Solved",
+        "21-Okt-2026",
+        "23-Okt-2026",
+        "glpi-11.0.11.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_8"
+        },
+        {
+          "id": "MainContent_lst_info_8"
+        },
+        {
+          "id": "MainContent_lst_tambah_8"
+        },
+        {
+          "id": "MainContent_lst_lstFile_8_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_8_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "10",
+        "M03966/Task. IT/1026",
+        "19-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "21-Okt-2026",
+        "Solved",
+        "19-Okt-2026",
+        "21-Okt-2026",
+        "Screenshot 2026-10-21 103414.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_9"
+        },
+        {
+          "id": "MainContent_lst_info_9"
+        },
+        {
+          "id": "MainContent_lst_tambah_9"
+        },
+        {
+          "id": "MainContent_lst_lstFile_9_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_9_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "11",
+        "M03989/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "23-Okt-2026",
+        "Solved",
+        "21-Okt-2026",
+        "26-Okt-2026",
+        "evidence_base_inventory_store.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_10"
+        },
+        {
+          "id": "MainContent_lst_info_10"
+        },
+        {
+          "id": "MainContent_lst_tambah_10"
+        },
+        {
+          "id": "MainContent_lst_lstFile_10_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_10_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "12",
+        "M03208/Task. IT/0826",
+        "04-Agu-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] Agustus 2026 - pembuatan timeline requirement review & WBS doc - project 1000saudara.com - seller center",
+        "FE completed [Improvement IT] Agustus 2026 - pembuatan timeline requirement review & WBS doc - project 1000saudara.com - seller center",
+        "Lain-Lain",
+        "2",
+        "T2",
+        "14-Sep-2026",
+        "Solved",
+        "26-Agu-2026",
+        "14-Sep-2026",
+        "task0826.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_11"
+        },
+        {
+          "id": "MainContent_lst_info_11"
+        },
+        {
+          "id": "MainContent_lst_tambah_11"
+        },
+        {
+          "id": "MainContent_lst_lstFile_11_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_11_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "13",
+        "M03239/Task. IT/0826",
+        "04-Agu-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] Agustus 2026 - Hardcoded Secret & API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test",
+        "Hardcoded Secret & API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test",
+        "Lain-Lain",
+        "1",
+        "T2",
+        "14-Sep-2026",
+        "Solved",
+        "26-Agu-2026",
+        "14-Sep-2026",
+        "f1dcb0ce-53a2-4559-a9b3-540cd76fe753 (1).png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_12"
+        },
+        {
+          "id": "MainContent_lst_info_12"
+        },
+        {
+          "id": "MainContent_lst_tambah_12"
+        },
+        {
+          "id": "MainContent_lst_lstFile_12_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_12_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "14",
+        "M03265/Task. IT/0826",
+        "12-Agu-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional",
+        "[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional",
+        "Lain-Lain",
+        "1",
+        "T2",
+        "14-Sep-2026",
+        "Solved",
+        "26-Agu-2026",
+        "14-Sep-2026",
+        "f1dcb0ce-53a2-4559-a9b3-540cd76fe753.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_13"
+        },
+        {
+          "id": "MainContent_lst_info_13"
+        },
+        {
+          "id": "MainContent_lst_tambah_13"
+        },
+        {
+          "id": "MainContent_lst_lstFile_13_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_13_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "15",
+        "M03540/Task. IT/0926",
+        "10-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru",
+        "BE completed [Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "15-Sep-2026",
+        "Solved",
+        "14-Sep-2026",
+        "14-Sep-2026",
+        "evidence_task_1_sept.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_14"
+        },
+        {
+          "id": "MainContent_lst_info_14"
+        },
+        {
+          "id": "MainContent_lst_tambah_14"
+        },
+        {
+          "id": "MainContent_lst_lstFile_14_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_14_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "16",
+        "M03561/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] [September 2026] 3. Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+        "Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "16-Sep-2026",
+        "22-Sep-2026",
+        "usage log.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_15"
+        },
+        {
+          "id": "MainContent_lst_info_15"
+        },
+        {
+          "id": "MainContent_lst_tambah_15"
+        },
+        {
+          "id": "MainContent_lst_lstFile_15_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_15_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "17",
+        "M03562/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] [September 2026] 1. Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+        "Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "16-Sep-2026",
+        "22-Sep-2026",
+        "antigravity multi-provider.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_16"
+        },
+        {
+          "id": "MainContent_lst_info_16"
+        },
+        {
+          "id": "MainContent_lst_tambah_16"
+        },
+        {
+          "id": "MainContent_lst_lstFile_16_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_16_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "18",
+        "M03563/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] [September 2026] 2. Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out",
+        "Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "16-Sep-2026",
+        "22-Sep-2026",
+        "Gemini provider.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_17"
+        },
+        {
+          "id": "MainContent_lst_info_17"
+        },
+        {
+          "id": "MainContent_lst_tambah_17"
+        },
+        {
+          "id": "MainContent_lst_lstFile_17_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_17_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "19",
+        "M03654/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Gateway",
+        "BE completed Technical Design - Seller Center - Create Solution BE Gateway",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "25-Sep-2026",
+        "25-Sep-2026",
+        "ev1.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_18"
+        },
+        {
+          "id": "MainContent_lst_info_18"
+        },
+        {
+          "id": "MainContent_lst_tambah_18"
+        },
+        {
+          "id": "MainContent_lst_lstFile_18_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_18_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "20",
+        "M03687/Task. IT/0926",
+        "25-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Access",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Access",
+        "Lain-Lain",
+        "3",
+        "T2",
+        "29-Okt-2026",
+        "Solved",
+        "07-Okt-2026",
+        "09-Okt-2026",
+        "Screenshot 2026-10-09 091916.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_19"
+        },
+        {
+          "id": "MainContent_lst_info_19"
+        },
+        {
+          "id": "MainContent_lst_tambah_19"
+        },
+        {
+          "id": "MainContent_lst_lstFile_19_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_19_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "21",
+        "M03699/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+        "Lain-Lain",
+        "3",
+        "T2",
+        "09-Okt-2026",
+        "Solved",
+        "07-Okt-2026",
+        "09-Okt-2026",
+        "trans.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_20"
+        },
+        {
+          "id": "MainContent_lst_info_20"
+        },
+        {
+          "id": "MainContent_lst_tambah_20"
+        },
+        {
+          "id": "MainContent_lst_lstFile_20_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_20_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "22",
+        "M03700/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Master",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Master",
+        "Lain-Lain",
+        "2",
+        "T2",
+        "01-Nov-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ok.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_21"
+        },
+        {
+          "id": "MainContent_lst_info_21"
+        },
+        {
+          "id": "MainContent_lst_tambah_21"
+        },
+        {
+          "id": "MainContent_lst_lstFile_21_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_21_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "23",
+        "M03701/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Report",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Report",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "02-Okt-2026",
+        "Solved",
+        "30-Sep-2026",
+        "07-Okt-2026",
+        "Screenshot 2026-10-07 084921.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_22"
+        },
+        {
+          "id": "MainContent_lst_info_22"
+        },
+        {
+          "id": "MainContent_lst_tambah_22"
+        },
+        {
+          "id": "MainContent_lst_lstFile_22_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_22_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "24",
+        "M03704/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Seller Center Library - NUPKG",
+        "BE completed Technical Design - Seller Center - Seller Center Library - NUPKG",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "06-Okt-2026",
+        "Solved",
+        "30-Sep-2026",
+        "07-Okt-2026",
+        "Screenshot 2026-10-07 084921 - Copy.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_23"
+        },
+        {
+          "id": "MainContent_lst_info_23"
+        },
+        {
+          "id": "MainContent_lst_tambah_23"
+        },
+        {
+          "id": "MainContent_lst_lstFile_23_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_23_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "25",
+        "M03859/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "12-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-master-ci.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_24"
+        },
+        {
+          "id": "MainContent_lst_info_24"
+        },
+        {
+          "id": "MainContent_lst_tambah_24"
+        },
+        {
+          "id": "MainContent_lst_lstFile_24_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_24_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "26",
+        "M03860/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "13-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-transactional-ci.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_25"
+        },
+        {
+          "id": "MainContent_lst_info_25"
+        },
+        {
+          "id": "MainContent_lst_tambah_25"
+        },
+        {
+          "id": "MainContent_lst_lstFile_25_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_25_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "27",
+        "M03861/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-report-ci.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_26"
+        },
+        {
+          "id": "MainContent_lst_info_26"
+        },
+        {
+          "id": "MainContent_lst_tambah_26"
+        },
+        {
+          "id": "MainContent_lst_lstFile_26_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_26_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "28",
+        "M03862/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-access-ci.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_27"
+        },
+        {
+          "id": "MainContent_lst_info_27"
+        },
+        {
+          "id": "MainContent_lst_tambah_27"
+        },
+        {
+          "id": "MainContent_lst_lstFile_27_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_27_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "29",
+        "M03863/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "api-gw-ci.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_28"
+        },
+        {
+          "id": "MainContent_lst_info_28"
+        },
+        {
+          "id": "MainContent_lst_tambah_28"
+        },
+        {
+          "id": "MainContent_lst_lstFile_28_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_28_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "30",
+        "M03864/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - POC cron job antara hangfire vs quartz",
+        "BE completed Technical Design - Seller Center - POC cron job antara hangfire vs quartz",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "Screenshot 2026-10-14 135549.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_29"
+        },
+        {
+          "id": "MainContent_lst_info_29"
+        },
+        {
+          "id": "MainContent_lst_tambah_29"
+        },
+        {
+          "id": "MainContent_lst_lstFile_29_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_29_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "31",
+        "M03865/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - POC GRPC antar microservice",
+        "BE completed Technical Design - Seller Center - POC GRPC antar microservice",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "Screenshot 2026-10-14 135508.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_30"
+        },
+        {
+          "id": "MainContent_lst_info_30"
+        },
+        {
+          "id": "MainContent_lst_tambah_30"
+        },
+        {
+          "id": "MainContent_lst_lstFile_30_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_30_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "32",
+        "M03866/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - POC outbox pattern dengan rabbitmq",
+        "BE completed Technical Design - Seller Center - POC outbox pattern dengan rabbitmq",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "Screenshot 2026-10-14 135422.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_31"
+        },
+        {
+          "id": "MainContent_lst_info_31"
+        },
+        {
+          "id": "MainContent_lst_tambah_31"
+        },
+        {
+          "id": "MainContent_lst_lstFile_31_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_31_download_0"
+        }
+      ]
+    }
+  ],
+  "pager": [],
+  "html": "<table class=\"table-striped table-hover\" style=\"width: 100%; border: 1px solid silver;\" border=\"1\">\n                        <thead class=\"thead-fixed\" style=\"color:#fff;background-color: #438eb9;\">\n                            <tr>\n                                <th></th>\n                                <th>TaskNo</th>\n                                <th>TglInput</th>\n                                <th>Pic</th>\n                                <th>Jabatan</th>\n                                <th>DeptName</th>\n                                <th>TaskName</th>\n                                <th>GoalTask</th>\n                                <th>AsalTask</th>\n                                <th>Bobot</th>\n                                <th>Target</th>\n                                <th>Duedate</th>\n                                <th>Status</th>\n                                <th>TglApproval</th>\n                                <th>TglSelesai</th>\n                                <th>Lampiran</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            \n                                <tr id=\"MainContent_lst_trLst_0\">\n\t<td style=\"width: 10px;\">\n                                        1\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl00$kelola\" id=\"MainContent_lst_kelola_0\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl00$info\" id=\"MainContent_lst_info_0\" title=\"info\" taskno=\"M03938/Task. IT/1026\" nilaibobot=\"4\" tglmulai=\"14-Okt-2026\" taskname=\"FE | [Seller Center] ST-2297 | INTP | Profile Toko Online\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03938/Task. IT/1026</td>\n\t<td>14-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>FE | [Seller Center] ST-2297 | INTP | Profile Toko Online</td>\n\t<td>FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online</td>\n\t<td>Lain-Lain</td>\n\t<td>4</td>\n\t<td>T1</td>\n\t<td>30-Okt-2026</td>\n\t<td>\n                                        Approval\n                                    </td>\n\t<td>15-Okt-2026</td>\n\t<td></td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl00$tambah\" id=\"MainContent_lst_tambah_0\" title=\"tambah lampiran\" status=\"Approval\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_1\">\n\t<td style=\"width: 10px;\">\n                                        2\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl01$kelola\" id=\"MainContent_lst_kelola_1\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl01$info\" id=\"MainContent_lst_info_1\" title=\"info\" taskno=\"M03939/Task. IT/1026\" nilaibobot=\"4\" tglmulai=\"14-Okt-2026\" taskname=\"FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03939/Task. IT/1026</td>\n\t<td>14-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online</td>\n\t<td>FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online</td>\n\t<td>Lain-Lain</td>\n\t<td>4</td>\n\t<td>T1</td>\n\t<td>30-Okt-2026</td>\n\t<td>\n                                        Approval\n                                    </td>\n\t<td>15-Okt-2026</td>\n\t<td></td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl01$tambah\" id=\"MainContent_lst_tambah_1\" title=\"tambah lampiran\" status=\"Approval\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_2\">\n\t<td style=\"width: 10px;\">\n                                        3\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl02$kelola\" id=\"MainContent_lst_kelola_2\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl02$info\" id=\"MainContent_lst_info_2\" title=\"info\" taskno=\"M03940/Task. IT/1026\" nilaibobot=\"4\" tglmulai=\"14-Okt-2026\" taskname=\"BE |&nbsp;[Seller Center] ST-2301 | INTP | Operasional Toko Online\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03940/Task. IT/1026</td>\n\t<td>14-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Seller Center] ST-2301 | INTP | Operasional Toko Online</td>\n\t<td>BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online</td>\n\t<td>Lain-Lain</td>\n\t<td>4</td>\n\t<td>T1</td>\n\t<td>30-Okt-2026</td>\n\t<td>\n                                        Approval\n                                    </td>\n\t<td>15-Okt-2026</td>\n\t<td></td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl02$tambah\" id=\"MainContent_lst_tambah_2\" title=\"tambah lampiran\" status=\"Approval\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_3\">\n\t<td style=\"width: 10px;\">\n                                        4\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl03$kelola\" id=\"MainContent_lst_kelola_3\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl03$info\" id=\"MainContent_lst_info_3\" title=\"info\" taskno=\"M03941/Task. IT/1026\" nilaibobot=\"4\" tglmulai=\"14-Okt-2026\" taskname=\"BE |&nbsp;[Seller Center] ST-2297 | INTP | Profile Toko Online\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03941/Task. IT/1026</td>\n\t<td>14-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Seller Center] ST-2297 | INTP | Profile Toko Online</td>\n\t<td>BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online</td>\n\t<td>Lain-Lain</td>\n\t<td>4</td>\n\t<td>T1</td>\n\t<td>30-Okt-2026</td>\n\t<td>\n                                        Approval\n                                    </td>\n\t<td>15-Okt-2026</td>\n\t<td></td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl03$tambah\" id=\"MainContent_lst_tambah_3\" title=\"tambah lampiran\" status=\"Approval\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_4\">\n\t<td style=\"width: 10px;\">\n                                        5\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl04$kelola\" id=\"MainContent_lst_kelola_4\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl04$info\" id=\"MainContent_lst_info_4\" title=\"info\" taskno=\"M03990/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"20-Okt-2026\" taskname=\"BE |&nbsp;[Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03990/Task. IT/1026</td>\n\t<td>20-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus</td>\n\t<td>BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>23-Okt-2026</td>\n\t<td>\n                                        Approval\n                                    </td>\n\t<td>21-Okt-2026</td>\n\t<td></td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl04$tambah\" id=\"MainContent_lst_tambah_4\" title=\"tambah lampiran\" status=\"Approval\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_5\">\n\t<td style=\"width: 10px;\">\n                                        6\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl05$kelola\" id=\"MainContent_lst_kelola_5\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl05$info\" id=\"MainContent_lst_info_5\" title=\"info\" taskno=\"M04020/Task. IT/1026\" nilaibobot=\"2\" tglmulai=\"21-Okt-2026\" taskname=\"[Seller Center] BE |&nbsp;ST-2302 | INTP | Pengiriman Toko Online\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed ST-2302 | INTP | Pengiriman Toko Online\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M04020/Task. IT/1026</td>\n\t<td>21-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Seller Center] BE |&nbsp;ST-2302 | INTP | Pengiriman Toko Online</td>\n\t<td>BE completed ST-2302 | INTP | Pengiriman Toko Online</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T1</td>\n\t<td>06-Nov-2026</td>\n\t<td>\n                                        Approval\n                                    </td>\n\t<td>23-Okt-2026</td>\n\t<td></td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl05$tambah\" id=\"MainContent_lst_tambah_5\" title=\"tambah lampiran\" status=\"Approval\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_6\">\n\t<td style=\"width: 10px;\">\n                                        7\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl06$kelola\" id=\"MainContent_lst_kelola_6\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl06$info\" id=\"MainContent_lst_info_6\" title=\"info\" taskno=\"M04021/Task. IT/1026\" nilaibobot=\"4\" tglmulai=\"21-Okt-2026\" taskname=\"[Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"FE completed ST-2302 | INTP | Pengiriman Toko Online\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M04021/Task. IT/1026</td>\n\t<td>21-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online</td>\n\t<td>FE completed ST-2302 | INTP | Pengiriman Toko Online</td>\n\t<td>Lain-Lain</td>\n\t<td>4</td>\n\t<td>T1</td>\n\t<td>06-Nov-2026</td>\n\t<td>\n                                        Approval\n                                    </td>\n\t<td>23-Okt-2026</td>\n\t<td></td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl06$tambah\" id=\"MainContent_lst_tambah_6\" title=\"tambah lampiran\" status=\"Approval\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_7\">\n\t<td style=\"width: 10px;\">\n                                        8\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl07$kelola\" id=\"MainContent_lst_kelola_7\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl07$info\" id=\"MainContent_lst_info_7\" title=\"info\" taskno=\"M03991/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"20-Okt-2026\" taskname=\"BE |&nbsp;[Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03991/Task. IT/1026</td>\n\t<td>20-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11</td>\n\t<td>BE completed [Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>30-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>21-Okt-2026</td>\n\t<td>23-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl07$tambah\" id=\"MainContent_lst_tambah_7\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_7_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"23-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl07$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_7_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl07$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_7_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                glpi-11.1.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_8\">\n\t<td style=\"width: 10px;\">\n                                        9\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl08$kelola\" id=\"MainContent_lst_kelola_8\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl08$info\" id=\"MainContent_lst_info_8\" title=\"info\" taskno=\"M03992/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"20-Okt-2026\" taskname=\"BE |&nbsp;[Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03992/Task. IT/1026</td>\n\t<td>20-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11</td>\n\t<td>BE completed [Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>30-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>21-Okt-2026</td>\n\t<td>23-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl08$tambah\" id=\"MainContent_lst_tambah_8\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_8_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"23-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl08$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_8_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl08$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_8_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                glpi-11.0.11.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_9\">\n\t<td style=\"width: 10px;\">\n                                        10\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl09$kelola\" id=\"MainContent_lst_kelola_9\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl09$info\" id=\"MainContent_lst_info_9\" title=\"info\" taskno=\"M03966/Task. IT/1026\" nilaibobot=\"2\" tglmulai=\"19-Okt-2026\" taskname=\"BE |&nbsp;[Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03966/Task. IT/1026</td>\n\t<td>19-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus</td>\n\t<td>BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T1</td>\n\t<td>21-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>19-Okt-2026</td>\n\t<td>21-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl09$tambah\" id=\"MainContent_lst_tambah_9\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_9_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"21-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl09$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_9_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl09$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_9_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Screenshot 2026-10-21 103414.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_10\">\n\t<td style=\"width: 10px;\">\n                                        11\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl10$kelola\" id=\"MainContent_lst_kelola_10\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl10$info\" id=\"MainContent_lst_info_10\" title=\"info\" taskno=\"M03989/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"20-Okt-2026\" taskname=\"BE |&nbsp;[Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03989/Task. IT/1026</td>\n\t<td>20-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus</td>\n\t<td>BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>23-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>21-Okt-2026</td>\n\t<td>26-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl10$tambah\" id=\"MainContent_lst_tambah_10\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_10_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"26-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl10$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_10_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl10$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_10_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                evidence_base_inventory_store.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_11\">\n\t<td style=\"width: 10px;\">\n                                        12\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl11$kelola\" id=\"MainContent_lst_kelola_11\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl11$info\" id=\"MainContent_lst_info_11\" title=\"info\" taskno=\"M03208/Task. IT/0826\" nilaibobot=\"2\" tglmulai=\"04-Agu-2026\" taskname=\"[Improvement IT] Agustus 2026 - pembuatan timeline requirement review &amp; WBS doc - project 1000saudara.com - seller center\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"FE completed [Improvement IT] Agustus 2026 - pembuatan timeline requirement review &amp; WBS doc - project 1000saudara.com - seller center\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03208/Task. IT/0826</td>\n\t<td>04-Agu-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Improvement IT] Agustus 2026 - pembuatan timeline requirement review &amp; WBS doc - project 1000saudara.com - seller center</td>\n\t<td>FE completed [Improvement IT] Agustus 2026 - pembuatan timeline requirement review &amp; WBS doc - project 1000saudara.com - seller center</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T2</td>\n\t<td>14-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>26-Agu-2026</td>\n\t<td>14-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl11$tambah\" id=\"MainContent_lst_tambah_11\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_11_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"11-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl11$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_11_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl11$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_11_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                task0826.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_12\">\n\t<td style=\"width: 10px;\">\n                                        13\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl12$kelola\" id=\"MainContent_lst_kelola_12\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl12$info\" id=\"MainContent_lst_info_12\" title=\"info\" taskno=\"M03239/Task. IT/0826\" nilaibobot=\"1\" tglmulai=\"04-Agu-2026\" taskname=\"[Improvement IT] Agustus 2026 -  Hardcoded Secret &amp; API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"Hardcoded Secret &amp; API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03239/Task. IT/0826</td>\n\t<td>04-Agu-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Improvement IT] Agustus 2026 -  Hardcoded Secret &amp; API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test</td>\n\t<td>Hardcoded Secret &amp; API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T2</td>\n\t<td>14-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>26-Agu-2026</td>\n\t<td>14-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl12$tambah\" id=\"MainContent_lst_tambah_12\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_12_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"11-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl12$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_12_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl12$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_12_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                f1dcb0ce-53a2-4559-a9b3-540cd76fe753 (1).png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_13\">\n\t<td style=\"width: 10px;\">\n                                        14\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl13$kelola\" id=\"MainContent_lst_kelola_13\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl13$info\" id=\"MainContent_lst_info_13\" title=\"info\" taskno=\"M03265/Task. IT/0826\" nilaibobot=\"1\" tglmulai=\"12-Agu-2026\" taskname=\"[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03265/Task. IT/0826</td>\n\t<td>12-Agu-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional</td>\n\t<td>[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T2</td>\n\t<td>14-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>26-Agu-2026</td>\n\t<td>14-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl13$tambah\" id=\"MainContent_lst_tambah_13\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_13_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"11-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl13$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_13_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl13$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_13_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                f1dcb0ce-53a2-4559-a9b3-540cd76fe753.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_14\">\n\t<td style=\"width: 10px;\">\n                                        15\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl14$kelola\" id=\"MainContent_lst_kelola_14\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl14$info\" id=\"MainContent_lst_info_14\" title=\"info\" taskno=\"M03540/Task. IT/0926\" nilaibobot=\"2\" tglmulai=\"10-Sep-2026\" taskname=\"BE |&nbsp;[Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed [Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03540/Task. IT/0926</td>\n\t<td>10-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;[Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru</td>\n\t<td>BE completed [Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T1</td>\n\t<td>15-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>14-Sep-2026</td>\n\t<td>14-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl14$tambah\" id=\"MainContent_lst_tambah_14\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_14_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl14$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_14_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl14$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_14_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                evidence_task_1_sept.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_15\">\n\t<td style=\"width: 10px;\">\n                                        16\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl15$kelola\" id=\"MainContent_lst_kelola_15\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl15$info\" id=\"MainContent_lst_info_15\" title=\"info\" taskno=\"M03561/Task. IT/0926\" nilaibobot=\"2\" tglmulai=\"16-Sep-2026\" taskname=\"[Improvement IT] [September 2026] 3. Logging semua stream &amp; response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"Logging semua stream &amp; response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03561/Task. IT/0926</td>\n\t<td>16-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Improvement IT] [September 2026] 3. Logging semua stream &amp; response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity</td>\n\t<td>Logging semua stream &amp; response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T1</td>\n\t<td>25-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>16-Sep-2026</td>\n\t<td>22-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl15$tambah\" id=\"MainContent_lst_tambah_15\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_15_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"22-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl15$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_15_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl15$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_15_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                usage log.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_16\">\n\t<td style=\"width: 10px;\">\n                                        17\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl16$kelola\" id=\"MainContent_lst_kelola_16\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl16$info\" id=\"MainContent_lst_info_16\" title=\"info\" taskno=\"M03562/Task. IT/0926\" nilaibobot=\"2\" tglmulai=\"16-Sep-2026\" taskname=\"[Improvement IT] [September 2026] 1. Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03562/Task. IT/0926</td>\n\t<td>16-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Improvement IT] [September 2026] 1. Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider</td>\n\t<td>Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T1</td>\n\t<td>25-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>16-Sep-2026</td>\n\t<td>22-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl16$tambah\" id=\"MainContent_lst_tambah_16\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_16_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"22-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl16$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_16_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl16$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_16_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                antigravity multi-provider.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_17\">\n\t<td style=\"width: 10px;\">\n                                        18\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl17$kelola\" id=\"MainContent_lst_kelola_17\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl17$info\" id=\"MainContent_lst_info_17\" title=\"info\" taskno=\"M03563/Task. IT/0926\" nilaibobot=\"2\" tglmulai=\"16-Sep-2026\" taskname=\"[Improvement IT] [September 2026] 2. Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03563/Task. IT/0926</td>\n\t<td>16-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>[Improvement IT] [September 2026] 2. Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out</td>\n\t<td>Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T1</td>\n\t<td>25-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>16-Sep-2026</td>\n\t<td>22-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl17$tambah\" id=\"MainContent_lst_tambah_17\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_17_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"22-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl17$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_17_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl17$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_17_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Gemini provider.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_18\">\n\t<td style=\"width: 10px;\">\n                                        19\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl18$kelola\" id=\"MainContent_lst_kelola_18\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl18$info\" id=\"MainContent_lst_info_18\" title=\"info\" taskno=\"M03654/Task. IT/0926\" nilaibobot=\"4\" tglmulai=\"16-Sep-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Solution BE Gateway\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Solution BE Gateway\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03654/Task. IT/0926</td>\n\t<td>16-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Solution BE Gateway</td>\n\t<td>BE completed Technical Design - Seller Center - Create Solution BE Gateway</td>\n\t<td>Lain-Lain</td>\n\t<td>4</td>\n\t<td>T1</td>\n\t<td>25-Sep-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>25-Sep-2026</td>\n\t<td>25-Sep-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl18$tambah\" id=\"MainContent_lst_tambah_18\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_18_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"25-Sep-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl18$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_18_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl18$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_18_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                ev1.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_19\">\n\t<td style=\"width: 10px;\">\n                                        20\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl19$kelola\" id=\"MainContent_lst_kelola_19\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl19$info\" id=\"MainContent_lst_info_19\" title=\"info\" taskno=\"M03687/Task. IT/0926\" nilaibobot=\"3\" tglmulai=\"25-Sep-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Access\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Solution BE Microservice - Access\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03687/Task. IT/0926</td>\n\t<td>25-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Access</td>\n\t<td>BE completed Technical Design - Seller Center - Create Solution BE Microservice - Access</td>\n\t<td>Lain-Lain</td>\n\t<td>3</td>\n\t<td>T2</td>\n\t<td>29-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>07-Okt-2026</td>\n\t<td>09-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl19$tambah\" id=\"MainContent_lst_tambah_19\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_19_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"09-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl19$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_19_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl19$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_19_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Screenshot 2026-10-09 091916.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_20\">\n\t<td style=\"width: 10px;\">\n                                        21\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl20$kelola\" id=\"MainContent_lst_kelola_20\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl20$info\" id=\"MainContent_lst_info_20\" title=\"info\" taskno=\"M03699/Task. IT/0926\" nilaibobot=\"3\" tglmulai=\"30-Sep-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Transactional\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Solution BE Microservice - Transactional\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03699/Task. IT/0926</td>\n\t<td>30-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Transactional</td>\n\t<td>BE completed Technical Design - Seller Center - Create Solution BE Microservice - Transactional</td>\n\t<td>Lain-Lain</td>\n\t<td>3</td>\n\t<td>T2</td>\n\t<td>09-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>07-Okt-2026</td>\n\t<td>09-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl20$tambah\" id=\"MainContent_lst_tambah_20\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_20_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"09-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl20$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_20_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl20$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_20_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                trans.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_21\">\n\t<td style=\"width: 10px;\">\n                                        22\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl21$kelola\" id=\"MainContent_lst_kelola_21\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl21$info\" id=\"MainContent_lst_info_21\" title=\"info\" taskno=\"M03700/Task. IT/0926\" nilaibobot=\"2\" tglmulai=\"30-Sep-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Master\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Solution BE Microservice - Master\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03700/Task. IT/0926</td>\n\t<td>30-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Master</td>\n\t<td>BE completed Technical Design - Seller Center - Create Solution BE Microservice - Master</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T2</td>\n\t<td>01-Nov-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl21$tambah\" id=\"MainContent_lst_tambah_21\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_21_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl21$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_21_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl21$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_21_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                ok.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_22\">\n\t<td style=\"width: 10px;\">\n                                        23\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl22$kelola\" id=\"MainContent_lst_kelola_22\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl22$info\" id=\"MainContent_lst_info_22\" title=\"info\" taskno=\"M03701/Task. IT/0926\" nilaibobot=\"2\" tglmulai=\"30-Sep-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Report\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Solution BE Microservice - Report\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03701/Task. IT/0926</td>\n\t<td>30-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Solution BE Microservice - Report</td>\n\t<td>BE completed Technical Design - Seller Center - Create Solution BE Microservice - Report</td>\n\t<td>Lain-Lain</td>\n\t<td>2</td>\n\t<td>T1</td>\n\t<td>02-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>30-Sep-2026</td>\n\t<td>07-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl22$tambah\" id=\"MainContent_lst_tambah_22\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_22_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"07-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl22$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_22_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl22$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_22_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Screenshot 2026-10-07 084921.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_23\">\n\t<td style=\"width: 10px;\">\n                                        24\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl23$kelola\" id=\"MainContent_lst_kelola_23\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl23$info\" id=\"MainContent_lst_info_23\" title=\"info\" taskno=\"M03704/Task. IT/0926\" nilaibobot=\"3\" tglmulai=\"30-Sep-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Seller Center Library - NUPKG\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Seller Center Library - NUPKG\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03704/Task. IT/0926</td>\n\t<td>30-Sep-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Seller Center Library - NUPKG</td>\n\t<td>BE completed Technical Design - Seller Center - Seller Center Library - NUPKG</td>\n\t<td>Lain-Lain</td>\n\t<td>3</td>\n\t<td>T1</td>\n\t<td>06-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>30-Sep-2026</td>\n\t<td>07-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl23$tambah\" id=\"MainContent_lst_tambah_23\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_23_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"07-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl23$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_23_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl23$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_23_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Screenshot 2026-10-07 084921 - Copy.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_24\">\n\t<td style=\"width: 10px;\">\n                                        25\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl24$kelola\" id=\"MainContent_lst_kelola_24\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl24$info\" id=\"MainContent_lst_info_24\" title=\"info\" taskno=\"M03859/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03859/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master</td>\n\t<td>BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>12-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl24$tambah\" id=\"MainContent_lst_tambah_24\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_24_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl24$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_24_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl24$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_24_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                ms-master-ci.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_25\">\n\t<td style=\"width: 10px;\">\n                                        26\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl25$kelola\" id=\"MainContent_lst_kelola_25\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl25$info\" id=\"MainContent_lst_info_25\" title=\"info\" taskno=\"M03860/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03860/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional</td>\n\t<td>BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>13-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl25$tambah\" id=\"MainContent_lst_tambah_25\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_25_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl25$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_25_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl25$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_25_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                ms-transactional-ci.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_26\">\n\t<td style=\"width: 10px;\">\n                                        27\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl26$kelola\" id=\"MainContent_lst_kelola_26\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl26$info\" id=\"MainContent_lst_info_26\" title=\"info\" taskno=\"M03861/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03861/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report</td>\n\t<td>BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>14-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl26$tambah\" id=\"MainContent_lst_tambah_26\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_26_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl26$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_26_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl26$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_26_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                ms-report-ci.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_27\">\n\t<td style=\"width: 10px;\">\n                                        28\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl27$kelola\" id=\"MainContent_lst_kelola_27\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl27$info\" id=\"MainContent_lst_info_27\" title=\"info\" taskno=\"M03862/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03862/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access</td>\n\t<td>BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>14-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl27$tambah\" id=\"MainContent_lst_tambah_27\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_27_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl27$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_27_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl27$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_27_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                ms-access-ci.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_28\">\n\t<td style=\"width: 10px;\">\n                                        29\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl28$kelola\" id=\"MainContent_lst_kelola_28\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl28$info\" id=\"MainContent_lst_info_28\" title=\"info\" taskno=\"M03863/Task. IT/1026\" nilaibobot=\"1\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03863/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway</td>\n\t<td>BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway</td>\n\t<td>Lain-Lain</td>\n\t<td>1</td>\n\t<td>T1</td>\n\t<td>14-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl28$tambah\" id=\"MainContent_lst_tambah_28\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_28_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl28$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_28_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl28$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_28_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                api-gw-ci.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_29\">\n\t<td style=\"width: 10px;\">\n                                        30\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl29$kelola\" id=\"MainContent_lst_kelola_29\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl29$info\" id=\"MainContent_lst_info_29\" title=\"info\" taskno=\"M03864/Task. IT/1026\" nilaibobot=\"3\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - POC cron job antara hangfire vs quartz\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - POC cron job antara hangfire vs quartz\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03864/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - POC cron job antara hangfire vs quartz</td>\n\t<td>BE completed Technical Design - Seller Center - POC cron job antara hangfire vs quartz</td>\n\t<td>Lain-Lain</td>\n\t<td>3</td>\n\t<td>T1</td>\n\t<td>14-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl29$tambah\" id=\"MainContent_lst_tambah_29\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_29_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl29$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_29_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl29$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_29_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Screenshot 2026-10-14 135549.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_30\">\n\t<td style=\"width: 10px;\">\n                                        31\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl30$kelola\" id=\"MainContent_lst_kelola_30\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl30$info\" id=\"MainContent_lst_info_30\" title=\"info\" taskno=\"M03865/Task. IT/1026\" nilaibobot=\"3\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - POC GRPC antar microservice\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - POC GRPC antar microservice\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03865/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - POC GRPC antar microservice</td>\n\t<td>BE completed Technical Design - Seller Center - POC GRPC antar microservice</td>\n\t<td>Lain-Lain</td>\n\t<td>3</td>\n\t<td>T1</td>\n\t<td>14-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl30$tambah\" id=\"MainContent_lst_tambah_30\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_30_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl30$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_30_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl30$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_30_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Screenshot 2026-10-14 135508.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                                <tr id=\"MainContent_lst_trLst_31\">\n\t<td style=\"width: 10px;\">\n                                        32\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl31$kelola\" id=\"MainContent_lst_kelola_31\" title=\"kelola\" src=\"../../img/icon/folder.png\">\n                                        <input type=\"image\" name=\"ctl00$MainContent$lst$ctl31$info\" id=\"MainContent_lst_info_31\" title=\"info\" taskno=\"M03866/Task. IT/1026\" nilaibobot=\"3\" tglmulai=\"09-Okt-2026\" taskname=\"BE |&nbsp;Technical Design - Seller Center - POC outbox pattern dengan rabbitmq\" pic=\"MUHAMMAD HERNANDA\" goaltask=\"BE completed Technical Design - Seller Center - POC outbox pattern dengan rabbitmq\" src=\"../../img/icon/info.png\">\n                                    </td>\n\t<td style=\"width: 30px;\">M03866/Task. IT/1026</td>\n\t<td>09-Okt-2026</td>\n\t<td>MUHAMMAD HERNANDA</td>\n\t<td>Programmer Back End</td>\n\t<td>ITMSS</td>\n\t<td>BE |&nbsp;Technical Design - Seller Center - POC outbox pattern dengan rabbitmq</td>\n\t<td>BE completed Technical Design - Seller Center - POC outbox pattern dengan rabbitmq</td>\n\t<td>Lain-Lain</td>\n\t<td>3</td>\n\t<td>T1</td>\n\t<td>14-Okt-2026</td>\n\t<td>\n                                        Solved\n                                    </td>\n\t<td>09-Okt-2026</td>\n\t<td>14-Okt-2026</td>\n\t<td style=\"width: 100px;\">\n                                        &nbsp; &nbsp;<input type=\"image\" name=\"ctl00$MainContent$lst$ctl31$tambah\" id=\"MainContent_lst_tambah_31\" title=\"tambah lampiran\" status=\"Solved\" src=\"../../img/icon/plus.png\">\n                                        <table width=\"100%\">\n                                            <tbody>\n                                                \n                                                    <tr id=\"MainContent_lst_lstFile_31_trFile_0\">\n\t\t<td style=\"max-width: 100px;\" title=\"14-Okt-2026\">\n                                                            <div style=\"white-space: nowrap; overflow-x: hidden;\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl31$lstFile$ctl00$hapus\" id=\"MainContent_lst_lstFile_31_hapus_0\" title=\"hapus lampiran\" status=\"Solved\" src=\"../../img/icon/xo.png\">\n                                                                <input type=\"image\" name=\"ctl00$MainContent$lst$ctl31$lstFile$ctl00$download\" id=\"MainContent_lst_lstFile_31_download_0\" title=\"download\" src=\"../../images/download.png\">&nbsp;\n                                                                Screenshot 2026-10-14 135422.png\n                                                            </div>\n                                                        </td>\n\t</tr>\n\t\n                                                \n                                            </tbody>\n                                        </table>\n                                    </td>\n</tr>\n\n                            \n                        </tbody>                                       \n                    </table>"
+}

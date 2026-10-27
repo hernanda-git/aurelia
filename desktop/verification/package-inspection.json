@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-26T13:14:47.542Z",
+  "status": "PASS",
+  "entries": 9273,
+  "forbiddenPaths": [],
+  "requiredPathsPresent": true,
+  "bundledFilesMatchBuild": true,
+  "exeSha256": "50c96d1603b345f228e57ec55b43df34ca377a575376f15a5576af38bbe726f3",
+  "asarSha256": "7731dd89f82907db7a2ca8c582e25212247e1f284e63cea0b0dae0c83c69677a"
+}

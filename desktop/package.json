@@ -1,0 +1,38 @@
+{
+  "name": "aurelia",
+  "productName": "Aurelia",
+  "version": "0.2.0",
+  "private": true,
+  "description": "A personal agentic task management",
+  "author": "Hernanda",
+  "license": "UNLICENSED",
+  "main": "dist/main/main/main.js",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.main.json",
+    "build": "vite build && tsc -p tsconfig.main.json",
+    "start": "electron .",
+    "package": "npm run build && node scripts/package.cjs",
+    "test:e2e": "node tests/desktop.e2e.cjs"
+  },
+  "dependencies": {
+    "@heroicons/react": "2.2.0",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "pngjs": "7.0.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@types/node": "^24.0.0",
+    "@types/pngjs": "6.0.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "electron": "45.0.0",
+    "playwright": "1.64.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-26T07:45:55.894Z",
+  "status": "PASS",
+  "track": "real immutable LOCAL CACHE over actual MCP stdio, NOT live PES",
+  "source": "live",
+  "retrievedAt": "2026-10-26T02:58:32.749Z",
+  "snapshotSha256": "59733f208bd871da9f045f5cb801170cb51e3b23fc92c2f4840167a29d214536",
+  "tools": [
+    "pes_assess_completion",
+    "pes_completion_readiness",
+    "pes_get_completion",
+    "pes_list_candidates"
+  ],
+  "recordsRead": 8,
+  "statuses": {
+    "Approval": 8
+  },
+  "scopeCoverage": "partial_active_tasks_only",
+  "stale": true,
+  "authorizedToCommit": false,
+  "livePortal": false,
+  "cacheUnchanged": true,
+  "hermesConnected": false
+}

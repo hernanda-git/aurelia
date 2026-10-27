@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>ARTIFICIAL PES completion contract fixture — NOT live evidence</title>
+<body><h1>ARTIFICIAL isolated DOM contract test. No real PES connection.</h1><div id="surface"></div>
+<script>
+// Deliberately hand-built contract, NOT a captured/live portal or proof of backend semantics.
+const headers=['Row','TaskNo','TglInput','Pic','Jabatan','DeptName','TaskName','GoalTask','AsalTask','Bobot','Target','Duedate','Status','TglApproval','TglSelesai','Lampiran'];
+const initial={records:['Store','FIFO'].map((name,i)=>({name,listTaskNo:`M0399${i}/Task. IT/1026`,detailTaskNo:`M0399${i}/Task.IT/1026`,pic:'3220',picName:'MUHAMMAD HERNANDA',sourceUrl:`https://app.asana.com/task/artificial-${name}`,taskName:`Artificial ${name}`,goal:`Artificial BE complete ${name}`,target:'23-Okt-2026',status:'T1',finish:'',listStatus:'Approval',listFinish:'',file:null,updates:0,uploads:0})),unrelated:'must remain untouched',fullNavigation:false};
+let state=JSON.parse(sessionStorage.getItem('contract-state')||'null')||initial;
+let selected=null,busy=false,handlers=[];
+const prm={get_isInAsyncPostBack:()=>busy,add_endRequest:f=>handlers.push(f),remove_endRequest:f=>handlers=handlers.filter(x=>x!==f)};
+window.Sys={WebForms:{PageRequestManager:{getInstance:()=>prm}}};
+const persist=()=>sessionStorage.setItem('contract-state',JSON.stringify(state));
+const get=id=>document.getElementById('MainContent_'+id);
+const surface=document.getElementById('surface');
+function postback(callback){busy=true;setTimeout(()=>{callback();busy=false;for(const fn of [...handlers])fn();},45);}
+function element(tag,id,value){const e=document.createElement(tag);e.id='MainContent_'+id;if(tag==='input')e.value=value??'';else e.textContent=value??'';return e;}
+function button(id,label,callback,parent=surface){const b=element('button',id,label);b.type='button';b.onclick=callback;parent.append(b);return b;}
+function table(rows,parent=surface){const t=document.createElement('table');rows.forEach((cells,i)=>{const r=t.insertRow();cells.forEach(c=>{const cell=i===0?document.createElement('th'):document.createElement('td');cell.textContent=c;r.append(cell);});});parent.append(t);return t;}
+function list(){selected=null;surface.replaceChildren();const t=table([headers]);state.records.forEach((r,i)=>{const cells=[String(i+1),r.listTaskNo,'20-Okt-2026',r.picName,'BE','ITMSS',r.taskName,r.goal,'Lain-Lain','1','T1',r.target,r.listStatus,'21-Okt-2026',r.listFinish,r.file?.name??''];const tr=t.insertRow();cells.forEach(c=>{const td=tr.insertCell();td.textContent=c;});button('lst_kelola_'+(10+i*7),'Kelola',()=>postback(()=>detail(i)),tr.cells[0]);button('lst_info_'+(10+i*7),'Info',()=>postback(()=>info(i)),tr.cells[0]);});return structuredClone(state);}
+function detail(index){selected=index;const r=state.records[index];surface.replaceChildren();['txtTaskNo','txtLain','txtKeterangan','txtTglTarget','txtTglSelesai'].forEach((id,i)=>surface.append(element('input',id,[r.detailTaskNo,r.sourceUrl,r.taskName,r.target,r.finish][i])));
+ surface.append(element('input','TxtGoal',r.goal),element('input','ArtificialPreserved','untouched business value'));
+ const dept=element('select','ddlDept');dept.add(new Option('ITMSS','32'));dept.add(new Option('Other','33'));surface.append(dept);
+ const pic=element('select','ddlPIC');pic.add(new Option(r.picName,r.pic));surface.append(pic);
+ const status=element('select','ddlStatus');['T1','Selesai'].forEach(s=>status.add(new Option(s,s)));status.value=r.status;surface.append(status);
+ status.onchange=()=>postback(()=>{const replacement=status.cloneNode(true);replacement.value='Selesai';status.replaceWith(replacement);get('txtTglSelesai').value='';});
+ const update=button('lbUpdateTask','Update',()=>{r.updates++;r.status=get('ddlStatus').value;r.finish=get('txtTglSelesai').value;persist();postback(()=>dialog());});update.disabled=r.status==='Selesai';
+ table([['Target','Status','FinishDate'],['1',r.status==='Selesai'?'Solved':'Approval',r.finish]]);
+ if(r.file){const a=element('a','saved_download_0',r.file.name);a.href='/artificial-attachment';surface.append(a);}
+}
+function dialog(){const box=element('div','ArtificialUploadDialog');box.setAttribute('role','dialog');const hidden=element('input','fuFileName1');hidden.type='file';hidden.style.display='none';box.append(hidden);const input=element('input','fuFileName');input.type='file';box.append(input);surface.append(box);
+ button('btnAddFile','Upload',async()=>{const r=state.records[selected],file=get('fuFileName').files[0];if(!file)throw Error('NO_FILE');r.uploads++;r.uploadedBody=await file.text();r.file={name:file.name,size:file.size,type:file.type};r.listStatus=r.name==='Store'?'Solved':'Update Task';r.listFinish=r.name==='Store'?'26-Okt-2026':'';persist();postback(()=>{if(state.fullNavigation)location.reload();else list();});},box);
+}
+function info(index){const r=state.records[index];const p=element('div','PanelModalTarget');p.style.whiteSpace='pre-wrap';p.append(document.createTextNode(`Info Target Task\nTaskNo\t: ${r.listTaskNo}\nPic\t: ${r.picName}\nGoalTask\t: ${r.goal}\n`));surface.append(p);table([['Target','Status'],['1',r.listStatus]],p);button('btnClose','Close',()=>postback(()=>p.remove()),p);}
+window.contract={list,detail,getState:()=>structuredClone(state),setFullNavigation:v=>{state.fullNavigation=v;persist();},reset:()=>{sessionStorage.removeItem('contract-state');location.reload();}};
+list();
+</script></body></html>

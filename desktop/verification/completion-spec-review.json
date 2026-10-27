@@ -1,0 +1,74 @@
+{
+  "passed": false,
+  "security_concerns": [
+    {
+      "severity": "high",
+      "path": "src/main/portal-completion.ts",
+      "line": 39,
+      "issue": "The dormant mutation driver never captures or validates the editable detail Goal Task field. CompletionIdentity includes goal and assertRow checks the list goal, but detailScript, assertDetail and the immediate pre-click guard check only TaskNo/PIC/source/taskName/target. A detail form whose goal differs from the authorized goal can therefore reach Update Task, potentially completing a different acceptance scope and posting an unrelated changed field. The actual saved FIFO screenshot contains a separate editable Goal Task input; the artificial detail fixture omits it. An in-memory transport reproduction with a matching list goal and different detail goal reached the submit action. This is a future-enablement integrity defect, not an exposed commit route in the assessment-only app.",
+      "fix": "Capture the actual detail goal control using an independently established DOM contract; fail closed if missing or ambiguous. Compare its exact observed value with the sealed proposal at inspect/stage and in the same script immediately before Update. Preserve and compare other posted fields that must remain unchanged. Add a detail-goal input to the artificial fixture and negative tests for detail/list disagreement and a goal changed after staging. Do not guess a live control ID or relax goal checks to make the artificial fixture pass."
+    }
+  ],
+  "logic_errors": [
+    {
+      "severity": "medium",
+      "path": "src/agent/stdio.ts",
+      "line": 31,
+      "issue": "The strict client live schema omits optional targetStatus although CompletionLivePreflight and completion-policy.ts require targetStatus=Approved to recognize list Approval/detail T1. Consequently the observed approved-T1 assessment cannot be expressed through MCP: including targetStatus produces INVALID_ARGUMENTS; omitting it fails policy eligibility. A direct in-memory evaluation of the current source returned eligible=true for the approved-T1 input, while the exact Zod client schema rejected live.targetStatus as an unrecognized key. The agent-stdio E2E source already contains an approved-T1 assertion, but this review did not rerun that disk-writing harness.",
+      "fix": "Add bounded optional targetStatus to the strict client schema and exported input schema, retaining exact raw values. Verify approved-T1 assessment through an actual isolated MCP call, including negative cases for absent and non-Approved target status. Keep authorizedToCommit=false."
+    },
+    {
+      "severity": "medium",
+      "path": "src/main/completion-verification.ts",
+      "line": 63,
+      "issue": "Cross-view date comparison requires raw display strings to equal the proposal's raw date in addition to equal validated civil dates. The original Store/FIFO Info histories display DueDate as 23-Oct-2026, while list/detail display 23-Okt-2026. The adapter-shaped fixtures supply 23-Okt-2026 to every view, hiding this actual-versus-fixture mismatch. In-memory execution of the verifier on an otherwise consistent synthetic case, changing only Info raw targetDate to the audit's 23-Oct-2026 with unchanged ISO 2026-10-23, returned SAVED_WITH_DISCREPANCY/TARGET_DATE_MISMATCH. This is an invented date conflict, unlike Store's genuine October 23 versus October 26 disagreement. Line 65 has the same raw-format comparison for finish dates.",
+      "fix": "Preserve each exact raw date for audit, but compare cross-view dates using validated civil-date values under a documented field mapping. Do not replace observed Info text with the proposal's spelling. Add regression cases for Oct/Okt equivalents and genuine different-day conflicts; retain Store and FIFO as unresolved discrepancies. If equivalent formatting intentionally remains a conservative blocker, document it as an unsupported representation rather than claiming a changed target date."
+    },
+    {
+      "severity": "medium",
+      "path": "src/main/completion-evidence.ts",
+      "line": 17,
+      "issue": "The evidence byte gate accepts any buffer longer than eight bytes with the PNG signature. A nine-byte signature-plus-zero buffer passes the exact current validation predicate despite not being a readable PNG. stage and validate both rely on this predicate, so hashing/sealing can preserve an unusable attachment rather than establish readable evidence. The module and documentation honestly disclaim full decoding, but the master plan's readable-attachment gate remains unimplemented. This is dormant in the current assessment-only app and is not evidence of arbitrary-path intake or current data exfiltration.",
+      "fix": "Before any future commit path, require a bounded trusted image decode/inspection gate with dimensions and resource limits, rejecting truncated images and invalid PNG structure. Recheck the inspected final artifact's digest before upload. Add signature-only/truncated/invalid-image tests. Keep provenance/content/secret review separate from successful decoding, and do not describe magic-byte validation alone as readable evidence validation."
+    }
+  ],
+  "limitations": [
+    "This is a preliminary independent stable-module review, not a final pinned approval or live-enablement authorization. src/main/completion.ts was being edited by a separate child; its transient contents were read for interface context only. Engine changes, crash boundaries, trusted source adapter, policy freshness across staging, global discrepancy circuit breaker, publication and notification integration require a separate final exact-source review after edits settle.",
+    "No source, profile, configuration, audit originals, browser state, or live PES records were modified. No network/PES calls, live mutations, build, package, or disk-writing test harnesses were run. The sole intentional file write is this JSON report. Executed reproductions loaded current TypeScript and Zod into memory with Node VM modules; mocked browser transport results are not actual PES DOM/backend results.",
+    "The parent-reported 274 passing tests were not independently rerun. The installed TypeScript 7 module did not provide transpileModule and esbuild was absent; Node stripTypeScriptTypes plus VM modules provided a working read-only alternative. One reproduction command initially had a quoting syntax error and was corrected before obtaining the reported results.",
+    "The HTML completion fixture explicitly identifies itself as artificial. Its transport intercepts HTTPS, uses window.contract.list rather than the real filtering/pagination pipeline, invents callback/postback behavior and attachment markup, and omits the real detail goal input. It demonstrates its own contract, not production selector compatibility, safe real ASP.NET postbacks, download selectors, or backend semantics. No production completion transport or saved-view mapper is wired into main.ts.",
+    "Adapter-shaped Store/FIFO fixtures explicitly enrich department, origin, reopen flags and semantic approval from fixture context. Those are not independently observed fields in every raw portal view. A future trusted mapper must prove view-to-task and target-row association and preserve missing observations as unknown rather than copy expected values into observations. The real Info modal contains target history rows, not the fixture's simplified universal SavedTaskView.",
+    "Journal process-crash fences, immutable wx event creation, mandatory file fsync, hash-chain validation, corruption poisoning and same-task/target reservations are present by source inspection. This review did not independently exercise filesystem crash persistence. The owner registry is in-process only and relies on Electron's single-instance lock. Windows directory metadata fsync/power-loss persistence and same-user malicious rewriting or path races remain expressly outside the stated guarantee.",
+    "Enrollment is explicitly unproven in verification/enrollment-feasibility.md. The capability verifier defaults to denial; its injected verifier is a trusted seam, not a demonstrated supervisor bootstrap. Current assessment accepts client-supplied policy, clock, provenance and live-state labels only as hypothetical assertions, always denies commit authorization, and reports source verification not performed. Those labels must never become trusted inputs simply by wiring the assessment adapter to the internal engine.",
+    "The shipped main/preload/observer path has no completion dispatcher, commit IPC, commit MCP tool, timer, or observer callback. Sync and connection navigation share PortalCoordinator and remain the preexisting read-only fetch/login flows. This supports the assessment-only boundary, not the master plan's end-to-end completion definition of done.",
+    "Historical Store/FIFO reports were read only. The real Store list/detail date conflict and FIFO list/Info versus detail disagreement remain discrepancies; no resubmission, semantic approval, server attachment checksum, successful live canary, connected Hermes adapter, cache-after-write success or notification delivery is asserted."
+  ],
+  "checks": {
+    "baseline_manifest_entries_verified": 39,
+    "baseline_hash_mismatches": [],
+    "baseline_comparison": "Compared main/preload/portal/sync/App/shared types with the frozen originals. Preload, portal and sync were unchanged; main adds shared ownership and read-only completion observation, and App adds the observer.",
+    "runtime_reproductions": [
+      "Approved Approval/T1/Approved input: pure policy eligible=true; current strict MCP live schema rejects targetStatus.",
+      "Otherwise consistent synthetic saved views: VERIFIED; only Info raw spelling changed from 23-Okt-2026 to audit-observed 23-Oct-2026: SAVED_WITH_DISCREPANCY/TARGET_DATE_MISMATCH.",
+      "Mock transport with a matching list goal and differing detail goal reached the driver's Update action; no browser or network mutation was executed.",
+      "Nine-byte PNG signature-plus-zero buffer passed the exact validatePng predicate; no evidence files were staged."
+    ],
+    "reviewed_source_sha256": {
+      "src/main/completion-journal.ts": "ba2eadc088496936921993cfeb21c2f0c7f51411f821f974118345f6375ef428",
+      "src/main/completion-evidence.ts": "ed5e725fd3961132611409573a3aaa2997d6ffc4456b6aca998bdfc89ecc6ab2",
+      "src/main/completion-policy.ts": "774625af6f3bf68c6338d8a5db86be2db7ec48ed875bb87125c5c548d449bcf2",
+      "src/main/completion-verification.ts": "926f11823e454124b978c2b4934b8af9a95554d5045985dbdad7bebdfa81c4f1",
+      "src/main/portal-completion.ts": "018e9e7f2cef2eefdb08bd823f40b13deea6735f9d8601d7385f05e7f2925840",
+      "src/main/agent-capability.ts": "ddda2c5fbfc1164dcd499b1581465051370b7acc179e52422480bba4c5219f78",
+      "src/main/portal-coordinator.ts": "45e63e9b3e4a976cf9720b682a1a7e0a6728781500cbf7738e6e2f359b7334ce",
+      "src/main/main.ts": "46dfc4b8d5c565bd09dd8bfde45d876217982971dfb30846279262fd13e32378",
+      "src/main/preload.ts": "e2bbcecc18f2bd087d95c0fd2278691d8820a272d3999477fc8f29a43fd299db",
+      "src/agent/assessment.ts": "a262992f5c3a36dc3763e92a7a24fb48ac386402e315a488d444c27860c67a04",
+      "src/agent/stdio.ts": "559d0074036413ac0d49d3bec12b6f4ba85ad39c5f0bc65df347370aa4cece2f",
+      "src/renderer/CompletionObserver.tsx": "d5cb67381e40aaf0da7daccffb61802a9680124cd4caebcada2f3ca8abcff302",
+      "src/main/completion-observer.ts": "6abf87d4ecdaf0257740002883fb91da7bb7b3302162d2a3681ff6f5c8a9704a",
+      "src/shared/completion-types.ts": "2ea13410f945dedbc98b9730928c56f39d1e5e6ef3884b0ea58903cb995952e5"
+    }
+  },
+  "summary": "NOT APPROVED: the assessment-only boundary is intact, but stable-module review found a missing detail-goal integrity guard, an MCP/policy schema mismatch, cross-view date-format false discrepancies, and incomplete readable-image validation. Enrollment, actual DOM/backend fidelity and the in-flight engine remain unapproved; request final pinned review after fixes."
+}

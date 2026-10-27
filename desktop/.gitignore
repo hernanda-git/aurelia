@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+package-lock.json.bak
+
+# Build and packaged binaries
+dist/
+build/
+release/
+*.asar
+
+# Local test profiles and runtime scratch
+verification/*-profile*
+verification/startup-collision-*
+verification/completion-desktop-*
+verification/portal-dom-profile/
+*.log
+npm-debug.log*
+
+# Environment, secrets, and local databases
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.db
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/

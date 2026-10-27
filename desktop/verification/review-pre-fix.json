@@ -1,0 +1,22 @@
+{
+  "reviewedCandidate": "7206cac770ebbae3b2a3f190d90d7c3180926f1f17a63f366b2677f09818c39e",
+  "passed": false,
+  "security_concerns": [],
+  "logic_errors": [
+    "src/main/sync.ts:18,24-26,40-43 — A persistence failure before the first await latches the coordinator as busy until restart. execute() can clear this.running in catch/finally before sync() overwrites it with the already-settled promise. Reviewer independently reproduced initial setLastAttempt failure followed by recovered storage: busy=true, fetches=0, retry returns the identical promise."
+  ],
+  "suggestions": [
+    "Add recovery coverage for initial setLastAttempt/appendEvent failures, asserting busy becomes false and a subsequent sync fetches."
+  ],
+  "summary": "Independent reviewer verified the raw manifest hash, aggregate source identity and all 17 source-file hashes; read eight runtime files plus renderer/CSP/packaging boundaries; found one reproduced recovery defect and no concrete security findings in that reviewed scope. No source edits or live network calls were performed.",
+  "remediation": {
+    "deliveredCandidate": "a501d02fd8a32a0410d96d176673383387f6a9d758fec288a2aadb4d898bfd82",
+    "action": "Publish the pending single-flight guard before executing the job; do not overwrite synchronous finally cleanup.",
+    "regression": "releases the single-flight guard after an initial persistence failure and permits retry",
+    "observedRedBeforeFix": true,
+    "finalUnitTestsPassed": 54,
+    "finalPackagedChecksPassed": 19,
+    "includedInDeliveredZip": true,
+    "newCandidateIndependentReview": "Explicitly deferred by user. This pre-fix verdict does not approve the delivered candidate."
+  }
+}

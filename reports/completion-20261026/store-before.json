@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-10-26T13:14:37.238287+07:00",
+  "listTaskNo": "M03989/Task. IT/1026",
+  "detail": {
+    "txtTaskNo": "M03989/Task.IT/1026",
+    "ddlPIC": "3220",
+    "txtKeterangan": "BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "txtLain": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219682896357924",
+    "ddlStatus": "T1",
+    "txtTglTarget": "23-Okt-2026",
+    "txtTglSelesai": ""
+  },
+  "evidence": "C:/Workspace/Deliverables/evidence_base_inventory_store.png",
+  "evidenceKind": "Previously user-approved rendered summary, not a native screenshot",
+  "historicalConfirmation": "restored-omp-44d6b88997e7522d8d7a59abf2bf2dcc"
+}

@@ -1,0 +1,48 @@
+{
+  "task": {
+    "Row": "8",
+    "TaskNo": "M03989/Task. IT/1026",
+    "TglInput": "20-Okt-2026",
+    "Pic": "MUHAMMAD HERNANDA",
+    "Jabatan": "Programmer Back End",
+    "DeptName": "ITMSS",
+    "TaskName": "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "GoalTask": "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "AsalTask": "Lain-Lain",
+    "Bobot": "1",
+    "Target": "T1",
+    "Duedate": "23-Okt-2026",
+    "Status": "Solved",
+    "TglApproval": "21-Okt-2026",
+    "TglSelesai": "26-Okt-2026",
+    "Lampiran": "evidence_base_inventory_store.png"
+  },
+  "scope": {
+    "from": "2026-09-01",
+    "to": "2026-11-30",
+    "pic": "MUHAMMAD HERNANDA",
+    "department": "IT Mitra Seribu Saudara"
+  },
+  "source": "live",
+  "snapshotId": "91c679a4-6ded-475c-bcc8-047e2d8406ea",
+  "retrievedAt": "2026-10-27T05:26:54.128Z",
+  "historyAvailable": false,
+  "rawCells": [
+    "8",
+    "M03989/Task. IT/1026",
+    "20-Okt-2026",
+    "MUHAMMAD HERNANDA",
+    "Programmer Back End",
+    "ITMSS",
+    "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "Lain-Lain",
+    "1",
+    "T1",
+    "23-Okt-2026",
+    "Solved",
+    "21-Okt-2026",
+    "26-Okt-2026",
+    "evidence_base_inventory_store.png"
+  ]
+}

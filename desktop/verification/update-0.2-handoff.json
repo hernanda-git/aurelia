@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-26T12:57:29.762512+07:00",
+  "status": "VERIFIED_AND_OPENED",
+  "version": "0.2.0",
+  "unitTests": 76,
+  "unitFiles": 6,
+  "packagedRuntimeChecks": 32,
+  "packagedDesktopChecks": 27,
+  "packagedRecoveryChecks": 5,
+  "userData": {
+    "at": "2026-10-26T05:46:50.144Z",
+    "status": "PASS",
+    "executable": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+    "profile": "C:\\Users\\it26\\AppData\\Roaming\\PES Focus",
+    "agentWorkspace": "C:\\Workspace\\pesautomation\\data\\agent-workspace",
+    "taskCount": 8,
+    "taskFolders": 8,
+    "source": "live",
+    "retrievedAt": "2026-10-26T02:58:32.749Z",
+    "snapshotId": "4e2a7848-b6d0-47e5-92e4-7a0cd4e0692c",
+    "sourceRowsAvailable": false,
+    "sourceSnapshotPreserved": true,
+    "preferencesPreserved": true,
+    "settingsPreserved": true,
+    "livePesSync": false,
+    "browserCredentialsReadOrCopied": false,
+    "screenshots": [
+      "PES-0.2-real-user.png",
+      "PES-0.2-agent-workspace-real.png"
+    ]
+  },
+  "shortcuts": [
+    {
+      "path": "C:\\Users\\it26\\Desktop\\PES.lnk",
+      "target": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+      "workingDirectory": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64",
+      "icon": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe,0",
+      "verified": true
+    },
+    {
+      "path": "C:\\Users\\it26\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\PES.lnk",
+      "target": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+      "workingDirectory": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64",
+      "icon": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe,0",
+      "verified": true
+    }
+  ],
+  "desktopLaunch": {
+    "at": "2026-10-26T12:57:11.9926006+07:00",
+    "status": "PASS",
+    "shortcut": "C:\\Users\\it26\\Desktop\\PES.lnk",
+    "executable": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+    "pid": 19468,
+    "windowTitle": "PES",
+    "leftRunning": true
+  },
+  "exe": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+  "exeSha256": "50c96d1603b345f228e57ec55b43df34ca377a575376f15a5576af38bbe726f3",
+  "asarSha256": "461ee47a1b67b8fb9863468814b5c8ba5596cd9d485aaac690f5a7828aaa9b03",
+  "archive": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-0.2.0-Windows-x64.zip",
+  "archiveSha256": "3f6dbfb59848aa769d61540d1d95a6aaa580d7e036518b431a65969415d0f064",
+  "archiveBytes": 164597782,
+  "archiveEntries": 74,
+  "sourceSetSha256": "aca7e570e93a5b4636a709689712d912ab528ccfb7c900c4dbc4630fffab4d68",
+  "manifestFileSha256": "164c236a3f2e6f8aea88abba61f13033722ac964ffcb0404f9dbbb94e66f3683",
+  "canonicalMarkdownLinksChecked": 28,
+  "livePesSyncThisUpdate": false,
+  "independentFinalSourceReview": "NOT_CLAIMED_PREVIOUS_DEFERRAL",
+  "optionalRootAgentInstructions": "NOT_CREATED_APPROVAL_TIMED_OUT_NOT_RETRIED"
+}

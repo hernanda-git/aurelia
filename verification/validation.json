@@ -1,0 +1,292 @@
+{
+  "verified_at": "2026-10-26T09:02:54.263953+07:00",
+  "workspace": "C:\\Workspace\\pesautomation",
+  "status": "PASS",
+  "check_count": 51,
+  "checks": [
+    {
+      "name": "required_artifacts",
+      "passed": true,
+      "details": [
+        "README.md",
+        "pes_automation.py",
+        "test_pes_automation.py",
+        "docs/01-SESSION-RECORD.md",
+        "docs/02-REQUIREMENTS.md",
+        "docs/03-ARCHITECTURE-E2E.md",
+        "docs/04-OPERATIONS.md",
+        "docs/05-DATA-AND-RESULTS.md",
+        "docs/LESSONS_LEARNED.md",
+        "docs/07-SECURITY.md",
+        "docs/08-VERIFICATION-AND-LIMITATIONS.md",
+        "docs/09-PROVENANCE-AND-HANDOFF.md",
+        "source/provenance.json",
+        "verification/unit-tests.txt"
+      ]
+    },
+    {
+      "name": "snapshot_hash:source/original/pes_automation.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/pes_automation.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/test_pes_automation.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/test_pes_automation.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/README.md",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/README.md",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/PES-Automation-2026-10-26.zip",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/PES-Automation-2026-10-26.zip",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/evidence/pes_filtered_raw.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/evidence/pes_filtered_raw.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/evidence/pes_task_histories.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/evidence/pes_task_histories.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/reports/2026-10-26/pes_filtered_raw.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/reports/2026-10-26/pes_filtered_raw.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/reports/2026-10-26/pes_tasks.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/reports/2026-10-26/pes_tasks.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/reports/2026-10-26/pes_tasks.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/reports/2026-10-26/pes_tasks.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/reports/2026-10-26/pes_tasks.md",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/reports/2026-10-26/pes_tasks.md",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/original/reports/2026-10-26/pes_task_histories.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "original_unchanged:source/original/reports/2026-10-26/pes_task_histories.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "snapshot_hash:source/pes-task-extraction.SKILL.snapshot.md",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:pes_automation.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:test_pes_automation.py",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:evidence/pes_filtered_raw.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:evidence/pes_task_histories.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:reports/2026-10-26/pes_filtered_raw.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:reports/2026-10-26/pes_tasks.csv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:reports/2026-10-26/pes_tasks.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:reports/2026-10-26/pes_tasks.md",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "active_copy_identical:reports/2026-10-26/pes_task_histories.json",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "raw_32_unique_rows",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "raw_status_distribution",
+      "passed": true,
+      "details": {
+        "Approval": 8,
+        "Solved": 24
+      }
+    },
+    {
+      "name": "all_requested_statuses_included",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "selected_8_unique_tasks",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "selected_counts",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "csv_identity_and_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "matching_histories",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "expected_pic",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "date_window",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "overdue_calculation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "unit_test_log_pass",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "markdown_relative_links",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "markdown_fence_balance",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "mermaid_basic_structure",
+      "passed": true,
+      "details": {
+        "blocks": 3,
+        "errors": [],
+        "scope": "basic structural sanity, not rendered or full-parser validation"
+      }
+    },
+    {
+      "name": "original_zip_integrity",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "heuristic_secret_scan",
+      "passed": true,
+      "details": {
+        "hits": [],
+        "forbidden_files": [],
+        "scope": "heuristic, not a formal no-secrets proof"
+      }
+    },
+    {
+      "name": "no_truncation_placeholders",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "no_git_repository_created",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "failures": [],
+  "website_refreshed": false,
+  "preserved_retrieved_at": "2026-10-26T08:45:19.320966+07:00"
+}

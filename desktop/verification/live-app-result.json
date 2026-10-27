@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-26T02:58:32.816Z",
+  "status": "PASS",
+  "livePesSync": true,
+  "sync": {
+    "phase": "success",
+    "message": "8 tugas aktif diperbarui · 32 baris diperiksa",
+    "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a",
+    "completed": 8,
+    "total": 8
+  },
+  "lastError": null,
+  "snapshot": {
+    "source": "live",
+    "retrievedAt": "2026-10-26T02:58:32.749Z",
+    "scope": {
+      "from": "2026-09-01",
+      "to": "2026-11-30",
+      "pic": "MUHAMMAD HERNANDA",
+      "department": "IT Mitra Seribu Saudara"
+    },
+    "totalScanned": 32,
+    "selected": 8,
+    "approval": 8,
+    "open": 0,
+    "histories": 8
+  }
+}

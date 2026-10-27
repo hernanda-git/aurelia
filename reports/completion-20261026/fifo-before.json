@@ -1,0 +1,30 @@
+{
+  "list": [
+    "5",
+    "M03990/Task. IT/1026",
+    "20-Okt-2026",
+    "MUHAMMAD HERNANDA",
+    "Programmer Back End",
+    "ITMSS",
+    "BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "Lain-Lain",
+    "1",
+    "T1",
+    "23-Okt-2026",
+    "Approval",
+    "21-Okt-2026",
+    "",
+    ""
+  ],
+  "detail": {
+    "txtTaskNo": "M03990/Task.IT/1026",
+    "ddlPIC": "3220",
+    "txtKeterangan": "BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+    "txtLain": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219683004217422",
+    "ddlStatus": "T1",
+    "txtTglTarget": "23-Okt-2026",
+    "txtTglSelesai": ""
+  },
+  "evidence": "C:/Workspace/Deliverables/evidence_base_inventory_fifo.png"
+}

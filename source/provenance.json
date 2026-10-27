@@ -1,0 +1,78 @@
+{
+  "captured_at": "2026-10-26T08:50:04.978186+07:00",
+  "purpose": "Byte-identical source snapshot from this session; no credentials or browser storage copied",
+  "files": [
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\pes_automation.py",
+      "snapshot": "source/original/pes_automation.py",
+      "sha256": "c5d39f961a3d284fe4dd429e73bc4faa193e971f58e6b9c25d92a6aef068ce20",
+      "bytes": 9369
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\test_pes_automation.py",
+      "snapshot": "source/original/test_pes_automation.py",
+      "sha256": "f3f856b519d8fb5b2b75b3fe11c5876e1a562fafe3fd3cc679161e4c3976ebaf",
+      "bytes": 2057
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\README.md",
+      "snapshot": "source/original/README.md",
+      "sha256": "e424b65d6c5bc61ec989db3689000f7f1922a05644080202f7ecbe7a9e63a702",
+      "bytes": 3675
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\PES-Automation-2026-10-26.zip",
+      "snapshot": "source/original/PES-Automation-2026-10-26.zip",
+      "sha256": "8207ce831235232f998da632994c12b2866940c6845b17d5819f6a3e4c2bb4c2",
+      "bytes": 27801
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\evidence\\pes_filtered_raw.json",
+      "snapshot": "source/original/evidence/pes_filtered_raw.json",
+      "sha256": "2092214420d11e681aa53ab84edb63d7c5b6de4f5b7a0495e926818e01f5f76a",
+      "bytes": 142763
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\evidence\\pes_task_histories.json",
+      "snapshot": "source/original/evidence/pes_task_histories.json",
+      "sha256": "0898f7ab317af17ced100a3a85ce2f843892e700d9aa6eb67abefbea8ef2078d",
+      "bytes": 14688
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\reports\\2026-10-26\\pes_filtered_raw.json",
+      "snapshot": "source/original/reports/2026-10-26/pes_filtered_raw.json",
+      "sha256": "b00d97a91f0f1569144f8477b09e8effc2b540b922b3c92662576db8002fc744",
+      "bytes": 124325
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\reports\\2026-10-26\\pes_tasks.csv",
+      "snapshot": "source/original/reports/2026-10-26/pes_tasks.csv",
+      "sha256": "c6092e49a28bc127ed7d18eae462067755f13352ab2a94cdbdb7ce254ab33f80",
+      "bytes": 5693
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\reports\\2026-10-26\\pes_tasks.json",
+      "snapshot": "source/original/reports/2026-10-26/pes_tasks.json",
+      "sha256": "f82c894da61d94214c54abf17733bc183b058ccd7d2fdb3f6a837a1f1f1c561a",
+      "bytes": 22202
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\reports\\2026-10-26\\pes_tasks.md",
+      "snapshot": "source/original/reports/2026-10-26/pes_tasks.md",
+      "sha256": "d4fc48a60c80a23a0e8180d05fd1f6c57c00931ee573d78feb8789583014d463",
+      "bytes": 8401
+    },
+    {
+      "source": "C:\\Users\\it26\\Documents\\PES-Automation\\reports\\2026-10-26\\pes_task_histories.json",
+      "snapshot": "source/original/reports/2026-10-26/pes_task_histories.json",
+      "sha256": "5abc72e7b131374c70d89c27b4e9eaaf34ca4bc80764a434054f4ec5340e4969",
+      "bytes": 14512
+    },
+    {
+      "source": "C:\\Users\\it26\\AppData\\Local\\hermes\\skills\\productivity\\pes-task-extraction\\SKILL.md",
+      "snapshot": "source/pes-task-extraction.SKILL.snapshot.md",
+      "sha256": "2e8116531e0927e58910a6d926a11531797a702813780104d275a9ce4ad13246",
+      "bytes": 5318
+    }
+  ]
+}

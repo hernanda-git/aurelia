@@ -1,0 +1,253 @@
+{
+  "at": "2026-10-26T12:57:14.062262+07:00",
+  "root": "C:\\Workspace\\pesautomation",
+  "algorithm": "SHA256 of UTF-8 compact sorted-key JSON files array",
+  "sourceSetSha256": "aca7e570e93a5b4636a709689712d912ab528ccfb7c900c4dbc4630fffab4d68",
+  "files": [
+    {
+      "path": "desktop/assets/icon.ico",
+      "bytes": 23644,
+      "sha256": "fc04caa878cc3cdff4527ed1b125c66777c45c7dd0511362402613b4f5f0816b"
+    },
+    {
+      "path": "desktop/assets/icon.png",
+      "bytes": 3915,
+      "sha256": "c2d5a09b68780a6c3b263469bdd15c7a4ed2c3c66b7c8308f1c9de9305c835c4"
+    },
+    {
+      "path": "desktop/assets/seed.json",
+      "bytes": 22202,
+      "sha256": "f82c894da61d94214c54abf17733bc183b058ccd7d2fdb3f6a837a1f1f1c561a"
+    },
+    {
+      "path": "desktop/docs/AGENT-WORKSPACE.md",
+      "bytes": 7643,
+      "sha256": "3cde5e36297a9c65ce8b5213073df7671ec95da5b63584e1f1e46cc6001eac51"
+    },
+    {
+      "path": "desktop/docs/ARCHITECTURE.md",
+      "bytes": 4832,
+      "sha256": "39d485241b09eb3f1c5a642d7e7360468fd5089a6b835b9e3fa47b4b1dbe740f"
+    },
+    {
+      "path": "desktop/docs/LESSONS_LEARNED.md",
+      "bytes": 3412,
+      "sha256": "a31dc65bf94d6d20df41fb638a2b26c646e7069b762bfa92aa970bdf26eac4db"
+    },
+    {
+      "path": "desktop/docs/VERIFICATION.md",
+      "bytes": 7437,
+      "sha256": "204a3c0501170954600650fbf756247c731ea47e18766858e1b6d66c7835e793"
+    },
+    {
+      "path": "desktop/package-lock.json",
+      "bytes": 75321,
+      "sha256": "3351e918510bcbe4bb830cdbc2a8aff76ebc6640f7c106dfcb04ce5c4fdbc8e1"
+    },
+    {
+      "path": "desktop/package.json",
+      "bytes": 953,
+      "sha256": "c2117f1aeee718757209696a1d5cabb46f89af1ab847b2331635f6b3d1a02fe0"
+    },
+    {
+      "path": "desktop/README.md",
+      "bytes": 3364,
+      "sha256": "6329e4d34e6c4fb5cb8ae75abac07e6bf8ccd85dedd6f965d7c920bf32c79a25"
+    },
+    {
+      "path": "desktop/scripts/create-shortcuts.ps1",
+      "bytes": 2500,
+      "sha256": "f43d0aa3e283d4f5ef1df838e3d8652b812d2aea71225a83e980790e034f030f"
+    },
+    {
+      "path": "desktop/scripts/finalize-update.py",
+      "bytes": 6793,
+      "sha256": "c8603327cfbaf50f79accd75f61cb9f1b00300e393a1a6dd6ef05a3fb2c796b9"
+    },
+    {
+      "path": "desktop/scripts/inspect-package.cjs",
+      "bytes": 1726,
+      "sha256": "e5e22b6f97bc787dbea76654f35fd3184ef6a25862312129c99c5e9031e92726"
+    },
+    {
+      "path": "desktop/scripts/install-electron.py",
+      "bytes": 2188,
+      "sha256": "6e28ec9ea884480b8a34995c4c910328a48287dc6f2f70eb116d12a1131ad4dd"
+    },
+    {
+      "path": "desktop/scripts/open-pes.ps1",
+      "bytes": 1435,
+      "sha256": "91456094e5701eecb2a94b79e8268013690a80dd634f69a674b68dfde09fd9a8"
+    },
+    {
+      "path": "desktop/scripts/package.cjs",
+      "bytes": 1342,
+      "sha256": "ad6c188ee25bbaab25bba657d0b6752df48a8f230cac7408e1ce08e293fb878a"
+    },
+    {
+      "path": "desktop/scripts/verify-live.cjs",
+      "bytes": 2432,
+      "sha256": "f229bf66e63e3c63737a7a45e46edcb7cd7c4d07952c5e45c899c7143ffdb5b0"
+    },
+    {
+      "path": "desktop/scripts/verify-update.cjs",
+      "bytes": 3744,
+      "sha256": "59c14afe494bcd584ddea8238deb42245b54c8d911d46fa24b55ffc5879e6e23"
+    },
+    {
+      "path": "desktop/src/main/agent-workspace.ts",
+      "bytes": 16321,
+      "sha256": "28da10af442ae2215a0babcd0f87ba1090320f89a24ee00f8a997f072a047005"
+    },
+    {
+      "path": "desktop/src/main/main.ts",
+      "bytes": 10648,
+      "sha256": "5d250879db58c75c79300f6bc611e57aa9c5184ae513849abe5506a8e5bd4b48"
+    },
+    {
+      "path": "desktop/src/main/portal-data.ts",
+      "bytes": 4623,
+      "sha256": "f7e38df1a096a492a2b76cab59628c2e25e37167e544f3cadadb4ff7793772d5"
+    },
+    {
+      "path": "desktop/src/main/portal.ts",
+      "bytes": 9480,
+      "sha256": "16373e5c77866ff3292ae32978e19e954fc4dc6321aa5dca6fae988f80e8d283"
+    },
+    {
+      "path": "desktop/src/main/preload.ts",
+      "bytes": 1239,
+      "sha256": "e2bbcecc18f2bd087d95c0fd2278691d8820a272d3999477fc8f29a43fd299db"
+    },
+    {
+      "path": "desktop/src/main/store.ts",
+      "bytes": 9686,
+      "sha256": "784d32acaeb49776fae54a9ba077581c82c83d8799140daf9c12e19e65a22986"
+    },
+    {
+      "path": "desktop/src/main/sync.ts",
+      "bytes": 4223,
+      "sha256": "f61d02cb69c5adc74aa9f782a22122788e9176b6839f72e6e0c032aefc58df5a"
+    },
+    {
+      "path": "desktop/src/renderer/App.tsx",
+      "bytes": 37328,
+      "sha256": "00510a108fd8ac92898b00b29620d2f1776ca36d762abb8e61a5b867dbfb1537"
+    },
+    {
+      "path": "desktop/src/renderer/index.html",
+      "bytes": 536,
+      "sha256": "1e17899af9f111b79916f3ff4a7ebd286cad7ae0b7186e09c8664c941769b865"
+    },
+    {
+      "path": "desktop/src/renderer/main.tsx",
+      "bytes": 222,
+      "sha256": "fc400cf6024a7aaa373ad3ad5f17352466a4912ebe94150119bd3476e52d1806"
+    },
+    {
+      "path": "desktop/src/renderer/styles.css",
+      "bytes": 31352,
+      "sha256": "871988067e875c31ef9a69038d70879af1984fe7ecb42eb67abe4404e7696975"
+    },
+    {
+      "path": "desktop/src/shared/domain.ts",
+      "bytes": 11168,
+      "sha256": "746931f31abf574859f3963a91458b4eed71eb0eebc9490ac792cd2cb142642f"
+    },
+    {
+      "path": "desktop/src/shared/types.ts",
+      "bytes": 2992,
+      "sha256": "e047782991947c7a0b91bfda6eabb4b2743b5fdd769b3a81037caafd5ee172d6"
+    },
+    {
+      "path": "desktop/src/shared/ui-copy.ts",
+      "bytes": 317,
+      "sha256": "093a4148c862efd8ad78cc7aa5429ad58ffd3b4ec2af185b63b4e25a7a449835"
+    },
+    {
+      "path": "desktop/tests/agent-workspace.test.ts",
+      "bytes": 15270,
+      "sha256": "b4627dd5cbafc66eca98c2facd4c20681e437c4763d5f41f8f82ab4d6ca86566"
+    },
+    {
+      "path": "desktop/tests/desktop.e2e.cjs",
+      "bytes": 14186,
+      "sha256": "bc96c788914025eaa6fd3b4abc841e1988fd0ecabb44ca823ab3a80de254bd22"
+    },
+    {
+      "path": "desktop/tests/domain.test.ts",
+      "bytes": 9435,
+      "sha256": "da7253432ab23c6b8d86116cb64d499fcd383aec6f86ff95570c92e8c1454598"
+    },
+    {
+      "path": "desktop/tests/portal.dom.e2e.cjs",
+      "bytes": 1526,
+      "sha256": "d9212165516af5ac10d421eb6de0683f456ad3e2480aa325d9a0b1bf19971f7b"
+    },
+    {
+      "path": "desktop/tests/portal.test.ts",
+      "bytes": 4383,
+      "sha256": "24bfe808aa446628157376685d86459d9f5634196591558517d09de2264f5802"
+    },
+    {
+      "path": "desktop/tests/startup-bootstrap.cjs",
+      "bytes": 450,
+      "sha256": "f4386d3be9ba8bef98393b0308504acbabeaa9c1533d7f31d513ca9d900188e3"
+    },
+    {
+      "path": "desktop/tests/startup-collision.e2e.cjs",
+      "bytes": 2968,
+      "sha256": "e3ba300c1858f28acc2b1e2d57327a006ae83c9f0e201d20807692729ba855a4"
+    },
+    {
+      "path": "desktop/tests/store.test.ts",
+      "bytes": 12695,
+      "sha256": "34760cbbf2938cec3e6264f961c17c8bad4bdfc14d87f657efad686b6d932406"
+    },
+    {
+      "path": "desktop/tests/sync.test.ts",
+      "bytes": 3002,
+      "sha256": "b525bd62b36fc4be1434294a4a0d5d0d94d08776ed3a15d4d8e7f081fef140af"
+    },
+    {
+      "path": "desktop/tests/ui-copy.test.ts",
+      "bytes": 629,
+      "sha256": "7a51c53bdd6bb0b94046eeca5bc8a1ebf117fcd45657258335d55c1c3228f4d3"
+    },
+    {
+      "path": "desktop/tsconfig.json",
+      "bytes": 338,
+      "sha256": "eaaeedf6c8d5cf4580f8a90406d597ea8a998a7f5933ebe884feffdfbfd67c9d"
+    },
+    {
+      "path": "desktop/tsconfig.main.json",
+      "bytes": 344,
+      "sha256": "d1d91265f627faf263ecb3a4148e8bab6c2061bedad7dfb3cb64cf836d05bc5a"
+    },
+    {
+      "path": "desktop/vite.config.mts",
+      "bytes": 293,
+      "sha256": "1301fb221ba51c095ea504cbafaed408d44959f2c1967ee24ccbc762bff72811"
+    },
+    {
+      "path": "desktop/vitest.config.mts",
+      "bytes": 143,
+      "sha256": "1ba6d2b5cb75229fd46a6b773c71d06ae1e9e55bb479def43674174b1c6c1456"
+    },
+    {
+      "path": "Launch PES Focus.cmd",
+      "bytes": 292,
+      "sha256": "439cc86d93ad1f44f8cb7eaa624a5dbad93a79004dfadcfb5b00e062dc709ce7"
+    },
+    {
+      "path": "Open PES.cmd",
+      "bytes": 224,
+      "sha256": "f764125212d90f7c38fb6edb6222092cdc02b5e79e8b68bc62ec07a15efa8c77"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6498,
+      "sha256": "67fe31daacde04bf7dda722959d0d9bc04cfb647466a61f8033a596b6f3c9b30"
+    }
+  ]
+}

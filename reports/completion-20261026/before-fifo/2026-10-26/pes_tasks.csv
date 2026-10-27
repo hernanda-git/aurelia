@@ -1,0 +1,85 @@
+﻿Row,TaskNo,TglInput,Pic,Jabatan,DeptName,TaskName,GoalTask,AsalTask,Bobot,Target,Duedate,Status,TglApproval,TglSelesai,Lampiran,overdue,days_overdue,History
+1,M03938/Task. IT/1026,14-Okt-2026,MUHAMMAD HERNANDA,Programmer Back End,ITMSS,FE | [Seller Center] ST-2297 | INTP | Profile Toko Online,FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online,Lain-Lain,4,T1,30-Okt-2026,Approval,15-Okt-2026,,,False,0,"Info Target Task
+ 
+TaskNo	: M03938/Task. IT/1026
+TglInput	: 14-Okt-2026
+TaskName	: FE | [Seller Center] ST-2297 | INTP | Profile Toko Online
+	
+Pic	: MUHAMMAD HERNANDA
+Bobot	: 4
+GoalTask	: FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online
+Target	Status	Tanggal	Keterangan
+Input	DueDate	Approve
+1	Verifikasi	14-Oct-2026	30-Oct-2026	  15-Oct-2026	"
+2,M03939/Task. IT/1026,14-Okt-2026,MUHAMMAD HERNANDA,Programmer Back End,ITMSS,FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online,FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online,Lain-Lain,4,T1,30-Okt-2026,Approval,15-Okt-2026,,,False,0,"Info Target Task
+ 
+TaskNo	: M03939/Task. IT/1026
+TglInput	: 14-Okt-2026
+TaskName	: FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online
+	
+Pic	: MUHAMMAD HERNANDA
+Bobot	: 4
+GoalTask	: FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online
+Target	Status	Tanggal	Keterangan
+Input	DueDate	Approve
+1	Verifikasi	14-Oct-2026	30-Oct-2026	  15-Oct-2026	"
+3,M03940/Task. IT/1026,14-Okt-2026,MUHAMMAD HERNANDA,Programmer Back End,ITMSS,BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online,BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online,Lain-Lain,4,T1,30-Okt-2026,Approval,15-Okt-2026,,,False,0,"Info Target Task
+ 
+TaskNo	: M03940/Task. IT/1026
+TglInput	: 14-Okt-2026
+TaskName	: BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online
+	
+Pic	: MUHAMMAD HERNANDA
+Bobot	: 4
+GoalTask	: BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online
+Target	Status	Tanggal	Keterangan
+Input	DueDate	Approve
+1	Verifikasi	14-Oct-2026	30-Oct-2026	  15-Oct-2026	"
+4,M03941/Task. IT/1026,14-Okt-2026,MUHAMMAD HERNANDA,Programmer Back End,ITMSS,BE | [Seller Center] ST-2297 | INTP | Profile Toko Online,BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online,Lain-Lain,4,T1,30-Okt-2026,Approval,15-Okt-2026,,,False,0,"Info Target Task
+ 
+TaskNo	: M03941/Task. IT/1026
+TglInput	: 14-Okt-2026
+TaskName	: BE | [Seller Center] ST-2297 | INTP | Profile Toko Online
+	
+Pic	: MUHAMMAD HERNANDA
+Bobot	: 4
+GoalTask	: BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online
+Target	Status	Tanggal	Keterangan
+Input	DueDate	Approve
+1	Verifikasi	14-Oct-2026	30-Oct-2026	  15-Oct-2026	"
+5,M03990/Task. IT/1026,20-Okt-2026,MUHAMMAD HERNANDA,Programmer Back End,ITMSS,BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus,BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus,Lain-Lain,1,T1,23-Okt-2026,Approval,21-Okt-2026,,,True,3,"Info Target Task
+ 
+TaskNo	: M03990/Task. IT/1026
+TglInput	: 20-Okt-2026
+TaskName	: BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus
+	
+Pic	: MUHAMMAD HERNANDA
+Bobot	: 1
+GoalTask	: BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus
+Target	Status	Tanggal	Keterangan
+Input	DueDate	Approve
+1	Verifikasi	20-Oct-2026	23-Oct-2026	  21-Oct-2026	"
+6,M04020/Task. IT/1026,21-Okt-2026,MUHAMMAD HERNANDA,Programmer Back End,ITMSS,[Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online,BE completed ST-2302 | INTP | Pengiriman Toko Online,Lain-Lain,2,T1,06-Nov-2026,Approval,23-Okt-2026,,,False,0,"Info Target Task
+ 
+TaskNo	: M04020/Task. IT/1026
+TglInput	: 21-Okt-2026
+TaskName	: [Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online
+	
+Pic	: MUHAMMAD HERNANDA
+Bobot	: 2
+GoalTask	: BE completed ST-2302 | INTP | Pengiriman Toko Online
+Target	Status	Tanggal	Keterangan
+Input	DueDate	Approve
+1	Verifikasi	21-Oct-2026	06-Nov-2026	  23-Oct-2026	"
+7,M04021/Task. IT/1026,21-Okt-2026,MUHAMMAD HERNANDA,Programmer Back End,ITMSS,[Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online,FE completed ST-2302 | INTP | Pengiriman Toko Online,Lain-Lain,4,T1,06-Nov-2026,Approval,23-Okt-2026,,,False,0,"Info Target Task
+ 
+TaskNo	: M04021/Task. IT/1026
+TglInput	: 21-Okt-2026
+TaskName	: [Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online
+	
+Pic	: MUHAMMAD HERNANDA
+Bobot	: 4
+GoalTask	: FE completed ST-2302 | INTP | Pengiriman Toko Online
+Target	Status	Tanggal	Keterangan
+Input	DueDate	Approve
+1	Verifikasi	21-Oct-2026	06-Nov-2026	  23-Oct-2026	"

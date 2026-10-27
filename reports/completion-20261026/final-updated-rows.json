@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-26T13:18:59.929678+07:00",
+  "rows": [
+    {
+      "cells": [
+        "7",
+        "M03990/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "23-Okt-2026",
+        "Update Task",
+        "21-Okt-2026",
+        "",
+        "evidence_base_inventory_fifo.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_6"
+        },
+        {
+          "id": "MainContent_lst_info_6"
+        },
+        {
+          "id": "MainContent_lst_tambah_6"
+        },
+        {
+          "id": "MainContent_lst_lstFile_6_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_6_download_0"
+        }
+      ]
+    },
+    {
+      "cells": [
+        "11",
+        "M03989/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE |\u00a0[Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "23-Okt-2026",
+        "Solved",
+        "21-Okt-2026",
+        "26-Okt-2026",
+        "evidence_base_inventory_store.png"
+      ],
+      "controls": [
+        {
+          "id": "MainContent_lst_kelola_10"
+        },
+        {
+          "id": "MainContent_lst_info_10"
+        },
+        {
+          "id": "MainContent_lst_tambah_10"
+        },
+        {
+          "id": "MainContent_lst_lstFile_10_hapus_0"
+        },
+        {
+          "id": "MainContent_lst_lstFile_10_download_0"
+        }
+      ]
+    }
+  ]
+}

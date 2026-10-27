@@ -1,0 +1,1512 @@
+{
+  "schemaVersion": 1,
+  "snapshot": {
+    "id": "0e4e2503-f970-4fb5-9e42-3c4cf010fdd5",
+    "source": "live",
+    "retrievedAt": "2026-10-26T06:22:34.367Z",
+    "scope": {
+      "from": "2026-09-01",
+      "to": "2026-11-30",
+      "pic": "MUHAMMAD HERNANDA",
+      "department": "IT Mitra Seribu Saudara"
+    },
+    "totalScanned": 32,
+    "tasks": [
+      {
+        "TaskNo": "M03938/Task. IT/1026",
+        "TglInput": "14-Okt-2026",
+        "Pic": "MUHAMMAD HERNANDA",
+        "Jabatan": "Programmer Back End",
+        "DeptName": "ITMSS",
+        "TaskName": "FE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "GoalTask": "FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "AsalTask": "Lain-Lain",
+        "Bobot": "4",
+        "Target": "T1",
+        "Duedate": "30-Okt-2026",
+        "Status": "Approval",
+        "TglApproval": "15-Okt-2026",
+        "TglSelesai": "",
+        "Lampiran": "",
+        "history": {
+          "text": "Info Target Task\n \nTaskNo\t: M03938/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2297 | INTP | Profile Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+          "tables": [
+            [
+              [
+                "TaskNo\t: M03938/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+                "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+              ]
+            ],
+            [
+              [
+                "TaskNo",
+                ": M03938/Task. IT/1026"
+              ],
+              [
+                "TglInput",
+                ": 14-Okt-2026"
+              ],
+              [
+                "TaskName",
+                ": FE | [Seller Center] ST-2297 | INTP | Profile Toko Online"
+              ]
+            ],
+            [
+              [
+                "Pic",
+                ": MUHAMMAD HERNANDA"
+              ],
+              [
+                "Bobot",
+                ": 4"
+              ],
+              [
+                "GoalTask",
+                ": FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+              ]
+            ],
+            [
+              [
+                "Target",
+                "Status",
+                "Tanggal",
+                "Keterangan"
+              ],
+              [
+                "Input",
+                "DueDate",
+                "Approve"
+              ],
+              [
+                "1",
+                "Verifikasi",
+                "14-Oct-2026",
+                "30-Oct-2026",
+                "15-Oct-2026",
+                ""
+              ]
+            ]
+          ]
+        },
+        "Row": "1"
+      },
+      {
+        "TaskNo": "M03939/Task. IT/1026",
+        "TglInput": "14-Okt-2026",
+        "Pic": "MUHAMMAD HERNANDA",
+        "Jabatan": "Programmer Back End",
+        "DeptName": "ITMSS",
+        "TaskName": "FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "GoalTask": "FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "AsalTask": "Lain-Lain",
+        "Bobot": "4",
+        "Target": "T1",
+        "Duedate": "30-Okt-2026",
+        "Status": "Approval",
+        "TglApproval": "15-Okt-2026",
+        "TglSelesai": "",
+        "Lampiran": "",
+        "history": {
+          "text": "Info Target Task\n \nTaskNo\t: M03939/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+          "tables": [
+            [
+              [
+                "TaskNo\t: M03939/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+                "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+              ]
+            ],
+            [
+              [
+                "TaskNo",
+                ": M03939/Task. IT/1026"
+              ],
+              [
+                "TglInput",
+                ": 14-Okt-2026"
+              ],
+              [
+                "TaskName",
+                ": FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+              ]
+            ],
+            [
+              [
+                "Pic",
+                ": MUHAMMAD HERNANDA"
+              ],
+              [
+                "Bobot",
+                ": 4"
+              ],
+              [
+                "GoalTask",
+                ": FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+              ]
+            ],
+            [
+              [
+                "Target",
+                "Status",
+                "Tanggal",
+                "Keterangan"
+              ],
+              [
+                "Input",
+                "DueDate",
+                "Approve"
+              ],
+              [
+                "1",
+                "Verifikasi",
+                "14-Oct-2026",
+                "30-Oct-2026",
+                "15-Oct-2026",
+                ""
+              ]
+            ]
+          ]
+        },
+        "Row": "2"
+      },
+      {
+        "TaskNo": "M03940/Task. IT/1026",
+        "TglInput": "14-Okt-2026",
+        "Pic": "MUHAMMAD HERNANDA",
+        "Jabatan": "Programmer Back End",
+        "DeptName": "ITMSS",
+        "TaskName": "BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "GoalTask": "BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "AsalTask": "Lain-Lain",
+        "Bobot": "4",
+        "Target": "T1",
+        "Duedate": "30-Okt-2026",
+        "Status": "Approval",
+        "TglApproval": "15-Okt-2026",
+        "TglSelesai": "",
+        "Lampiran": "",
+        "history": {
+          "text": "Info Target Task\n \nTaskNo\t: M03940/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+          "tables": [
+            [
+              [
+                "TaskNo\t: M03940/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+                "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+              ]
+            ],
+            [
+              [
+                "TaskNo",
+                ": M03940/Task. IT/1026"
+              ],
+              [
+                "TglInput",
+                ": 14-Okt-2026"
+              ],
+              [
+                "TaskName",
+                ": BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+              ]
+            ],
+            [
+              [
+                "Pic",
+                ": MUHAMMAD HERNANDA"
+              ],
+              [
+                "Bobot",
+                ": 4"
+              ],
+              [
+                "GoalTask",
+                ": BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+              ]
+            ],
+            [
+              [
+                "Target",
+                "Status",
+                "Tanggal",
+                "Keterangan"
+              ],
+              [
+                "Input",
+                "DueDate",
+                "Approve"
+              ],
+              [
+                "1",
+                "Verifikasi",
+                "14-Oct-2026",
+                "30-Oct-2026",
+                "15-Oct-2026",
+                ""
+              ]
+            ]
+          ]
+        },
+        "Row": "3"
+      },
+      {
+        "TaskNo": "M03941/Task. IT/1026",
+        "TglInput": "14-Okt-2026",
+        "Pic": "MUHAMMAD HERNANDA",
+        "Jabatan": "Programmer Back End",
+        "DeptName": "ITMSS",
+        "TaskName": "BE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "GoalTask": "BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "AsalTask": "Lain-Lain",
+        "Bobot": "4",
+        "Target": "T1",
+        "Duedate": "30-Okt-2026",
+        "Status": "Approval",
+        "TglApproval": "15-Okt-2026",
+        "TglSelesai": "",
+        "Lampiran": "",
+        "history": {
+          "text": "Info Target Task\n \nTaskNo\t: M03941/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2297 | INTP | Profile Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+          "tables": [
+            [
+              [
+                "TaskNo\t: M03941/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: BE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+                "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+              ]
+            ],
+            [
+              [
+                "TaskNo",
+                ": M03941/Task. IT/1026"
+              ],
+              [
+                "TglInput",
+                ": 14-Okt-2026"
+              ],
+              [
+                "TaskName",
+                ": BE | [Seller Center] ST-2297 | INTP | Profile Toko Online"
+              ]
+            ],
+            [
+              [
+                "Pic",
+                ": MUHAMMAD HERNANDA"
+              ],
+              [
+                "Bobot",
+                ": 4"
+              ],
+              [
+                "GoalTask",
+                ": BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online"
+              ]
+            ],
+            [
+              [
+                "Target",
+                "Status",
+                "Tanggal",
+                "Keterangan"
+              ],
+              [
+                "Input",
+                "DueDate",
+                "Approve"
+              ],
+              [
+                "1",
+                "Verifikasi",
+                "14-Oct-2026",
+                "30-Oct-2026",
+                "15-Oct-2026",
+                ""
+              ]
+            ]
+          ]
+        },
+        "Row": "4"
+      },
+      {
+        "TaskNo": "M04020/Task. IT/1026",
+        "TglInput": "21-Okt-2026",
+        "Pic": "MUHAMMAD HERNANDA",
+        "Jabatan": "Programmer Back End",
+        "DeptName": "ITMSS",
+        "TaskName": "[Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online",
+        "GoalTask": "BE completed ST-2302 | INTP | Pengiriman Toko Online",
+        "AsalTask": "Lain-Lain",
+        "Bobot": "2",
+        "Target": "T1",
+        "Duedate": "06-Nov-2026",
+        "Status": "Approval",
+        "TglApproval": "23-Okt-2026",
+        "TglSelesai": "",
+        "Lampiran": "",
+        "history": {
+          "text": "Info Target Task\n \nTaskNo\t: M04020/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 2\nGoalTask\t: BE completed ST-2302 | INTP | Pengiriman Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t21-Oct-2026\t06-Nov-2026\t  23-Oct-2026\t",
+          "tables": [
+            [
+              [
+                "TaskNo\t: M04020/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online",
+                "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 2\nGoalTask\t: BE completed ST-2302 | INTP | Pengiriman Toko Online"
+              ]
+            ],
+            [
+              [
+                "TaskNo",
+                ": M04020/Task. IT/1026"
+              ],
+              [
+                "TglInput",
+                ": 21-Okt-2026"
+              ],
+              [
+                "TaskName",
+                ": [Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online"
+              ]
+            ],
+            [
+              [
+                "Pic",
+                ": MUHAMMAD HERNANDA"
+              ],
+              [
+                "Bobot",
+                ": 2"
+              ],
+              [
+                "GoalTask",
+                ": BE completed ST-2302 | INTP | Pengiriman Toko Online"
+              ]
+            ],
+            [
+              [
+                "Target",
+                "Status",
+                "Tanggal",
+                "Keterangan"
+              ],
+              [
+                "Input",
+                "DueDate",
+                "Approve"
+              ],
+              [
+                "1",
+                "Verifikasi",
+                "21-Oct-2026",
+                "06-Nov-2026",
+                "23-Oct-2026",
+                ""
+              ]
+            ]
+          ]
+        },
+        "Row": "5"
+      },
+      {
+        "TaskNo": "M04021/Task. IT/1026",
+        "TglInput": "21-Okt-2026",
+        "Pic": "MUHAMMAD HERNANDA",
+        "Jabatan": "Programmer Back End",
+        "DeptName": "ITMSS",
+        "TaskName": "[Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online",
+        "GoalTask": "FE completed ST-2302 | INTP | Pengiriman Toko Online",
+        "AsalTask": "Lain-Lain",
+        "Bobot": "4",
+        "Target": "T1",
+        "Duedate": "06-Nov-2026",
+        "Status": "Approval",
+        "TglApproval": "23-Okt-2026",
+        "TglSelesai": "",
+        "Lampiran": "",
+        "history": {
+          "text": "Info Target Task\n \nTaskNo\t: M04021/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed ST-2302 | INTP | Pengiriman Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t21-Oct-2026\t06-Nov-2026\t  23-Oct-2026\t",
+          "tables": [
+            [
+              [
+                "TaskNo\t: M04021/Task. IT/1026\nTglInput\t: 21-Okt-2026\nTaskName\t: [Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online",
+                "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed ST-2302 | INTP | Pengiriman Toko Online"
+              ]
+            ],
+            [
+              [
+                "TaskNo",
+                ": M04021/Task. IT/1026"
+              ],
+              [
+                "TglInput",
+                ": 21-Okt-2026"
+              ],
+              [
+                "TaskName",
+                ": [Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online"
+              ]
+            ],
+            [
+              [
+                "Pic",
+                ": MUHAMMAD HERNANDA"
+              ],
+              [
+                "Bobot",
+                ": 4"
+              ],
+              [
+                "GoalTask",
+                ": FE completed ST-2302 | INTP | Pengiriman Toko Online"
+              ]
+            ],
+            [
+              [
+                "Target",
+                "Status",
+                "Tanggal",
+                "Keterangan"
+              ],
+              [
+                "Input",
+                "DueDate",
+                "Approve"
+              ],
+              [
+                "1",
+                "Verifikasi",
+                "21-Oct-2026",
+                "06-Nov-2026",
+                "23-Oct-2026",
+                ""
+              ]
+            ]
+          ]
+        },
+        "Row": "6"
+      }
+    ],
+    "sourceRows": [
+      [
+        "1",
+        "M03938/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "FE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "FE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      [
+        "2",
+        "M03939/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      [
+        "3",
+        "M03940/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "BE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      [
+        "4",
+        "M03941/Task. IT/1026",
+        "14-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "BE completed [Seller Center] ST-2297 | INTP | Profile Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "30-Okt-2026",
+        "Approval",
+        "15-Okt-2026",
+        "",
+        ""
+      ],
+      [
+        "5",
+        "M04020/Task. IT/1026",
+        "21-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Seller Center] BE | ST-2302 | INTP | Pengiriman Toko Online",
+        "BE completed ST-2302 | INTP | Pengiriman Toko Online",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "06-Nov-2026",
+        "Approval",
+        "23-Okt-2026",
+        "",
+        ""
+      ],
+      [
+        "6",
+        "M04021/Task. IT/1026",
+        "21-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Seller Center] FE | ST-2302 | INTP | Pengiriman Toko Online",
+        "FE completed ST-2302 | INTP | Pengiriman Toko Online",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "06-Nov-2026",
+        "Approval",
+        "23-Okt-2026",
+        "",
+        ""
+      ],
+      [
+        "7",
+        "M03990/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Fifo - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "23-Okt-2026",
+        "Update Task",
+        "21-Okt-2026",
+        "",
+        "evidence_base_inventory_fifo.png"
+      ],
+      [
+        "8",
+        "M03991/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11",
+        "BE completed [Improvement IT] [Oktober] - GLPI Mohon upgrade modul Monitoring Cost GLPI mysupport.grcboard.com dari versi 10 menjadi versi 11",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "30-Okt-2026",
+        "Solved",
+        "21-Okt-2026",
+        "23-Okt-2026",
+        "glpi-11.1.png"
+      ],
+      [
+        "9",
+        "M03992/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11",
+        "BE completed [Improvement IT] [Oktober] - GLPI Mohon Activation modul Monitoring Cost GLPI dev-mysupport.grcboard.com di versi 11",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "30-Okt-2026",
+        "Solved",
+        "21-Okt-2026",
+        "23-Okt-2026",
+        "glpi-11.0.11.png"
+      ],
+      [
+        "10",
+        "M03966/Task. IT/1026",
+        "19-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "21-Okt-2026",
+        "Solved",
+        "19-Okt-2026",
+        "21-Okt-2026",
+        "Screenshot 2026-10-21 103414.png"
+      ],
+      [
+        "11",
+        "M03989/Task. IT/1026",
+        "20-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "BE completed [Improvement IT] [Oktober 2026] - Enhance Base Inventory Store - Penjagaan Stock minus dan Notif Penanganan Stok Minus",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "23-Okt-2026",
+        "Solved",
+        "21-Okt-2026",
+        "26-Okt-2026",
+        "evidence_base_inventory_store.png"
+      ],
+      [
+        "12",
+        "M03208/Task. IT/0826",
+        "04-Agu-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] Agustus 2026 - pembuatan timeline requirement review & WBS doc - project 1000saudara.com - seller center",
+        "FE completed [Improvement IT] Agustus 2026 - pembuatan timeline requirement review & WBS doc - project 1000saudara.com - seller center",
+        "Lain-Lain",
+        "2",
+        "T2",
+        "14-Sep-2026",
+        "Solved",
+        "26-Agu-2026",
+        "14-Sep-2026",
+        "task0826.png"
+      ],
+      [
+        "13",
+        "M03239/Task. IT/0826",
+        "04-Agu-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] Agustus 2026 - Hardcoded Secret & API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test",
+        "Hardcoded Secret & API Keys, SSL/TLS Bypass, Insecure CORS Policy - feedback sesuai pen test",
+        "Lain-Lain",
+        "1",
+        "T2",
+        "14-Sep-2026",
+        "Solved",
+        "26-Agu-2026",
+        "14-Sep-2026",
+        "f1dcb0ce-53a2-4559-a9b3-540cd76fe753 (1).png"
+      ],
+      [
+        "14",
+        "M03265/Task. IT/0826",
+        "12-Agu-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional",
+        "[Improvement IT] Agustus 2026 - implementasi informasi credential di pindah ke environtment variable solution api user, master, transactional",
+        "Lain-Lain",
+        "1",
+        "T2",
+        "14-Sep-2026",
+        "Solved",
+        "26-Agu-2026",
+        "14-Sep-2026",
+        "f1dcb0ce-53a2-4559-a9b3-540cd76fe753.png"
+      ],
+      [
+        "15",
+        "M03540/Task. IT/0926",
+        "10-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | [Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru",
+        "BE completed [Improvement IT] [September 2026] - Research enhancement metode search di intechgra Azure saat akan tambah produk baru",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "15-Sep-2026",
+        "Solved",
+        "14-Sep-2026",
+        "14-Sep-2026",
+        "evidence_task_1_sept.png"
+      ],
+      [
+        "16",
+        "M03561/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] [September 2026] 3. Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+        "Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "16-Sep-2026",
+        "22-Sep-2026",
+        "usage log.png"
+      ],
+      [
+        "17",
+        "M03562/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] [September 2026] 1. Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+        "Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "16-Sep-2026",
+        "22-Sep-2026",
+        "antigravity multi-provider.png"
+      ],
+      [
+        "18",
+        "M03563/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "[Improvement IT] [September 2026] 2. Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out",
+        "Berhasil hit dan response dari streaming + REST ke endpoint /v1beta googleapis (Antigravity) dan retry time out",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "16-Sep-2026",
+        "22-Sep-2026",
+        "Gemini provider.png"
+      ],
+      [
+        "19",
+        "M03654/Task. IT/0926",
+        "16-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Gateway",
+        "BE completed Technical Design - Seller Center - Create Solution BE Gateway",
+        "Lain-Lain",
+        "4",
+        "T1",
+        "25-Sep-2026",
+        "Solved",
+        "25-Sep-2026",
+        "25-Sep-2026",
+        "ev1.png"
+      ],
+      [
+        "20",
+        "M03687/Task. IT/0926",
+        "25-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Access",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Access",
+        "Lain-Lain",
+        "3",
+        "T2",
+        "29-Okt-2026",
+        "Solved",
+        "07-Okt-2026",
+        "09-Okt-2026",
+        "Screenshot 2026-10-09 091916.png"
+      ],
+      [
+        "21",
+        "M03699/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+        "Lain-Lain",
+        "3",
+        "T2",
+        "09-Okt-2026",
+        "Solved",
+        "07-Okt-2026",
+        "09-Okt-2026",
+        "trans.png"
+      ],
+      [
+        "22",
+        "M03700/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Master",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Master",
+        "Lain-Lain",
+        "2",
+        "T2",
+        "01-Nov-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ok.png"
+      ],
+      [
+        "23",
+        "M03701/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Solution BE Microservice - Report",
+        "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Report",
+        "Lain-Lain",
+        "2",
+        "T1",
+        "02-Okt-2026",
+        "Solved",
+        "30-Sep-2026",
+        "07-Okt-2026",
+        "Screenshot 2026-10-07 084921.png"
+      ],
+      [
+        "24",
+        "M03704/Task. IT/0926",
+        "30-Sep-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Seller Center Library - NUPKG",
+        "BE completed Technical Design - Seller Center - Seller Center Library - NUPKG",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "06-Okt-2026",
+        "Solved",
+        "30-Sep-2026",
+        "07-Okt-2026",
+        "Screenshot 2026-10-07 084921 - Copy.png"
+      ],
+      [
+        "25",
+        "M03859/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Master",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "12-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-master-ci.png"
+      ],
+      [
+        "26",
+        "M03860/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Transactional",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "13-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-transactional-ci.png"
+      ],
+      [
+        "27",
+        "M03861/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Report",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-report-ci.png"
+      ],
+      [
+        "28",
+        "M03862/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Access",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "ms-access-ci.png"
+      ],
+      [
+        "29",
+        "M03863/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway",
+        "BE completed Technical Design - Seller Center - Create Workflow Build Solution (CI) - Gateway",
+        "Lain-Lain",
+        "1",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "api-gw-ci.png"
+      ],
+      [
+        "30",
+        "M03864/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - POC cron job antara hangfire vs quartz",
+        "BE completed Technical Design - Seller Center - POC cron job antara hangfire vs quartz",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "Screenshot 2026-10-14 135549.png"
+      ],
+      [
+        "31",
+        "M03865/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - POC GRPC antar microservice",
+        "BE completed Technical Design - Seller Center - POC GRPC antar microservice",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "Screenshot 2026-10-14 135508.png"
+      ],
+      [
+        "32",
+        "M03866/Task. IT/1026",
+        "09-Okt-2026",
+        "MUHAMMAD HERNANDA",
+        "Programmer Back End",
+        "ITMSS",
+        "BE | Technical Design - Seller Center - POC outbox pattern dengan rabbitmq",
+        "BE completed Technical Design - Seller Center - POC outbox pattern dengan rabbitmq",
+        "Lain-Lain",
+        "3",
+        "T1",
+        "14-Okt-2026",
+        "Solved",
+        "09-Okt-2026",
+        "14-Okt-2026",
+        "Screenshot 2026-10-14 135422.png"
+      ]
+    ],
+    "diff": {
+      "added": 0,
+      "changed": 0,
+      "outOfScope": 1,
+      "scopeChanged": false
+    }
+  },
+  "preferences": {},
+  "focusTaskId": null,
+  "settings": {
+    "theme": "dark",
+    "timezone": "Asia/Jakarta",
+    "compact": false
+  },
+  "activities": [
+    {
+      "id": "49f73e8c-caca-4e9f-96de-861b1dd75e3d",
+      "at": "2026-10-26T02:57:58.026Z",
+      "level": "info",
+      "category": "system",
+      "message": "Data tersimpan dari pengambilan 26 Oktober 2026 diimpor. Ini bukan sinkronisasi langsung."
+    },
+    {
+      "id": "4b1fd44f-280c-4f17-b287-9f055280f7bc",
+      "at": "2026-10-26T02:57:58.574Z",
+      "level": "info",
+      "category": "connection",
+      "message": "Koneksi PES dibuka; masuk langsung di halaman resmi PES."
+    },
+    {
+      "id": "c4fd7615-ce0f-4dc5-80c8-5b44d18385e4",
+      "at": "2026-10-26T02:57:59.157Z",
+      "level": "warning",
+      "category": "connection",
+      "message": "Masuk ke PES diperlukan. Data tersimpan tetap tersedia."
+    },
+    {
+      "id": "098e927b-f355-4352-8c7e-12905c53c66b",
+      "at": "2026-10-26T02:58:10.309Z",
+      "level": "success",
+      "category": "connection",
+      "message": "Sesi PES terhubung. Sinkronisasi siap dijalankan."
+    },
+    {
+      "id": "a4d8e47c-4b1c-44a9-aeec-fbc2e8f51ac0",
+      "at": "2026-10-26T02:58:10.429Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Sinkronisasi dimulai",
+      "stage": "connecting",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "6417094c-810b-4469-84f5-8fb8d26621cb",
+      "at": "2026-10-26T02:58:10.436Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Menghubungkan ke PES…",
+      "stage": "connecting",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "57b3a6e2-d071-4ff8-baaf-b3e42207ca77",
+      "at": "2026-10-26T02:58:25.547Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Menyiapkan departemen, PIC, dan rentang tanggal…",
+      "stage": "filtering",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "2345c141-7e06-4ebb-9b79-8aaae04fee3b",
+      "at": "2026-10-26T02:58:27.197Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca daftar tugas · halaman 1",
+      "stage": "reading",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "48249a92-e4da-43ae-8652-26317cc8e3ed",
+      "at": "2026-10-26T02:58:27.211Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "d45f06f5-521f-4251-9c8b-c2839796d7a5",
+      "at": "2026-10-26T02:58:27.830Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "50a22535-175e-4d4e-b408-adcecc59c6fa",
+      "at": "2026-10-26T02:58:28.447Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "917b0b0c-2b5e-4e20-8ccf-38fb6a1a6a1b",
+      "at": "2026-10-26T02:58:29.254Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "ade12c7b-fd3f-4307-b1fe-6270d90cfc64",
+      "at": "2026-10-26T02:58:29.878Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "2f62f1cf-501a-4c7d-a39a-e11c3870ebbf",
+      "at": "2026-10-26T02:58:30.711Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "99876cbe-9864-4755-a138-1e528c991bd0",
+      "at": "2026-10-26T02:58:31.347Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "d9075ec5-06f7-4d65-9634-920f35de97cb",
+      "at": "2026-10-26T02:58:32.080Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tugas · halaman 1",
+      "stage": "details",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "6e1b43ce-7fba-423d-9fae-a77e30e5e849",
+      "at": "2026-10-26T02:58:32.743Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Memvalidasi 8 tugas dari 32 baris…",
+      "stage": "validating",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a"
+    },
+    {
+      "id": "f56e90f8-309c-4950-a8e5-74d62b09814c",
+      "at": "2026-10-26T02:58:32.775Z",
+      "level": "success",
+      "category": "sync",
+      "message": "8 tugas aktif tersimpan; 32 baris diperiksa",
+      "stage": "success",
+      "runId": "1d68d315-a8c7-4ca0-874f-8a422d15336a",
+      "durationMs": 22350
+    },
+    {
+      "id": "11297619-144a-48b0-bb6c-c8f583e1458d",
+      "at": "2026-10-26T06:15:27.034Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Sinkronisasi dimulai",
+      "stage": "connecting",
+      "runId": "dd528fd2-d642-4716-90aa-37c441e53b63"
+    },
+    {
+      "id": "397eb4bd-a498-4755-ae98-b4ba849db964",
+      "at": "2026-10-26T06:15:27.303Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Menghubungkan ke PES…",
+      "stage": "connecting",
+      "runId": "dd528fd2-d642-4716-90aa-37c441e53b63"
+    },
+    {
+      "id": "9fb697e1-f8d8-40ae-bbd1-2c42ab38b504",
+      "at": "2026-10-26T06:15:28.028Z",
+      "level": "warning",
+      "category": "connection",
+      "message": "Masuk ke PES diperlukan. Data tersimpan tetap tersedia."
+    },
+    {
+      "id": "805eeb41-bb5b-47fa-8f81-6185194eac55",
+      "at": "2026-10-26T06:15:28.075Z",
+      "level": "error",
+      "category": "sync",
+      "message": "Masuk ke PES melalui jendela koneksi, lalu sinkronkan kembali.",
+      "stage": "failed",
+      "runId": "dd528fd2-d642-4716-90aa-37c441e53b63",
+      "durationMs": 1150
+    },
+    {
+      "id": "7f062c31-b41c-42a9-8664-8883c70896ac",
+      "at": "2026-10-26T06:15:37.049Z",
+      "level": "success",
+      "category": "connection",
+      "message": "Sesi PES terhubung. Sinkronisasi siap dijalankan."
+    },
+    {
+      "id": "ebc89b85-78a5-408a-832e-9ad2b350c080",
+      "at": "2026-10-26T06:15:39.654Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Sinkronisasi dimulai",
+      "stage": "connecting",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "71622677-93cc-4e2f-ae57-01d94a924623",
+      "at": "2026-10-26T06:15:39.694Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Menghubungkan ke PES…",
+      "stage": "connecting",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "afd1b46d-5388-4091-88b5-ee60f91a07af",
+      "at": "2026-10-26T06:15:42.355Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Menyiapkan departemen, PIC, dan rentang tanggal…",
+      "stage": "filtering",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "e9c4028a-1fdb-44c5-a133-d99919c9ba3e",
+      "at": "2026-10-26T06:15:50.116Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca daftar tasks · halaman 1",
+      "stage": "reading",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "3bd1c5ef-2f21-4324-bddb-ea05cf77f051",
+      "at": "2026-10-26T06:15:50.162Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "5a77a1ea-2fdf-492c-a881-245abe93ff4d",
+      "at": "2026-10-26T06:15:50.860Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "6ef23001-758c-4d5a-8ad9-a2691c16c9a3",
+      "at": "2026-10-26T06:15:51.849Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "c60276ef-a991-49fe-a4ea-3ea8e83d9516",
+      "at": "2026-10-26T06:15:52.516Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "1afb7e85-6214-4c2b-9789-9da92923bb0b",
+      "at": "2026-10-26T06:15:53.184Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "6a22cbfb-5f88-47a8-a619-bcc68198058f",
+      "at": "2026-10-26T06:15:53.850Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "0d467a4f-eb9c-403f-a964-72d40a8d0514",
+      "at": "2026-10-26T06:15:54.505Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "b1373f6a-27fd-4da4-8e79-ece19d361d3b",
+      "at": "2026-10-26T06:15:55.155Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Memvalidasi 7 tasks dari 32 baris…",
+      "stage": "validating",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2"
+    },
+    {
+      "id": "69a84f5d-a2fb-4eda-9966-0c8e9980b6da",
+      "at": "2026-10-26T06:15:55.224Z",
+      "level": "success",
+      "category": "sync",
+      "message": "7 tasks aktif tersimpan; 32 baris diperiksa",
+      "stage": "success",
+      "runId": "b6ac506a-a682-4498-8555-cee9da3699b2",
+      "durationMs": 15573
+    },
+    {
+      "id": "0268959d-5250-4377-a9d9-945d2f4e6706",
+      "at": "2026-10-26T06:22:19.756Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Sinkronisasi dimulai",
+      "stage": "connecting",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "12345c07-aa58-4e71-b051-8a947095daa7",
+      "at": "2026-10-26T06:22:19.891Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Menghubungkan ke PES…",
+      "stage": "connecting",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "b66eaeeb-6885-4e15-b6ea-d87794c22f13",
+      "at": "2026-10-26T06:22:25.032Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Menyiapkan departemen, PIC, dan rentang tanggal…",
+      "stage": "filtering",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "e1055341-7778-43d8-a04a-934d03ae5005",
+      "at": "2026-10-26T06:22:28.652Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca daftar tasks · halaman 1",
+      "stage": "reading",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "b8ab9e88-0b01-47b7-bdbf-cef689c21210",
+      "at": "2026-10-26T06:22:28.761Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "0ae00213-cd74-4d16-9b72-3320283abf1d",
+      "at": "2026-10-26T06:22:29.578Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "3c5bd9a9-e889-4f2b-a410-b5e8bb158b1f",
+      "at": "2026-10-26T06:22:30.495Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "687c220b-9897-466f-8438-b5cd76c6cd55",
+      "at": "2026-10-26T06:22:31.359Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "a8b4bcd1-5209-4919-8419-9e30cda527cf",
+      "at": "2026-10-26T06:22:32.098Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "77913d61-80dc-4510-a260-d35ea6ca5098",
+      "at": "2026-10-26T06:22:33.048Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Membaca rincian tasks · halaman 1",
+      "stage": "details",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "d77cc6b4-f12f-44fc-b3af-4b853e80ecf0",
+      "at": "2026-10-26T06:22:34.105Z",
+      "level": "info",
+      "category": "sync",
+      "message": "Memvalidasi 6 tasks dari 32 baris…",
+      "stage": "validating",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d"
+    },
+    {
+      "id": "88cadcc3-f7f3-40b0-83c1-d67770b13deb",
+      "at": "2026-10-26T06:22:34.611Z",
+      "level": "success",
+      "category": "sync",
+      "message": "6 tasks aktif tersimpan; 32 baris diperiksa",
+      "stage": "success",
+      "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d",
+      "durationMs": 14858
+    }
+  ],
+  "lastAttemptAt": "2026-10-26T06:22:19.753Z",
+  "lastError": null,
+  "connection": "connected",
+  "sync": {
+    "phase": "success",
+    "message": "6 tasks aktif diperbarui · 32 baris diperiksa",
+    "runId": "085a5f11-fe3d-49e1-84c5-cb5e0793e46d",
+    "completed": 6,
+    "total": 6
+  }
+}

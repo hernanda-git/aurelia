@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T05:27:17.264Z",
+  "status": "PASS",
+  "executable": "C:\\Workspace\\pesautomation\\desktop\\node_modules\\electron\\dist\\electron.exe",
+  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\startup-collision-6O2zPr",
+  "checks": [
+    "cached tasks remain available when projection initialization fails",
+    "unrelated workspace data is not overwritten",
+    "projection error is visible and workspace action is disabled",
+    "projection recovers after the collision is resolved without restarting the application",
+    "recovery preserves the source snapshot and unrelated files"
+  ],
+  "livePesSync": false
+}

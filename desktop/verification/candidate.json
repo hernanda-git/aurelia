@@ -1,0 +1,75 @@
+{
+  "at": "2026-10-26T11:14:52.327964+07:00",
+  "candidate": "a501d02fd8a32a0410d96d176673383387f6a9d758fec288a2aadb4d898bfd82",
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "b7e998298510ff793fcafbb3a21cd7731efd657639e014500577ef2165211e6d"
+    },
+    {
+      "path": "scripts/package.cjs",
+      "sha256": "5a43c0a9279409ad5c0f5a653c6c1958cfd99dec1ca849f2d34e046d59bab1af"
+    },
+    {
+      "path": "src/main/main.ts",
+      "sha256": "5ba08df9cec45916908ab182a011eebd9a38790eb4244c374d8a6589c9c6a431"
+    },
+    {
+      "path": "src/main/portal-data.ts",
+      "sha256": "8e3f542ca2ef6af4f6bde7272ef7340d266d0eeafc3e65e1369533f4de18fff0"
+    },
+    {
+      "path": "src/main/portal.ts",
+      "sha256": "a56b9ce29c735040497f001497e97d4a63e851feffc1eecc1f62cb6516b6469b"
+    },
+    {
+      "path": "src/main/preload.ts",
+      "sha256": "bf879af53f1cb8a16f3473e041ca07b278c5acbf6ae03b4d41f77cae0b46c0f4"
+    },
+    {
+      "path": "src/main/store.ts",
+      "sha256": "784d32acaeb49776fae54a9ba077581c82c83d8799140daf9c12e19e65a22986"
+    },
+    {
+      "path": "src/main/sync.ts",
+      "sha256": "0f5424ba67604086171da1c3bf4eb4af3e6f515b2cc3c1ef324c1db89689ac78"
+    },
+    {
+      "path": "src/renderer/App.tsx",
+      "sha256": "a95c3e1d089113826dc26f776a657b8063772c3fa0971950aaefb40f28ed3a73"
+    },
+    {
+      "path": "src/renderer/index.html",
+      "sha256": "0a2ac7dfeeebf93ac433842702f4d7585938797c2575823be4cdbbbf22312254"
+    },
+    {
+      "path": "src/renderer/main.tsx",
+      "sha256": "fc400cf6024a7aaa373ad3ad5f17352466a4912ebe94150119bd3476e52d1806"
+    },
+    {
+      "path": "src/renderer/styles.css",
+      "sha256": "0ae65fc3e3f340c0fd0b02e39c26f74d6fde2887e33ce3f99b4176cc16038e33"
+    },
+    {
+      "path": "src/shared/domain.ts",
+      "sha256": "519d96ab42e739fe4c336e9fdee03bdba2e95e0cf5e84bbf9383d272ffa3bcd0"
+    },
+    {
+      "path": "src/shared/types.ts",
+      "sha256": "87e7a0095a75f5f2614e5c4a1fe5f9365cab454ca03de84a8e0e0f89114c5127"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "eaaeedf6c8d5cf4580f8a90406d597ea8a998a7f5933ebe884feffdfbfd67c9d"
+    },
+    {
+      "path": "tsconfig.main.json",
+      "sha256": "d1d91265f627faf263ecb3a4148e8bab6c2061bedad7dfb3cb64cf836d05bc5a"
+    },
+    {
+      "path": "vite.config.mts",
+      "sha256": "1301fb221ba51c095ea504cbafaed408d44959f2c1967ee24ccbc762bff72811"
+    }
+  ],
+  "hashDefinition": "candidate is SHA256 of json.dumps(files, sort_keys=True).encode(), not the raw manifest SHA256"
+}

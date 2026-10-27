@@ -1,0 +1,48 @@
+{
+  "task": {
+    "Row": "21",
+    "TaskNo": "M03699/Task. IT/0926",
+    "TglInput": "30-Sep-2026",
+    "Pic": "MUHAMMAD HERNANDA",
+    "Jabatan": "Programmer Back End",
+    "DeptName": "ITMSS",
+    "TaskName": "BE | Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+    "GoalTask": "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+    "AsalTask": "Lain-Lain",
+    "Bobot": "3",
+    "Target": "T2",
+    "Duedate": "09-Okt-2026",
+    "Status": "Solved",
+    "TglApproval": "07-Okt-2026",
+    "TglSelesai": "09-Okt-2026",
+    "Lampiran": "trans.png"
+  },
+  "scope": {
+    "from": "2026-09-01",
+    "to": "2026-11-30",
+    "pic": "MUHAMMAD HERNANDA",
+    "department": "IT Mitra Seribu Saudara"
+  },
+  "source": "live",
+  "snapshotId": "efee7ae2-2dbe-47fc-a760-31e2c3be5366",
+  "retrievedAt": "2026-10-26T09:07:50.425Z",
+  "historyAvailable": false,
+  "rawCells": [
+    "21",
+    "M03699/Task. IT/0926",
+    "30-Sep-2026",
+    "MUHAMMAD HERNANDA",
+    "Programmer Back End",
+    "ITMSS",
+    "BE | Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+    "BE completed Technical Design - Seller Center - Create Solution BE Microservice - Transactional",
+    "Lain-Lain",
+    "3",
+    "T2",
+    "09-Okt-2026",
+    "Solved",
+    "07-Okt-2026",
+    "09-Okt-2026",
+    "trans.png"
+  ]
+}

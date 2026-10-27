@@ -1,0 +1,48 @@
+{
+  "task": {
+    "Row": "17",
+    "TaskNo": "M03562/Task. IT/0926",
+    "TglInput": "16-Sep-2026",
+    "Pic": "MUHAMMAD HERNANDA",
+    "Jabatan": "Programmer Back End",
+    "DeptName": "ITMSS",
+    "TaskName": "[Improvement IT] [September 2026] 1. Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+    "GoalTask": "Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+    "AsalTask": "Lain-Lain",
+    "Bobot": "2",
+    "Target": "T1",
+    "Duedate": "25-Sep-2026",
+    "Status": "Solved",
+    "TglApproval": "16-Sep-2026",
+    "TglSelesai": "22-Sep-2026",
+    "Lampiran": "antigravity multi-provider.png"
+  },
+  "scope": {
+    "from": "2026-09-01",
+    "to": "2026-11-30",
+    "pic": "MUHAMMAD HERNANDA",
+    "department": "IT Mitra Seribu Saudara"
+  },
+  "source": "live",
+  "snapshotId": "0e4e2503-f970-4fb5-9e42-3c4cf010fdd5",
+  "retrievedAt": "2026-10-26T06:22:34.367Z",
+  "historyAvailable": false,
+  "rawCells": [
+    "17",
+    "M03562/Task. IT/0926",
+    "16-Sep-2026",
+    "MUHAMMAD HERNANDA",
+    "Programmer Back End",
+    "ITMSS",
+    "[Improvement IT] [September 2026] 1. Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+    "Memastikan OAuth Gemini / Antigravity masuk ke AI Gateway dan bisa Multi OAuth sebagai Provider",
+    "Lain-Lain",
+    "2",
+    "T1",
+    "25-Sep-2026",
+    "Solved",
+    "16-Sep-2026",
+    "22-Sep-2026",
+    "antigravity multi-provider.png"
+  ]
+}

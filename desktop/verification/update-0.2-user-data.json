@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-26T05:46:50.144Z",
+  "status": "PASS",
+  "executable": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64\\PES.exe",
+  "profile": "C:\\Users\\it26\\AppData\\Roaming\\PES Focus",
+  "agentWorkspace": "C:\\Workspace\\pesautomation\\data\\agent-workspace",
+  "taskCount": 8,
+  "taskFolders": 8,
+  "source": "live",
+  "retrievedAt": "2026-10-26T02:58:32.749Z",
+  "snapshotId": "4e2a7848-b6d0-47e5-92e4-7a0cd4e0692c",
+  "sourceRowsAvailable": false,
+  "sourceSnapshotPreserved": true,
+  "preferencesPreserved": true,
+  "settingsPreserved": true,
+  "livePesSync": false,
+  "browserCredentialsReadOrCopied": false,
+  "screenshots": [
+    "PES-0.2-real-user.png",
+    "PES-0.2-agent-workspace-real.png"
+  ]
+}

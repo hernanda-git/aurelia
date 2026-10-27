@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-26T11:53:49.881250+07:00",
+  "userData": "C:\\Users\\it26\\AppData\\Roaming\\PES Focus",
+  "backup": "C:\\Users\\it26\\AppData\\Roaming\\PES Focus\\backups\\workspace-before-0.2.0-20261026-115349.json",
+  "originalSha256": "4bb69d5e97f9fb0eca52895ccd0ea13b6beb8de71b57f87ff5127808636ce1e3",
+  "snapshotId": "4e2a7848-b6d0-47e5-92e4-7a0cd4e0692c",
+  "snapshotSha256": "34577d7ef9a1a9b8dbc0d614f2adce2214b19643d8c3843a394b5d68fd30ee71",
+  "tasks": [
+    "M03938/Task. IT/1026",
+    "M03939/Task. IT/1026",
+    "M03940/Task. IT/1026",
+    "M03941/Task. IT/1026",
+    "M03989/Task. IT/1026",
+    "M03990/Task. IT/1026",
+    "M04020/Task. IT/1026",
+    "M04021/Task. IT/1026"
+  ],
+  "settings": {
+    "theme": "dark",
+    "timezone": "Asia/Jakarta",
+    "compact": false
+  },
+  "focusTaskId": null,
+  "preferences": {},
+  "credentialsCopied": false
+}

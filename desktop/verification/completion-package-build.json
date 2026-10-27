@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-26T13:02:26.869Z",
+  "status": "PASS",
+  "version": "0.2.0-assessment.1",
+  "folders": [
+    "C:\\Workspace\\pesautomation\\desktop\\release\\assessment-candidate\\PES-win32-x64"
+  ],
+  "staging": "C:\\Users\\it26\\AppData\\Local\\hermes\\cache\\scratch\\pes-assessment-stage-yzogxE",
+  "productionDependencyPaths": 100,
+  "prune": false,
+  "runtimeSource": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-win32-x64",
+  "peMetadataUnchanged": true,
+  "existingReleaseReplaced": false,
+  "liveWritesEnabled": false
+}

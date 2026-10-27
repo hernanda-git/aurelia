@@ -1,0 +1,48 @@
+{
+  "task": {
+    "Row": "16",
+    "TaskNo": "M03561/Task. IT/0926",
+    "TglInput": "16-Sep-2026",
+    "Pic": "MUHAMMAD HERNANDA",
+    "Jabatan": "Programmer Back End",
+    "DeptName": "ITMSS",
+    "TaskName": "[Improvement IT] [September 2026] 3. Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+    "GoalTask": "Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+    "AsalTask": "Lain-Lain",
+    "Bobot": "2",
+    "Target": "T1",
+    "Duedate": "25-Sep-2026",
+    "Status": "Solved",
+    "TglApproval": "16-Sep-2026",
+    "TglSelesai": "22-Sep-2026",
+    "Lampiran": "usage log.png"
+  },
+  "scope": {
+    "from": "2026-09-01",
+    "to": "2026-11-30",
+    "pic": "MUHAMMAD HERNANDA",
+    "department": "IT Mitra Seribu Saudara"
+  },
+  "source": "live",
+  "snapshotId": "6ef9bf15-1380-4c2d-a2a7-40261dea844b",
+  "retrievedAt": "2026-10-26T06:15:55.185Z",
+  "historyAvailable": false,
+  "rawCells": [
+    "16",
+    "M03561/Task. IT/0926",
+    "16-Sep-2026",
+    "MUHAMMAD HERNANDA",
+    "Programmer Back End",
+    "ITMSS",
+    "[Improvement IT] [September 2026] 3. Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+    "Logging semua stream & response dari masing masing agent melalui gateway grc board untuk provider Gemini / Antigravity",
+    "Lain-Lain",
+    "2",
+    "T1",
+    "25-Sep-2026",
+    "Solved",
+    "16-Sep-2026",
+    "22-Sep-2026",
+    "usage log.png"
+  ]
+}

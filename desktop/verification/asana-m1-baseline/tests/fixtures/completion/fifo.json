@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "now": "2026-10-26T13:20:00+07:00",
+  "submittedAt": "2026-10-26T13:00:00+07:00",
+  "maxReadbackAgeMs": 600000,
+  "expected": {
+    "identity": {
+      "listTaskNo": "M03990/Task. IT/1026",
+      "detailTaskNo": "M03990/Task.IT/1026",
+      "pic": "3220",
+      "department": "32",
+      "originUrl": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219683004217422"
+    },
+    "targetDate": {
+      "iso": "2026-10-23",
+      "raw": "23-Okt-2026"
+    },
+    "finishDate": {
+      "iso": "2026-10-23",
+      "raw": "23-Okt-2026"
+    },
+    "attachmentName": "evidence_base_inventory_fifo.png",
+    "attachmentSha256": "2afa1d37f6ad8e3950c1f1a3c1e5ff642bd97b3e81b0ece9d82b6e86d226b662"
+  },
+  "semanticContract": {
+    "revision": "pes-selesai-solved-v1",
+    "approvedBy": "fixture-only-not-live-authorization"
+  },
+  "views": {
+    "list": {
+      "taskNo": "M03990/Task. IT/1026",
+      "pic": "3220",
+      "department": "32",
+      "originUrl": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219683004217422",
+      "status": "Update Task",
+      "targetDate": {
+        "iso": "2026-10-23",
+        "raw": "23-Okt-2026"
+      },
+      "capturedAt": "2026-10-26T13:18:38.746347+07:00",
+      "independentlyReopened": true,
+      "finishDate": null
+    },
+    "detail": {
+      "taskNo": "M03990/Task.IT/1026",
+      "pic": "3220",
+      "department": "32",
+      "originUrl": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219683004217422",
+      "status": "Selesai",
+      "targetDate": {
+        "iso": "2026-10-23",
+        "raw": "23-Okt-2026"
+      },
+      "capturedAt": "2026-10-26T13:18:38.746347+07:00",
+      "independentlyReopened": true,
+      "finishDate": {
+        "iso": "2026-10-23",
+        "raw": "23-Okt-2026"
+      }
+    },
+    "targetTable": {
+      "taskNo": "M03990/Task.IT/1026",
+      "pic": "3220",
+      "department": "32",
+      "originUrl": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219683004217422",
+      "status": "Solved",
+      "targetDate": {
+        "iso": "2026-10-23",
+        "raw": "23-Okt-2026"
+      },
+      "capturedAt": "2026-10-26T13:18:38.746347+07:00",
+      "independentlyReopened": true
+    },
+    "info": {
+      "taskNo": "M03990/Task. IT/1026",
+      "pic": "3220",
+      "department": "32",
+      "originUrl": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219683004217422",
+      "status": "Update Task",
+      "targetDate": {
+        "iso": "2026-10-23",
+        "raw": "23-Okt-2026"
+      },
+      "capturedAt": "2026-10-26T13:18:38.746347+07:00",
+      "independentlyReopened": true
+    }
+  },
+  "attachment": {
+    "identity": {
+      "listTaskNo": "M03990/Task. IT/1026",
+      "detailTaskNo": "M03990/Task.IT/1026",
+      "pic": "3220",
+      "department": "32",
+      "originUrl": "https://app.asana.com/1/1206737432461724/project/1208922858503175/task/1219683004217422"
+    },
+    "fileName": "evidence_base_inventory_fifo.png",
+    "capturedAt": "2026-10-26T13:18:38.746347+07:00",
+    "independentlyReopened": true,
+    "verification": "metadata_only"
+  },
+  "fixtureSource": {
+    "detail": "reports/completion-20261026/fifo-persisted-detail.json",
+    "note": "Sanitized adapter fixture. Department, origin on non-detail views and reopen markers are explicit fixture context, not fields present in raw rows. Target table FIFO Solved from RESULT.md/master plan. No server byte verification claimed."
+  }
+}

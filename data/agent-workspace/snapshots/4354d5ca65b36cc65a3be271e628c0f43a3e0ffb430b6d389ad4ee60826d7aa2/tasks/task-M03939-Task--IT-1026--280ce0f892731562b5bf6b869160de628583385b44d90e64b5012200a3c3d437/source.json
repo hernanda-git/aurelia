@@ -1,0 +1,108 @@
+{
+  "task": {
+    "Row": "2",
+    "TaskNo": "M03939/Task. IT/1026",
+    "TglInput": "14-Okt-2026",
+    "Pic": "MUHAMMAD HERNANDA",
+    "Jabatan": "Programmer Back End",
+    "DeptName": "ITMSS",
+    "TaskName": "FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+    "GoalTask": "FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+    "AsalTask": "Lain-Lain",
+    "Bobot": "4",
+    "Target": "T1",
+    "Duedate": "30-Okt-2026",
+    "Status": "Approval",
+    "TglApproval": "15-Okt-2026",
+    "TglSelesai": "",
+    "Lampiran": "",
+    "history": {
+      "text": "Info Target Task\n \nTaskNo\t: M03939/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online\n\t\nPic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online\nTarget\tStatus\tTanggal\tKeterangan\nInput\tDueDate\tApprove\n1\tVerifikasi\t14-Oct-2026\t30-Oct-2026\t  15-Oct-2026\t",
+      "tables": [
+        [
+          [
+            "TaskNo\t: M03939/Task. IT/1026\nTglInput\t: 14-Okt-2026\nTaskName\t: FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+            "Pic\t: MUHAMMAD HERNANDA\nBobot\t: 4\nGoalTask\t: FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+          ]
+        ],
+        [
+          [
+            "TaskNo",
+            ": M03939/Task. IT/1026"
+          ],
+          [
+            "TglInput",
+            ": 14-Okt-2026"
+          ],
+          [
+            "TaskName",
+            ": FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+          ]
+        ],
+        [
+          [
+            "Pic",
+            ": MUHAMMAD HERNANDA"
+          ],
+          [
+            "Bobot",
+            ": 4"
+          ],
+          [
+            "GoalTask",
+            ": FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online"
+          ]
+        ],
+        [
+          [
+            "Target",
+            "Status",
+            "Tanggal",
+            "Keterangan"
+          ],
+          [
+            "Input",
+            "DueDate",
+            "Approve"
+          ],
+          [
+            "1",
+            "Verifikasi",
+            "14-Oct-2026",
+            "30-Oct-2026",
+            "15-Oct-2026",
+            ""
+          ]
+        ]
+      ]
+    }
+  },
+  "scope": {
+    "from": "2026-09-01",
+    "to": "2026-11-30",
+    "pic": "MUHAMMAD HERNANDA",
+    "department": "IT Mitra Seribu Saudara"
+  },
+  "source": "live",
+  "snapshotId": "6ef9bf15-1380-4c2d-a2a7-40261dea844b",
+  "retrievedAt": "2026-10-26T06:15:55.185Z",
+  "historyAvailable": true,
+  "rawCells": [
+    "2",
+    "M03939/Task. IT/1026",
+    "14-Okt-2026",
+    "MUHAMMAD HERNANDA",
+    "Programmer Back End",
+    "ITMSS",
+    "FE | [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+    "FE completed [Seller Center] ST-2301 | INTP | Operasional Toko Online",
+    "Lain-Lain",
+    "4",
+    "T1",
+    "30-Okt-2026",
+    "Approval",
+    "15-Okt-2026",
+    "",
+    ""
+  ]
+}

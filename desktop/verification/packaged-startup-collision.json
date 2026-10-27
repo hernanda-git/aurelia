@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T05:46:48.127Z",
+  "status": "PASS",
+  "executable": "C:/Workspace/pesautomation/desktop/release/PES-win32-x64/PES.exe",
+  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\startup-collision-5CHnP2",
+  "checks": [
+    "cached tasks remain available when projection initialization fails",
+    "unrelated workspace data is not overwritten",
+    "projection error is visible and workspace action is disabled",
+    "projection recovers after the collision is resolved without restarting the application",
+    "recovery preserves the source snapshot and unrelated files"
+  ],
+  "livePesSync": false
+}

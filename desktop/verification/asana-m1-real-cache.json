@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-26T15:42:54.037Z",
+  "status": "PASS",
+  "track": "actual packaged Electron Node runtime reading existing LOCAL CATALOG, NOT live Asana",
+  "runtime": "24.22.0",
+  "owned": 180,
+  "completed": 168,
+  "incomplete": 12,
+  "placeholders": 3,
+  "sourceUpdatedAt": "2026-10-21T06:09:22.073Z",
+  "catalogUnchanged": true,
+  "catalogSha256": "8a722a52728067ee83b02cdf532b49cdbfa0d07cb5e7887a021616668135bfc5",
+  "liveAsana": false
+}

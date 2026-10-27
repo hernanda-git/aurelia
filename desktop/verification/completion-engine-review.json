@@ -1,0 +1,71 @@
+{
+  "passed": false,
+  "scope": "Independent read-only review of the completion engine, durable journal, capability authority and notification outbox. This is not global, packaged, enrolled or live approval.",
+  "reviewedFiles": [
+    {"path":"src/main/completion.ts","sha256":"597c125114cd17af862aa22ab3fcf283f6511c50307ab5256ce0f473fbfdbe4a"},
+    {"path":"src/main/completion-notifications.ts","sha256":"938f9710f8ab09b749220133de86b43a730e71bae724a43026894b46a2240c28"},
+    {"path":"src/main/completion-journal.ts","sha256":"ba2eadc088496936921993cfeb21c2f0c7f51411f821f974118345f6375ef428"},
+    {"path":"src/main/agent-capability.ts","sha256":"ddda2c5fbfc1164dcd499b1581465051370b7acc179e52422480bba4c5219f78"},
+    {"path":"src/main/portal-coordinator.ts","sha256":"45e63e9b3e4a976cf9720b682a1a7e0a6728781500cbf7738e6e2f359b7334ce"},
+    {"path":"src/main/completion-policy.ts","sha256":"774625af6f3bf68c6338d8a5db86be2db7ec48ed875bb87125c5c548d449bcf2"},
+    {"path":"src/main/completion-verification.ts","sha256":"53e71d7cafda31e18e42d18a2a72e5143440de89ed6e2e09f8e5327248900286"},
+    {"path":"src/main/completion-evidence.ts","sha256":"231649b912cfbc18c854ea48a670ea01be38d19eab28eaa44b8e2f849fd13004","testExecutionSnapshotSha256":"ebba65280a60ca478a84733e471b8212ca5c4c9e6ed671e2e11e02072a233bff","note":"Supporting dependency reread after the evidence worker added PNG decode resource limits; focused tests and isolated probe used the earlier testExecutionSnapshotSha256. No independent approval of evidence component changes."},
+    {"path":"tests/completion.test.ts","sha256":"1be2b46ebc8985e2c3212681c228fe69df350585dd24c6a0d2e7827500bd942c"},
+    {"path":"tests/completion-recovery.test.ts","sha256":"c2b5928861b84429e018eaa954a73efc5d190f220ba895a89b24c10c1ab1470d"},
+    {"path":"tests/completion-notifications.test.ts","sha256":"53a55d3d67a030c5c9ddab0369e6bd555ed91941e5f821fd9017a16add9aa285"},
+    {"path":"tests/completion-journal.test.ts","sha256":"81385c65b4471a209054a1f25b5d996b1e0244434f0c90bc6c400dde6ba9ffcd"},
+    {"path":"tests/agent-capability.test.ts","sha256":"6c8af1dba1e9bb059f94d0db904c3c3ffe94453fcef41add688ddf2849c50739"},
+    {"path":"vitest.config.mts","sha256":"1ba6d2b5cb75229fd46a6b773c71d06ae1e9e55bb479def43674174b1c6c1456"},
+    {"path":"package.json","sha256":"539d512466b71f6ba4a5c575a375b79ab783590698ee80afe3617230e8a0e6ac"}
+  ],
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "ENGINE-PUBLICATION-001",
+      "severity": "medium",
+      "file": "src/main/completion.ts",
+      "lines": "144-145, 189-193; related 103-106, 125-126 and 131",
+      "title": "Post-verification record-listing failure incorrectly enters remote recovery and masks the durable outcome",
+      "detail": "After readSaved durably transitions the journal to VERIFIED, this.result() lists engine records outside publication error handling. If names()/readdirSync throws at that point, commit's broad catch treats this local publication/result failure as a remote execution failure and calls readSaved again. The second call attempts VERIFIED -> VERIFYING, which the journal correctly rejects. commit therefore rejects with Invalid transition instead of retaining a usable VERIFIED result with stale publication state; the original storage error is also lost. publish's sequence-directory listing is likewise outside its storage-write try/catch. No duplicate mutation was observed, and the durable VERIFIED journal state remains intact.",
+      "reproduction": "In a copied synthetic fixture, replace CompletionRecordStore.prototype.names with a wrapper that throws once when the fixture journal first reaches VERIFIED. Configure refreshCache. commit rejects with Invalid transition; the journal remains VERIFIED, submit count is exactly one, and refreshCache is never called. The dedicated regression probe passed by asserting this current erroneous behavior.",
+      "recommendation": "Separate local result/publication work from the mutation/readback recovery catch. Once a remote outcome transition succeeds, do not call readSaved again for local publication/result errors. Handle publication enumeration together with publication persistence, preserving the established outcome and explicitly stale publication state. Add the injected names()/readdir failure regression at both initial post-verification result construction and publication sequence enumeration."
+    }
+  ],
+  "verification": {
+    "focusedSuite": {
+      "command": "node node_modules/vitest/vitest.mjs run tests/completion.test.ts tests/completion-recovery.test.ts tests/completion-notifications.test.ts tests/completion-journal.test.ts tests/agent-capability.test.ts --no-cache --configLoader runner",
+      "exitCode": 0,
+      "testFilesPassed": 5,
+      "testsPassed": 95,
+      "isolation": "TMP, TEMP and TMPDIR redirected to a fresh engine-review-f9i0p2s4 directory; no cache, no application launch, no live driver or remote calls."
+    },
+    "additionalStorageFailureProbe": {
+      "exitCode": 0,
+      "testFilesPassed": 1,
+      "testsPassed": 24,
+      "note": "Includes imported fixture suite registrations; not 24 additional unique cases. One dedicated injected local-I/O regression reproduces ENGINE-PUBLICATION-001.",
+      "scratchRoot": "C:/Users/it26/AppData/Local/hermes/cache/scratch/completion-review-probe-jdudlobp",
+      "isolation": "Copied source/test fixture and configuration; dependency junction only; test temporary directories under the scratch root. No project source, configuration, enrollment or profile changes."
+    },
+    "confirmedProperties": [
+      "Existing same-account/task/target preparation is replayed without issuing a replacement capability; queued commits serialize through PortalCoordinator.",
+      "Capability consumption is persisted and fsynced before durable SUBMIT_INTENT and before submit; consumption failures burn the ephemeral capability. Journal write failures poison subsequent writes.",
+      "Recovered submit/upload intent and uncertain outcomes permit read-only reconciliation, not submit/upload replay; tests cover submit/upload uncertainty and recovered journal boundaries.",
+      "Cancellation before submission is durably terminal at queue, preflight and stage boundaries; cancellation after submit does not claim rollback or repeat mutation.",
+      "The sealed full-policy digest is checked before preflight and again after stage; current trusted clock/freshness is assessed again immediately before consumption.",
+      "Absent, false or throwing host source verifier blocks before staging/submission.",
+      "Ordinary cache/projection callback failures and notification enqueue/transport failures preserve remote outcomes and do not authorize mutation retries. Local result/publication enumeration failures have the specific exception-boundary defect reported above.",
+      "Notification payloads are restricted, outcome IDs are deterministic, sender acknowledgements require matching IDs, malformed receipts fail closed, and persisted receipts suppress acknowledged replay. Unacknowledged transport may replay and requires sender-side ID deduplication.",
+      "Historical SAVED_WITH_DISCREPANCY latches the account circuit even after later reconciliation; unresolved intent/unknown latest states block other commits."
+    ]
+  },
+  "limitations": [
+    "The engine is not registered/live and actual enrollment remains unmet, as specified in the task. Synthetic enrollment and source-verifier fixtures are not proof of real authorization or source integration.",
+    "No remote calls, portal operations, packaged application launch, source/configuration/profile edits, or global/live approval were performed. Only this review JSON was added to the project.",
+    "The journal requires a host single-instance lock; this review does not prove future host integration or inter-process exclusion. Windows directory durability and same-user tamper protections are expressly limited in the implementation.",
+    "Portal/evidence fixes belong to other reviewers. Supporting evidence/policy/verification dependencies were read for orchestration context; this result is not approval of those separate components.",
+    "Only the focused engine/recovery/outbox/journal/capability suites and one isolated failure probe were executed, not the entire project or live end-to-end tests.",
+    "The fixture was concurrently updated from truncated bytes to a readable generated PNG by another worker before the successful focused test execution; hashes identify the reviewed final fixture."
+  ],
+  "summary": "Focused synthetic safety tests pass (95 tests), with no identified duplicate remote mutation or enrollment/source-verifier bypass. Review fails on one reproduced medium-severity local publication/result I/O exception-boundary defect that obscures an already-durable VERIFIED outcome. This is not global or live approval."
+}

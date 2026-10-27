@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-26T11:24:34.075309+07:00",
+  "path": "C:\\Workspace\\pesautomation\\desktop\\release\\PES-Focus-0.1.0-Windows-x64.zip",
+  "entries": 74,
+  "bytes": 164659599,
+  "sha256": "5b7d0e3f0542fef5289295005d16ea570d45479b269a044b080b464d2991464f",
+  "private_profile_included": false,
+  "candidate": "a501d02fd8a32a0410d96d176673383387f6a9d758fec288a2aadb4d898bfd82",
+  "sourceDrift": false,
+  "independentReview": "deferred by explicit user choice",
+  "runtimeChecks": 19
+}

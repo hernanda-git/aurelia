@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-27T06:29:10.913Z",
+  "status": "PASS",
+  "packaged": false,
+  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\asana-m1-profile-V20yuR",
+  "source": "SYNTHETIC CATALOG FIXTURE; NOT LIVE",
+  "liveAsana": false,
+  "livePes": false,
+  "checks": [
+    "actual main reads synthetic catalog read-only, scopes 125 owned tasks and excludes foreign record",
+    "separate Asana sidebar, real search and provider-specific Ctrl+K work",
+    "Ctrl+R reloads only Asana catalog, not PES",
+    "actual IPC rejects unrelated IDs, verifies clipboard and exposes no mutations",
+    "actual scoped export contains exactly selected owned task",
+    "Asana actions leave PES snapshot/preferences untouched and make zero network requests",
+    "actual filters, saved completed/modified view, pagination, board/detail and Escape work",
+    "actual light theme and narrow detail layout render without document overflow",
+    "actual Cancel dispatches while reload is pending, despite local busy guard",
+    "personal snapshot, pin and focus survive actual process restart"
+  ],
+  "rendererErrors": []
+}
