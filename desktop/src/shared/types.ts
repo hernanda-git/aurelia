@@ -13,7 +13,8 @@ export interface Snapshot {
   /** All captured grid rows, including non-active statuses; absent in legacy snapshots. */
   sourceRows?: string[][];
 }
-export interface Settings { theme: 'dark' | 'light' | 'system'; timezone: string; compact: boolean }
+export type Theme = 'dark' | 'light' | 'system' | 'pinkish' | 'catppuccin' | 'everforest' | 'solarized' | 'github' | 'nous' | 'nous-alt' | 'midnight' | 'ember' | 'cyberpunk' | 'slate' | 'mono';
+export interface Settings { theme: Theme; timezone: string; compact: boolean }
 export interface TaskPreference { pinned: boolean }
 export type ActivityLevel = 'info' | 'success' | 'warning' | 'error';
 export interface Activity {

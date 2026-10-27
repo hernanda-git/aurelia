@@ -9,8 +9,9 @@ export function createInitialState(): AppState {
     settings: { ...defaultSettings }, activities: [], lastAttemptAt: null, lastError: null,
     connection: 'unknown', sync: { phase: 'idle', message: 'Belum ada sinkronisasi.' } };
 }
+const VALID_THEMES = ['dark', 'light', 'system', 'pinkish', 'catppuccin', 'everforest', 'solarized', 'github', 'nous', 'nous-alt', 'midnight', 'ember', 'cyberpunk', 'slate', 'mono'];
 function settings(value: Settings): Settings {
-  if (!value || typeof value !== 'object' || Object.keys(value).some(key => !['theme', 'timezone', 'compact'].includes(key)) || !['dark', 'light', 'system'].includes(value.theme) || typeof value.compact !== 'boolean' || typeof value.timezone !== 'string' || !value.timezone.trim()) throw new Error('Invalid settings');
+  if (!value || typeof value !== 'object' || Object.keys(value).some(key => !['theme', 'timezone', 'compact'].includes(key)) || !VALID_THEMES.includes(value.theme) || typeof value.compact !== 'boolean' || typeof value.timezone !== 'string' || !value.timezone.trim()) throw new Error('Invalid settings');
   new Intl.DateTimeFormat('en', { timeZone: value.timezone });
   return { theme: value.theme, timezone: value.timezone, compact: value.compact };
 }

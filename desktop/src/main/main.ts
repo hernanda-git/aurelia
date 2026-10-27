@@ -49,7 +49,7 @@ function register(channel:string,handler:(...args:any[])=>unknown):void{
   try{return await handler(...args);}catch{throw new Error('Tindakan belum berhasil. Data tersimpan tetap tersedia.');}
  });
 }
-function applyTheme(theme:Settings['theme']):void{nativeTheme.themeSource=theme;if(main)main.setBackgroundColor(theme==='light'?'#f4f4ef':'#101310');}
+function applyTheme(theme:Settings['theme']):void{const isLight=theme==='light';nativeTheme.themeSource=theme==='system'?'system':isLight?'light':'dark';if(main)main.setBackgroundColor(isLight?'#f4f4ef':theme==='pinkish'?'#1c1318':'#101310');}
 function registerApi():void{
  register('asana:state',()=>getAsanaStore().getState());
  register('asana:reload-catalog',async()=>{const pending=getAsanaStore().reloadCatalog(asanaCatalogPath());broadcastAsana();try{await pending;}finally{broadcastAsana();}});
