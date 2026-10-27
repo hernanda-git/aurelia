@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-27T08:00:39.953Z",
+  "at": "2026-10-27T08:07:01.058Z",
   "status": "PASS",
   "version": "0.2.0-asana-m1.1",
   "candidate": "C:\\Workspace\\pesautomation\\desktop\\release\\asana-milestone1\\PES-win32-x64",
@@ -7,7 +7,7 @@
   "requiredFilesMatchBuild": true,
   "forbiddenPaths": [],
   "exeSha256": "50c96d1603b345f228e57ec55b43df34ca377a575376f15a5576af38bbe726f3",
-  "asarSha256": "40d7c45c52ac34b996ee1e1fa624aa714199f2768dac7d2ff29bb54107a787e9",
+  "asarSha256": "c2714f6cabdcf52297ccb13750df5190a89c060a5b50976effbb128a0f797a52",
   "installedReleaseReplaced": false,
   "parkedAssessmentReplaced": false,
   "liveWrites": false,
