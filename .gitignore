@@ -17,6 +17,8 @@ release/
 npm-debug.log*
 
 # Agent workspace local generations and mutable task work
+data/agent-workspace/tasks/
+data/agent-workspace/snapshots/
 data/agent-workspace/generations/
 data/agent-workspace/current.json
 data/agent-workspace/index.json
