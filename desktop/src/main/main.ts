@@ -52,7 +52,7 @@ function register(channel:string,handler:(...args:any[])=>unknown):void{
 function applyTheme(theme:Settings['theme']):void{const isLight=theme==='light';nativeTheme.themeSource=theme==='system'?'system':isLight?'light':'dark';if(main)main.setBackgroundColor(isLight?'#f4f4ef':theme==='pinkish'?'#1c1318':'#101310');}
 function registerApi():void{
  register('asana:state',()=>getAsanaStore().getState());
- register('asana:reload-catalog',async()=>{const pending=getAsanaStore().reloadCatalog(asanaCatalogPath());broadcastAsana();try{await pending;}finally{broadcastAsana();}});
+ register('asana:reload-catalog',async()=>{const pending=getAsanaStore().reloadCatalog(asanaCatalogPath());broadcastAsana();try{await pending;const count=getAsanaStore().getState().snapshot?.tasks.length??0;store.appendEvent({level:'success',category:'sync',message:`Sinkronisasi Asana selesai: ${count} tasks terhubung`});broadcast();}catch{store.appendEvent({level:'warning',category:'sync',message:'Sinkronisasi Asana dibatalkan atau gagal. Snapshot lokal tetap digunakan.'});broadcast();}finally{broadcastAsana();}});
  register('asana:cancel',()=>{getAsanaStore().cancelReload();broadcastAsana();});
  register('asana:preferences',(patch:unknown)=>{getAsanaStore().setPreferences(patch as Partial<AsanaPreferences>);broadcastAsana();});
  register('asana:open',(gid:unknown)=>shell.openExternal(asanaTaskUrl(getAsanaStore().getState(),gid)));

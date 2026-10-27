@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import { basename, dirname, join, parse, resolve } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { readAsanaCatalog } from './asana-catalog';
+import { isAsanaLiveSyncAvailable, runAsanaLiveSync } from './asana-sync';
 import { validateAsanaPreferences, validateAsanaSnapshot } from '../shared/asana-domain';
 import type { AsanaPreferences, AsanaState } from '../shared/asana-types';
 const MAX_STATE_BYTES = 32 * 1024 * 1024;
@@ -23,6 +24,7 @@ export class AsanaStore {
   private state: AsanaState = initial();
   private pending: Promise<void> | null = null;
   private generation = 0;
+  private abortController: AbortController | null = null;
   constructor(private readonly file: string) {
     try {
       safePath(file);
@@ -60,29 +62,55 @@ export class AsanaStore {
   reloadCatalog(path: string): Promise<void> {
     if (this.pending) return this.pending;
     const generation = ++this.generation;
+    this.abortController = new AbortController();
+    const signal = this.abortController.signal;
     this.state = { ...this.state, phase: 'loading', lastAttemptAt: new Date().toISOString(), lastError: null };
     const pending = (async () => {
       // Yield so the IPC cancel action can discard a scheduled read. SQLite's
       // bounded synchronous read itself cannot be interrupted mid-query.
       await new Promise<void>(r => setImmediate(r));
       if (generation !== this.generation) return;
+      let syncWarning: string | null = null;
+      if (isAsanaLiveSyncAvailable(path)) {
+        try {
+          const syncResult = await runAsanaLiveSync(signal, path);
+          if (generation !== this.generation) return;
+          if (!syncResult.ok && syncResult.error !== 'CANCELLED') {
+            syncWarning = syncResult.error || 'Live sync failed';
+          }
+        } catch (e) {
+          if (generation !== this.generation) return;
+          syncWarning = e instanceof Error ? e.message : 'Live sync failed';
+        }
+      }
+      if (generation !== this.generation) return;
       try {
         const snapshot = readAsanaCatalog(path);
         await new Promise<void>(r => setImmediate(r));
         if (generation !== this.generation) return;
-        this.persist({ ...this.getState(), snapshot, phase: 'ready', lastError: null });
+        const lastError = syncWarning ? `Asana sync notice: ${syncWarning}. Data snapshot tetap tersedia.` : null;
+        this.persist({ ...this.getState(), snapshot, phase: 'ready', lastError });
       } catch {
         if (generation !== this.generation) return;
         this.state = { ...this.state, phase: 'failed', lastError: 'Asana catalog reload failed. Last good data is retained.' };
       }
     })();
     this.pending = pending;
-    void pending.finally(() => { if (this.pending === pending) this.pending = null; });
+    void pending.finally(() => {
+      if (this.pending === pending) {
+        this.pending = null;
+        this.abortController = null;
+      }
+    });
     return pending;
   }
   cancelReload(): void {
     if (!this.pending) return;
     ++this.generation;
+    if (this.abortController) {
+      try { this.abortController.abort(); } catch {}
+      this.abortController = null;
+    }
     this.state = { ...this.state, phase: this.state.snapshot ? 'ready' : 'idle', lastError: null };
   }
 }

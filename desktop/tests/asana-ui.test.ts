@@ -48,14 +48,17 @@ describe('Asana local catalog view model',()=>{
  });
  it('renders cache-only navigation, filters, counts, task titles and honest unavailable detail copy',async()=>{
   const {createElement}=await import('react');const {renderToStaticMarkup}=await import('react-dom/server');
-  const {AsanaPanel,AsanaNav}=await import('../src/renderer/asana/AsanaPanel');
+  const {AsanaPanel,AsanaNav,AsanaTaskDetail}=await import('../src/renderer/asana/AsanaPanel');
   const state={snapshot:{id:'synthetic',source:'catalog' as const,retrievedAt:'2026-10-26T00:00:00Z',sourceUpdatedAt:null,tasks:[task('1')],statusOptions:[],coverage:'catalog_only' as const},phase:'ready' as const,lastAttemptAt:null,lastError:null,preferences:{pinned:[],focusGid:null,savedViews:[]}};
   const nav=renderToStaticMarkup(createElement(AsanaNav,{state,selectedStatus:'all',onSelect:()=>{}}));
   expect(nav).toContain('HERNANDA MSS');expect(nav).toContain('asana-nav-all');expect(nav).toContain('asana-status-s');
   const html=renderToStaticMarkup(createElement(AsanaPanel,{state,status:'all',onStatus:()=>{},timezone:'UTC',onNotify:()=>{}}));
   for(const id of ['asana-search','asana-list','asana-row-1','asana-title-1','asana-count','asana-reload','asana-export','asana-progress','asana-completion','asana-role','asana-due','asana-section','asana-sort','asana-next','asana-board-toggle'])expect(html).toContain(`data-testid="${id}"`);
   expect(html).toContain('Reload local catalog');expect(html).toContain('Total 1');expect(html).toContain('Matching 1');expect(html).toContain('Showing 1');
-  expect(html).not.toContain('Sync live');expect(html).toContain('Select a task');
+  expect(html).not.toContain('Sync live');expect(html).not.toContain('Select a task');
+  const detail=renderToStaticMarkup(createElement(AsanaTaskDetail,{task:task('1'),timezone:'UTC',preferences:{pinned:[],focusGid:null,savedViews:[]},busy:false,onClose:()=>{},onAction:async()=>{},onPreferences:()=>{}}));
+  expect(detail).toContain('data-testid="asana-detail-resize-handle"');
+  expect(detail).toContain('data-testid="asana-detail-close"');
   expect(html).toContain('<h1>Asana Tasks</h1>');
   // The host <main> already uses asana-main; inner scroll/layout must not match it.
   expect(html).toContain('<div class="asana-content">');

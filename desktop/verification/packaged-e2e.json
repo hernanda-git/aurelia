@@ -1,8 +1,8 @@
 {
-  "at": "2026-10-27T06:00:58.976Z",
-  "executable": "C:/Workspace/pesautomation/desktop/release/asana-milestone1/PES-win32-x64/PES.exe",
+  "at": "2026-10-27T11:06:50.832Z",
+  "executable": "C:/Workspace/pesautomation/desktop/release/Aurelia-win32-x64/Aurelia.exe",
   "checks": [
-    "PES branding and exact List Tasks heading appear in the actual desktop",
+    "Aurelia branding and exact List Tasks heading appear in the actual desktop",
     "task title typography is readable at the default density",
     "actual historical import has 8 tasks and imported provenance",
     "import does not fake a sync attempt",
@@ -22,6 +22,7 @@
     "unknown and traversal-shaped task IDs cannot open arbitrary paths or read files",
     "settings shows the real workspace and its Open workspace button invokes the exact local directory",
     "dark and light themes rendered in actual desktop",
+    "pinkish and Hermes agent theme presets rendered in actual desktop",
     "narrow desktop layout uses a detail drawer without document overflow",
     "IPC rejects a different window even when it has the preload bridge",
     "actual selected-task export writes the original data",
@@ -35,6 +36,6 @@
     "single-task JSON export excludes unrelated raw rows and retains the full-query scan count as provenance"
   ],
   "rendererErrors": [],
-  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\e2e-profile-OORLSO",
+  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\e2e-profile-n6J5VS",
   "livePesSync": false
 }

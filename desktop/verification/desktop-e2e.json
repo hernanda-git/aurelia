@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-27T06:29:03.042Z",
+  "at": "2026-10-27T11:41:06.663Z",
   "executable": "C:\\Workspace\\pesautomation\\desktop\\node_modules\\electron\\dist\\electron.exe",
   "checks": [
     "Aurelia branding and exact List Tasks heading appear in the actual desktop",
@@ -9,7 +9,7 @@
     "actual search, status filters, and empty state work",
     "Ctrl+K focuses task search",
     "renderer has no Node require access",
-    "initial placeholder window with KONTEKS TASKS eyebrow is closable via top-right x icon",
+    "task detail window is closed by default, opens on task click, and is closable via top-right x icon",
     "real filesystem projection retains all cached fields and histories with honest legacy raw-row availability",
     "local pin persisted through main IPC",
     "local preference changes produce real activity events",
@@ -22,6 +22,7 @@
     "unknown and traversal-shaped task IDs cannot open arbitrary paths or read files",
     "settings shows the real workspace and its Open workspace button invokes the exact local directory",
     "dark and light themes rendered in actual desktop",
+    "pinkish and Hermes agent theme presets rendered in actual desktop",
     "narrow desktop layout uses a detail drawer without document overflow",
     "IPC rejects a different window even when it has the preload bridge",
     "actual selected-task export writes the original data",
@@ -35,6 +36,6 @@
     "single-task JSON export excludes unrelated raw rows and retains the full-query scan count as provenance"
   ],
   "rendererErrors": [],
-  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\e2e-profile-f5LlGq",
+  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\e2e-profile-cd8lmn",
   "livePesSync": false
 }
