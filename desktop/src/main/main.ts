@@ -120,7 +120,13 @@ function registerApi():void{
 }
 async function start():Promise<void>{
  const file=path.join(app.getPath('userData'),'workspace.json');
- try{asanaStore=new AsanaStore(path.join(app.getPath('userData'),'asana-state.json'));}catch{asanaStore=undefined;}
+ try{
+  asanaStore=new AsanaStore(path.join(app.getPath('userData'),'asana-state.json'));
+  const dbPath=asanaCatalogPath();
+  if(existsSync(dbPath)&&(!asanaStore.getState().snapshot||!asanaStore.getState().snapshot?.tasks.some(t=>t.itStartDate!==null))){
+   await asanaStore.reloadCatalog(dbPath);
+  }
+ }catch{asanaStore=undefined;}
  try{
   store=new StateStore(file);
   if(!store.getState().snapshot){

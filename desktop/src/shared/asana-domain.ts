@@ -41,9 +41,16 @@ export function normalizeAsanaTask(value: unknown, lastSeenAt: string | null = n
     if (new Set(fields.map((f: any) => f.gid)).size !== fields.length) throw new Error();
     const field = (id: string) => raw.custom_fields.find((f: any) => f.gid === id);
     const opt = (id: string) => { const f = field(id); return f?.enum_value == null ? { gid: null, name: null } : { gid: f.enum_value.gid, name: f.enum_value.name ?? null }; };
-    const date = (id: string) => field(id)?.date_value?.date ?? null;
+    const parseDate = (id: string, name: string): string | null => {
+      const f = (raw.custom_fields as Record<string, unknown>[]).find(cf => cf.gid === id || cf.name === name);
+      if (!f) return null;
+      const rawDate = f.display_value ?? (typeof f.date_value === 'object' && f.date_value !== null ? (f.date_value as Record<string, unknown>).date : f.date_value) ?? f.text_value;
+      if (typeof rawDate !== 'string') return null;
+      const m = /^(\d{4}-\d{2}-\d{2})/.exec(rawDate);
+      return m && civilDate(m[1]) ? m[1] : null;
+    };
     const name = label.parse(raw.name); const id = gid.parse(raw.gid);
-    const result = taskSchema.parse({ gid: id, name, notes: raw.notes ?? '', goal: field('1210770007256855')?.display_value ?? field('1210770007256855')?.text_value ?? '', role: /^(BE|FE|QA|SA)\b/i.exec(name)?.[1].toUpperCase() ?? '', completed: raw.completed, ownership: { fieldGid: ASANA_SCOPE.ownerField, optionGid: ASANA_SCOPE.ownerOption, projectGid: ASANA_SCOPE.project }, status: opt(ASANA_SCOPE.statusField), progress: opt(ASANA_SCOPE.progressField), dueOn: raw.due_on ?? null, dueAt: raw.due_at ?? null, itStartDate: date('1208878900985995'), itEndDate: date('1208878923161869'), modifiedAt: raw.modified_at ?? null, lastSeenAt, url: asanaTaskUrl(id), parent: raw.parent == null ? null : { gid: raw.parent.gid, name: raw.parent.name ?? null }, memberships, fields, anomalies: !name.trim() || name === id ? ['untitled'] : [] });
+    const result = taskSchema.parse({ gid: id, name, notes: raw.notes ?? '', goal: field('1210770007256855')?.display_value ?? field('1210770007256855')?.text_value ?? '', role: /^(BE|FE|QA|SA)\b/i.exec(name)?.[1].toUpperCase() ?? '', completed: raw.completed, ownership: { fieldGid: ASANA_SCOPE.ownerField, optionGid: ASANA_SCOPE.ownerOption, projectGid: ASANA_SCOPE.project }, status: opt(ASANA_SCOPE.statusField), progress: opt(ASANA_SCOPE.progressField), dueOn: raw.due_on ?? null, dueAt: raw.due_at ?? null, itStartDate: parseDate('1208878900985995', 'IT Start Date'), itEndDate: parseDate('1208878923161869', 'IT End Date'), modifiedAt: raw.modified_at ?? null, lastSeenAt, url: asanaTaskUrl(id), parent: raw.parent == null ? null : { gid: raw.parent.gid, name: raw.parent.name ?? null }, memberships, fields, anomalies: !name.trim() || name === id ? ['untitled'] : [] });
     return result;
   } catch { throw new Error('Invalid owned Asana task.'); }
 }

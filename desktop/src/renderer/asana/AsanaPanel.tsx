@@ -8,7 +8,11 @@ const api=()=> (window as unknown as {asana:AsanaAPI}).asana;
 const emptyPreferences:AsanaPreferences={pinned:[],focusGid:null,savedViews:[]};
 const stamp=(value:string|null|undefined)=>value ?? 'Unavailable in catalog';
 function formatDate(value: string | null | undefined, timezone: string, full = false) {
-  if (!value) return 'Belum tersedia';
+  if (!value) return '—';
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    const [y, m, d] = value.split('-').map(Number);
+    return new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, d, 12)));
+  }
   const date = new Date(value); if (!Number.isFinite(date.getTime())) return value;
   return new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short', year: 'numeric', ...(full ? {hour:'2-digit',minute:'2-digit'} as const : {}), timeZone: timezone }).format(date);
 }
@@ -43,7 +47,7 @@ export function AsanaTaskDetail({task,timezone,preferences,busy,width=360,isResi
    <button className="button" data-testid="asana-pin" aria-pressed={pinned} disabled={busy} onClick={()=>onPreferences({pinned:pinned?preferences.pinned.filter(g=>g!==task.gid):[...preferences.pinned,task.gid]})}><StarIcon/>{pinned?'Unpin locally':'Pin locally'}</button><button className="button" data-testid="asana-focus" aria-pressed={focused} disabled={busy} onClick={()=>onPreferences({focusGid:focused?null:task.gid})}>{focused?'Clear local focus':'Focus locally'}</button></div>
    <DetailSection title="Overview" defaultOpen={true}><dl className="asana-facts"><Fact label="Status">{rawOption(task.status)}</Fact><Fact label="Task progress">{rawOption(task.progress)}</Fact><Fact label="Native completion">{task.completed?'Completed':'Incomplete'}</Fact><Fact label="Role">{task.role||'Unset'}</Fact></dl><p className="asana-text">{task.notes||'No description in this catalog record.'}</p></DetailSection>
    <DetailSection title="Goal" defaultOpen={true}><p className="asana-text">{task.goal||'No goal in this catalog record.'}</p></DetailSection>
-   <DetailSection title="Dates & freshness" defaultOpen={true}><dl className="asana-facts"><Fact label={`Due day (${timezone})`}>{civilDue(task,timezone)??'No valid due date'}</Fact><Fact label="due_on (civil)">{stamp(task.dueOn)}</Fact><Fact label="due_at (instant)">{stamp(task.dueAt)}</Fact><Fact label="IT start date">{stamp(task.itStartDate)}</Fact><Fact label="IT end date">{stamp(task.itEndDate)}</Fact><Fact label="Modified at">{stamp(task.modifiedAt)}</Fact><Fact label="Last seen at">{stamp(task.lastSeenAt)}</Fact></dl></DetailSection>
+   <DetailSection title="Dates & freshness" defaultOpen={true}><dl className="asana-facts"><Fact label={`Due day (${timezone})`}>{civilDue(task,timezone)??'No valid due date'}</Fact><Fact label="due_on (civil)">{stamp(task.dueOn)}</Fact><Fact label="due_at (instant)">{stamp(task.dueAt)}</Fact><Fact label="IT start date">{task.itStartDate ? formatDate(task.itStartDate, timezone) : stamp(task.itStartDate)}</Fact><Fact label="IT end date">{task.itEndDate ? formatDate(task.itEndDate, timezone) : stamp(task.itEndDate)}</Fact><Fact label="Modified at">{stamp(task.modifiedAt)}</Fact><Fact label="Last seen at">{stamp(task.lastSeenAt)}</Fact></dl></DetailSection>
    <DetailSection title="Memberships" defaultOpen={false}>{task.memberships.length?task.memberships.map((m,i)=><p key={`${m.projectGid}-${i}`} className="asana-text">{m.projectName} <span className="task-id">{m.projectGid}</span><br/>{m.sectionName??'Unset section'} <span className="task-id">{m.sectionGid}</span></p>):<p>No memberships in catalog record.</p>}</DetailSection>
    <DetailSection title="Parent reference" defaultOpen={false} testId="asana-parent">{task.parent?<><p className="asana-text">{task.parent.name??'Title unavailable'} · {task.parent.gid}</p><p className="asana-muted">Reference only—not included in your owned-task count.</p></>:<p>No parent reference in catalog.</p>}</DetailSection>
    <DetailSection title="Custom fields · raw display values" defaultOpen={false}><dl className="asana-facts">{task.fields.map((f,i)=><Fact key={`${f.gid}-${i}`} label={`${f.name} · ${f.gid}`}>{f.displayValue??'Unset'}</Fact>)}</dl>{!task.fields.length&&<p>No custom fields in catalog record.</p>}</DetailSection>
