@@ -57,6 +57,7 @@ const root=path.resolve(__dirname,'..'),verification=path.join(root,'verificatio
   await page.evaluate(gid=>window.asana.exportTasks('json',[gid]),id);const saved=JSON.parse(fs.readFileSync(exported,'utf8'));assert.equal(saved.tasks.length,1);assert.equal(saved.tasks[0].gid,id);assert.equal(saved.queryTotalOwned,125);checks.push('actual scoped export contains exactly selected owned task');
   const after=await page.evaluate(()=>window.pes.getState());assert.deepEqual(after.snapshot,before.snapshot);assert.deepEqual(after.preferences,before.preferences);assert.equal(after.focusTaskId,before.focusTaskId);assert.equal(await app.evaluate(()=>global.__asanaNetwork.length),0);checks.push('Asana actions leave PES snapshot/preferences untouched and make zero network requests');
   assert.equal(await page.getByTestId('asana-sync-missing').count(),0);
+  if (await page.getByTestId('asana-filter-toggle').isVisible()) await page.getByTestId('asana-filter-toggle').click();
   await page.getByTestId('asana-completion').selectOption('completed');
   await page.waitForFunction(()=>document.querySelector('[data-testid="asana-count"]').textContent.includes('Matching 42'));
   await page.getByTestId('asana-sort').selectOption('modified');

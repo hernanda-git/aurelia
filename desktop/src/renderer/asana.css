@@ -36,6 +36,9 @@
 .asana-source span { color: var(--text-secondary); font-size: 11px; }
 .asana-error { padding: 12px 15px; margin-bottom: 16px; border: 1px solid var(--danger); background: var(--danger-soft); color: var(--danger); border-radius: 6px; overflow-wrap: anywhere; }
 .asana-search-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.asana-filter-toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; height: 36px; padding: 0 12px; border-radius: 6px; white-space: nowrap; }
+.asana-filter-badge { background: var(--accent); color: var(--white-on-accent); font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 10px; line-height: 1.2; }
+.asana-collapsible-filters.collapsed { display: none; }
 .asana-search { flex: 1; min-width: 0; display: flex; align-items: center; gap: 9px; padding: 0 12px; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: 7px; }
 .asana-search:focus-within { border-color: var(--focus-ring); outline: 1px solid var(--focus-ring); }
 .asana-search svg { color: var(--text-muted); }
@@ -68,10 +71,10 @@
 .asana-group > h2 > button > span:last-child { color: var(--text-muted); font-size: 10px; font-weight: 400; flex-shrink: 0; }
 .asana-group > h2 > button:hover { background: var(--bg-strong); }
 .asana-group table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; min-width: 620px; }
-.asana-group th { color: var(--text-muted); font-weight: 500; font-size: 10px; padding: 9px 13px; border-bottom: 1px solid var(--border-faint); }
+.asana-group th { color: var(--text-muted); font-weight: 500; font-size: 10px; padding: 9px 13px; border-bottom: 1px solid var(--border-faint); white-space: nowrap; }
 .asana-group td { padding: 14px 13px; border-bottom: 1px solid var(--border-faint); vertical-align: top; color: var(--text-secondary); }
-.asana-group td:first-child { width: 43%; min-width: 210px; }
-.asana-group td:last-child { white-space: nowrap; }
+.asana-group td:first-child { width: 34%; min-width: 180px; }
+.asana-group td:not(:first-child) { white-space: nowrap; }
 .asana-group tr:last-child td { border-bottom: 0; }
 .asana-group tbody tr:hover, .asana-cards article:hover { background: var(--bg-elevated); }
 .asana-group [data-selected="true"] { background: var(--accent-soft); box-shadow: inset 3px 0 var(--accent); }
@@ -105,8 +108,12 @@
 .asana-detail-body > h2 { font-size: 20px; line-height: 1.5; font-weight: 600; margin-top: 8px; }
 .asana-detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .asana-detail-actions .button { font-size: 11px; }
-.asana-detail-body section { border-top: 1px solid var(--border-faint); padding-top: 20px; margin-top: 24px; }
+.asana-detail-body section { border-top: 1px solid var(--border-faint); padding-top: 16px; margin-top: 18px; }
 .asana-detail-body h3 { font-size: 11px; color: var(--text-secondary); font-weight: 650; letter-spacing: .04em; margin-bottom: 12px; }
+.asana-detail-section-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; background: transparent; padding: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; }
+.asana-detail-section-toggle:hover { color: var(--text-primary); }
+.asana-icon-xs { width: 12px; height: 12px; flex-shrink: 0; stroke-width: 2; }
+.asana-icon-sm { width: 14px; height: 14px; flex-shrink: 0; }
 .asana-detail-body section > p { font-size: 12px; overflow-wrap: anywhere; }
 .asana-detail-body section > p + p { margin-top: 10px; }
 .asana-text { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; line-height: 1.8; }

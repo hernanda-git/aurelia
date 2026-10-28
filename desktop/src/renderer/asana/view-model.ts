@@ -3,10 +3,21 @@ export type Query = {query:string;status:string;progress:string;completion:strin
 export const defaultQuery:Query={query:'',status:'all',progress:'all',completion:'all',role:'all',due:'all',section:'all',sort:'modified',page:1,pageSize:50};
 export const rawOption=(option:AsanaOption)=>option.name ?? (option.gid ? `Unknown (${option.gid})` : 'Unset');
 export const taskTitle=(task:AsanaTask)=>!task.name.trim() ? 'Untitled task' : task.name;
+function statusRank(key:string,label:string):number {
+ const k=key.toLowerCase().trim(), l=label.toLowerCase().trim();
+ if(k==='unset'||l==='unset') return 1;
+ if(l.includes('in-progress')||l.includes('in progress')) return 2;
+ if(l.includes('ready to qa')) return 3;
+ if(l.includes('user/po')||l.includes('user / po')) return 4;
+ return 100;
+}
 export function statusGroups(tasks:AsanaTask[], options:AsanaSnapshot['statusOptions']=[]) {
  const groups=new Map(options.map(o=>[o.gid,{key:o.gid,label:o.name,count:0}]));
  for(const t of uniqueTasks(tasks)){const key=t.status.gid ?? 'unset';const group=groups.get(key) ?? {key,label:rawOption(t.status),count:0}; group.count++;groups.set(key,group);}
- return [...groups.values()];
+ return [...groups.values()].sort((a,b)=>{
+  const rA=statusRank(a.key,a.label),rB=statusRank(b.key,b.label);
+  return rA!==rB ? rA-rB : a.label.localeCompare(b.label);
+ });
 }
 export const uniqueTasks=(tasks:AsanaTask[])=>[...new Map(tasks.map(t=>[t.gid,t])).values()];
 const cmp=(a:string,b:string)=>a<b?-1:a>b?1:0;
