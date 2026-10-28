@@ -1,6 +1,6 @@
 import type { AsanaTask, AsanaOption, AsanaSnapshot } from '../../shared/asana-types';
 export type Query = {query:string;status:string;progress:string;completion:string;role:string;due:string;section:string;sort:string;page:number;pageSize:number};
-export const defaultQuery:Query={query:'',status:'all',progress:'all',completion:'all',role:'all',due:'all',section:'all',sort:'name',page:1,pageSize:50};
+export const defaultQuery:Query={query:'',status:'all',progress:'all',completion:'all',role:'all',due:'all',section:'all',sort:'modified',page:1,pageSize:50};
 export const rawOption=(option:AsanaOption)=>option.name ?? (option.gid ? `Unknown (${option.gid})` : 'Unset');
 export const taskTitle=(task:AsanaTask)=>!task.name.trim() ? 'Untitled task' : task.name;
 export function statusGroups(tasks:AsanaTask[], options:AsanaSnapshot['statusOptions']=[]) {
@@ -24,8 +24,10 @@ export function queryTasks(tasks:AsanaTask[], q:Query, timezone='UTC', today=civ
  const overdue=(task:AsanaTask)=>!task.completed&&(task.dueAt&&Number.isFinite(Date.parse(task.dueAt))?Date.parse(task.dueAt)<now:!!civilDue(task,timezone)&&civilDue(task,timezone)!<today);
  const matching=unique.filter(t=>(q.status==='all'||(t.status.gid??'unset')===q.status)&&(q.progress==='all'||(t.progress.gid??'unset')===q.progress)&&(q.completion==='all'||t.completed===(q.completion==='completed'))&&(q.role==='all'||t.role===q.role)&&(q.section==='all'||(q.section==='unset'?!t.memberships.some(m=>m.sectionGid):t.memberships.some(m=>m.sectionGid===q.section)))&& (q.due==='all'||(q.due==='none'?!civilDue(t,timezone):q.due==='overdue'?overdue(t):q.due==='today'?civilDue(t,timezone)===today:!!civilDue(t,timezone)&&civilDue(t,timezone)!>today))&&(!search||[t.gid,t.name,t.notes,t.goal,...t.fields.map(f=>f.displayValue??'')].some(s=>s.toLocaleLowerCase().includes(search))));
  matching.sort((a,b)=>{
-  const key=(t:AsanaTask)=>q.sort==='due'?civilDue(t,timezone)??'9999-99-99':q.sort==='modified'?t.modifiedAt??'':q.sort==='gid'?t.gid:taskTitle(t).toLocaleLowerCase();
-  return (q.sort==='modified'?-1:1)*cmp(key(a),key(b))||cmp(a.gid,b.gid);
+  const dateKey=(t:AsanaTask)=>t.modifiedAt||(t.dueAt?t.dueAt:t.dueOn?`${t.dueOn}T00:00:00Z`:'')||t.lastSeenAt||'';
+  if(q.sort==='modified'){return -1*cmp(dateKey(a),dateKey(b))||cmp(a.gid,b.gid);}
+  const key=(t:AsanaTask)=>q.sort==='due'?civilDue(t,timezone)??'9999-99-99':q.sort==='gid'?t.gid:taskTitle(t).toLocaleLowerCase();
+  return cmp(key(a),key(b))||cmp(a.gid,b.gid);
  });
  const size=Math.max(1,q.pageSize), pages=Math.max(1,Math.ceil(matching.length/size)),page=Math.max(1,Math.min(q.page,pages));
  return {total:unique.length,matching:matching.length,tasks:matching.slice((page-1)*size,page*size),allMatching:matching,page,pages};
