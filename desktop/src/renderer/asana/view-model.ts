@@ -2,6 +2,13 @@ import type { AsanaTask, AsanaOption, AsanaSnapshot } from '../../shared/asana-t
 export type Query = {query:string;status:string;progress:string;completion:string;role:string;due:string;section:string;sort:string;page:number;pageSize:number};
 export const defaultQuery:Query={query:'',status:'all',progress:'all',completion:'all',role:'all',due:'all',section:'all',sort:'modified',page:1,pageSize:50};
 export const rawOption=(option:AsanaOption)=>option.name ?? (option.gid ? `Unknown (${option.gid})` : 'Unset');
+export const isUntitledTask = (task: AsanaTask): boolean =>
+  !task.name.trim() ||
+  (Array.isArray(task.anomalies) && task.anomalies.includes('untitled')) ||
+  task.name.trim().toLowerCase() === 'untitled task' ||
+  task.name.trim().toLowerCase() === 'untitled' ||
+  task.name.trim().toLowerCase() === 'tanpa judul' ||
+  (task.name === task.gid && /^\d{10,}$/.test(task.gid));
 export const taskTitle=(task:AsanaTask)=>!task.name.trim() ? 'Untitled task' : task.name;
 function statusRank(key:string,label:string):number {
  const k=key.toLowerCase().trim(), l=label.toLowerCase().trim();
@@ -13,7 +20,10 @@ function statusRank(key:string,label:string):number {
 }
 export function statusGroups(tasks:AsanaTask[], options:AsanaSnapshot['statusOptions']=[]) {
  const groups=new Map(options.map(o=>[o.gid,{key:o.gid,label:o.name,count:0}]));
- for(const t of uniqueTasks(tasks)){const key=t.status.gid ?? 'unset';const group=groups.get(key) ?? {key,label:rawOption(t.status),count:0}; group.count++;groups.set(key,group);}
+ for(const t of uniqueTasks(tasks)){
+  if(isUntitledTask(t)) continue;
+  const key=t.status.gid ?? 'unset';const group=groups.get(key) ?? {key,label:rawOption(t.status),count:0}; group.count++;groups.set(key,group);
+ }
  return [...groups.values()].sort((a,b)=>{
   const rA=statusRank(a.key,a.label),rB=statusRank(b.key,b.label);
   return rA!==rB ? rA-rB : a.label.localeCompare(b.label);
@@ -31,7 +41,7 @@ export function civilDue(task:AsanaTask,timezone:string):string|null {
  return null;
 }
 export function queryTasks(tasks:AsanaTask[], q:Query, timezone='UTC', today=civilDay(new Date(),timezone)) {
- const unique=uniqueTasks(tasks), search=q.query.trim().toLocaleLowerCase(), now=Date.now();
+ const unique=uniqueTasks(tasks).filter(t=>!isUntitledTask(t)), search=q.query.trim().toLocaleLowerCase(), now=Date.now();
  const overdue=(task:AsanaTask)=>!task.completed&&(task.dueAt&&Number.isFinite(Date.parse(task.dueAt))?Date.parse(task.dueAt)<now:!!civilDue(task,timezone)&&civilDue(task,timezone)!<today);
  const matching=unique.filter(t=>(q.status==='all'||(t.status.gid??'unset')===q.status)&&(q.progress==='all'||(t.progress.gid??'unset')===q.progress)&&(q.completion==='all'||t.completed===(q.completion==='completed'))&&(q.role==='all'||t.role===q.role)&&(q.section==='all'||(q.section==='unset'?!t.memberships.some(m=>m.sectionGid):t.memberships.some(m=>m.sectionGid===q.section)))&& (q.due==='all'||(q.due==='none'?!civilDue(t,timezone):q.due==='overdue'?overdue(t):q.due==='today'?civilDue(t,timezone)===today:!!civilDue(t,timezone)&&civilDue(t,timezone)!>today))&&(!search||[t.gid,t.name,t.notes,t.goal,...t.fields.map(f=>f.displayValue??'')].some(s=>s.toLocaleLowerCase().includes(search))));
  matching.sort((a,b)=>{

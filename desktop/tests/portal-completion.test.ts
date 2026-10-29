@@ -1,11 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import { mkdtempSync,writeFileSync,rmSync } from 'node:fs';
 import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
 
 const dialog={url:'https://pes.grcboard.com/Modul/ISO/FormInputTask.aspx',visible:true,uploadEnabled:true,files:[]};
 function evidenceFile(){
- const dir=mkdtempSync(join(process.env.TMPDIR!, 'pes-driver-test-'));const bytes=Buffer.from('artificial isolated evidence');
+ const dir=mkdtempSync(join(process.env.TMPDIR || process.env.TEMP || tmpdir(), 'pes-driver-test-'));const bytes=Buffer.from('artificial isolated evidence');
  const filePath=join(dir,'contract.txt');writeFileSync(filePath,bytes);
  return {dir,evidence:{filePath,fileName:'contract.txt',size:bytes.length,mime:'text/plain',sha256:createHash('sha256').update(bytes).digest('hex')}};
 }

@@ -191,8 +191,9 @@ export default function App() {
   }, [state?.settings.theme]);
   const tz = state?.settings.timezone ?? 'Asia/Jakarta';
   const tasks = state?.snapshot?.tasks ?? [];
+  const isUntitledPesTask = (t: Task) => !t.TaskName?.trim() || ['untitled task', 'untitled', 'tanpa judul'].includes(t.TaskName.trim().toLowerCase());
   const decorated = useMemo(() => tasks.map(task => ({ task, deadline: deadlineInfo(task.Duedate, now, tz) })), [tasks, now, tz]);
-  const base = useMemo(() => decorated.filter(({task}) => (status === 'all' || task.Status === status) && (!query.trim() || [task.TaskNo,task.TaskName,task.GoalTask,task.Pic,task.DeptName,task.AsalTask,task.Status,task.Target].join(' ').toLocaleLowerCase('id-ID').includes(query.trim().toLocaleLowerCase('id-ID')))), [decorated,query,status]);
+  const base = useMemo(() => decorated.filter(({task}) => !isUntitledPesTask(task) && (status === 'all' || task.Status === status) && (!query.trim() || [task.TaskNo,task.TaskName,task.GoalTask,task.Pic,task.DeptName,task.AsalTask,task.Status,task.Target].join(' ').toLocaleLowerCase('id-ID').includes(query.trim().toLocaleLowerCase('id-ID')))), [decorated,query,status]);
   const isFocus = useCallback((id: string) => !!state?.preferences[id]?.pinned || state?.focusTaskId === id, [state?.preferences,state?.focusTaskId]);
   const counts = useMemo(() => ({ all:base.length, overdue:base.filter(t => t.deadline.kind === 'overdue').length, today:base.filter(t => t.deadline.kind === 'today').length, upcoming:base.filter(t => t.deadline.kind === 'upcoming').length, focus:base.filter(t => isFocus(t.task.TaskNo)).length }), [base,isFocus]);
   const visible = useMemo(() => {

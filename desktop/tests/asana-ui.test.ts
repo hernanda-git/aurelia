@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { queryTasks, statusGroups, taskTitle, rawOption, defaultQuery, civilDue } from '../src/renderer/asana/view-model';
+import { queryTasks, statusGroups, taskTitle, rawOption, defaultQuery, civilDue, isUntitledTask } from '../src/renderer/asana/view-model';
 import type { AsanaTask } from '../src/shared/asana-types';
 export const task = (gid:string, patch:Partial<AsanaTask>={}):AsanaTask => ({gid,name:`Task ${gid}`,notes:'',goal:'',role:'BE',completed:false,status:{gid:'s',name:'Ready to QA'},progress:{gid:'p',name:'Done '},dueOn:null,dueAt:null,itStartDate:null,itEndDate:null,modifiedAt:null,lastSeenAt:null,url:'',parent:null,memberships:[],fields:[],anomalies:[],ownership:{fieldGid:'1208878911420813',optionGid:'1214725811552235',projectGid:'1208922858503175'},...patch});
 describe('Asana local catalog view model',()=>{
@@ -10,6 +10,30 @@ describe('Asana local catalog view model',()=>{
   expect(taskTitle(task('4',{name:''}))).toBe('Untitled task');
   expect(taskTitle(task('5',{name:'5'}))).toBe('5');
   expect(taskTitle(task('6',{name:'  '}))).toBe('Untitled task');
+ });
+ it('excludes untitled tasks from queryTasks and statusGroups while retaining isUntitledTask diagnostics', () => {
+  const tasks = [
+   task('1', { name: 'Valid task' }),
+   task('2', { name: '' }),
+   task('3', { name: '   ' }),
+   task('4', { name: 'Untitled task' }),
+   task('5', { name: '1217662849040679', gid: '1217662849040679' }),
+   task('6', { name: 'Anomalous', anomalies: ['untitled'] }),
+  ];
+  expect(isUntitledTask(tasks[0])).toBe(false);
+  expect(isUntitledTask(tasks[1])).toBe(true);
+  expect(isUntitledTask(tasks[2])).toBe(true);
+  expect(isUntitledTask(tasks[3])).toBe(true);
+  expect(isUntitledTask(tasks[4])).toBe(true);
+  expect(isUntitledTask(tasks[5])).toBe(true);
+
+  const result = queryTasks(tasks, defaultQuery);
+  expect(result.total).toBe(1);
+  expect(result.matching).toBe(1);
+  expect(result.tasks.map(t => t.gid)).toEqual(['1']);
+
+  const groups = statusGroups(tasks);
+  expect(groups.reduce((n, g) => n + g.count, 0)).toBe(1);
  });
  it('deduplicates by gid before grouping and counts, retains unknown and unset, and pages beyond 100',()=>{
   const tasks=Array.from({length:121},(_,i)=>task(String(i).padStart(3,'0')));
