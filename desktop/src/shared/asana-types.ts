@@ -10,4 +10,15 @@ export type AsanaTask = {
 export type AsanaSnapshot = { id: string; source: 'catalog'; retrievedAt: string; sourceUpdatedAt: string | null; tasks: AsanaTask[]; statusOptions: { gid: string; name: string; enabled: boolean }[]; coverage: 'catalog_only' };
 export type AsanaPreferences = { pinned: string[]; focusGid: string | null; savedViews: { name: string; query: string; status: string; completion: string; progress: string; role: string; sort: string }[] };
 export type AsanaState = { snapshot: AsanaSnapshot | null; phase: 'idle' | 'loading' | 'ready' | 'failed'; lastAttemptAt: string | null; lastError: string | null; preferences: AsanaPreferences };
-export type AsanaAPI = { getState(): Promise<AsanaState>; reloadCatalog(): Promise<void>; cancelReload(): Promise<void>; setPreferences(patch: Partial<AsanaPreferences>): Promise<void>; openTask(gid: string): Promise<void>; copyTask(gid: string): Promise<void>; exportTasks(format: 'json' | 'csv', gids: string[]): Promise<boolean>; onState(listener: (state: AsanaState) => void): () => void };
+export type AsanaAPI = {
+  getState(): Promise<AsanaState>;
+  reloadCatalog(): Promise<void>;
+  cancelReload(): Promise<void>;
+  setPreferences(patch: Partial<AsanaPreferences>): Promise<void>;
+  openTask(gid: string): Promise<void>;
+  copyTask(gid: string): Promise<void>;
+  exportTasks(format: 'json' | 'csv', gids: string[]): Promise<boolean>;
+  startTaskInProgress(gid: string, dueDate?: string | null): Promise<{ success: boolean; error?: string }>;
+  startAllUnsetInProgress(tasks: { gid: string; dueDate?: string | null }[]): Promise<{ success: boolean; count: number; error?: string }>;
+  onState(listener: (state: AsanaState) => void): () => void;
+};

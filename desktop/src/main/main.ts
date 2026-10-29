@@ -13,6 +13,7 @@ import { CompletionJournal } from './completion-journal';
 import { completionObservation } from './completion-observer';
 import { AsanaStore } from './asana-store';
 import { asanaTaskContext, asanaTaskUrl, encodeAsanaExport } from './asana-ipc';
+import { executeAsanaTaskUpdate, executeAsanaBatchUpdate, type TaskUpdatePayload } from './asana-mutation';
 import type { AsanaPreferences } from '../shared/asana-types';
 
 app.setName('Aurelia');
@@ -62,6 +63,34 @@ function registerApi():void{
   const result=await dialog.showSaveDialog(main!,{defaultPath:`Asana-HERNANDA-MSS-${new Date().toISOString().slice(0,10)}.${format}`,filters:[{name:String(format).toUpperCase(),extensions:[String(format)]}]});
   if(result.canceled||!result.filePath)return false;
   writeFileSync(result.filePath,data,'utf8');return true;
+ });
+ register('asana:start-in-progress',async(gid:unknown,dueDate:unknown)=>{
+  if(typeof gid!=='string'||!/^\d+$/.test(gid))throw new Error('ASANA_TASK_INVALID');
+  const dueStr=typeof dueDate==='string'&&dueDate?dueDate:null;
+  const res=await executeAsanaTaskUpdate(gid,dueStr,asanaCatalogPath());
+  if(!res.success)throw new Error(res.error||'Failed to update task');
+  await getAsanaStore().reloadCatalog(asanaCatalogPath());
+  store.appendEvent({level:'success',category:'sync',message:`Task ${gid} diperbarui ke In-Progress (Progress: In Progress)`});
+  broadcast();broadcastAsana();
+  return {success:true};
+ });
+ register('asana:start-all-unset-in-progress',async(tasksArg:unknown)=>{
+  if(!Array.isArray(tasksArg))throw new Error('ASANA_TASKS_INVALID');
+  const tasks:TaskUpdatePayload[]=[];
+  for(const item of tasksArg){
+   if(!item||typeof item!=='object')continue;
+   const obj=item as Record<string,unknown>;
+   if(typeof obj.gid==='string'&&/^\d+$/.test(obj.gid)){
+    tasks.push({gid:obj.gid,dueDate:typeof obj.dueDate==='string'?obj.dueDate:null});
+   }
+  }
+  if(tasks.length===0)return {success:true,count:0};
+  const res=await executeAsanaBatchUpdate(tasks,asanaCatalogPath());
+  if(!res.success)throw new Error(res.error||'Failed to update tasks');
+  await getAsanaStore().reloadCatalog(asanaCatalogPath());
+  store.appendEvent({level:'success',category:'sync',message:`${res.count} tasks Unset berhasil diperbarui ke In-Progress`});
+  broadcast();broadcastAsana();
+  return {success:true,count:res.count};
  });
  register('pes:state',()=>currentState());
  register('pes:sync',()=>sync.sync());

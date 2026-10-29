@@ -17,6 +17,8 @@ const asana:AsanaAPI={
  openTask:gid=>ipcRenderer.invoke('asana:open',gid),
  copyTask:gid=>ipcRenderer.invoke('asana:copy',gid),
  exportTasks:(format,gids)=>ipcRenderer.invoke('asana:export',format,gids),
+ startTaskInProgress:(gid,dueDate)=>ipcRenderer.invoke('asana:start-in-progress',gid,dueDate),
+ startAllUnsetInProgress:tasks=>ipcRenderer.invoke('asana:start-all-unset-in-progress',tasks),
  onState:listener=>{const handler=(_event:unknown,state:AsanaState)=>listener(state);ipcRenderer.on('asana:state-changed',handler);return()=>ipcRenderer.removeListener('asana:state-changed',handler);}
 };
 contextBridge.exposeInMainWorld('asana',asana);

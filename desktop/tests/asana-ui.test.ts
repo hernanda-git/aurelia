@@ -1,5 +1,8 @@
 import { describe, expect, it, vi } from 'vitest';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { queryTasks, statusGroups, taskTitle, rawOption, defaultQuery, civilDue, isUntitledTask } from '../src/renderer/asana/view-model';
+import { AsanaPanel, AsanaNav, AsanaTaskDetail } from '../src/renderer/asana/AsanaPanel';
 import type { AsanaTask } from '../src/shared/asana-types';
 export const task = (gid:string, patch:Partial<AsanaTask>={}):AsanaTask => ({gid,name:`Task ${gid}`,notes:'',goal:'',role:'BE',completed:false,status:{gid:'s',name:'Ready to QA'},progress:{gid:'p',name:'Done '},dueOn:null,dueAt:null,itStartDate:null,itEndDate:null,modifiedAt:null,lastSeenAt:null,url:'',parent:null,memberships:[],fields:[],anomalies:[],ownership:{fieldGid:'1208878911420813',optionGid:'1214725811552235',projectGid:'1208922858503175'},...patch});
 describe('Asana local catalog view model',()=>{
@@ -71,8 +74,6 @@ describe('Asana local catalog view model',()=>{
   } finally {vi.useRealTimers();}
  });
  it('renders cache-only navigation, filters, counts, task titles and honest unavailable detail copy',async()=>{
-  const {createElement}=await import('react');const {renderToStaticMarkup}=await import('react-dom/server');
-  const {AsanaPanel,AsanaNav,AsanaTaskDetail}=await import('../src/renderer/asana/AsanaPanel');
   const state={snapshot:{id:'synthetic',source:'catalog' as const,retrievedAt:'2026-10-26T00:00:00Z',sourceUpdatedAt:null,tasks:[task('1')],statusOptions:[],coverage:'catalog_only' as const},phase:'ready' as const,lastAttemptAt:null,lastError:null,preferences:{pinned:[],focusGid:null,savedViews:[]}};
   const nav=renderToStaticMarkup(createElement(AsanaNav,{state,selectedStatus:'all',onSelect:()=>{}}));
   expect(nav).toContain('HERNANDA MSS');expect(nav).toContain('asana-nav-all');expect(nav).toContain('asana-status-s');
@@ -87,5 +88,27 @@ describe('Asana local catalog view model',()=>{
   // The host <main> already uses asana-main; inner scroll/layout must not match it.
   expect(html).toContain('<div class="asana-content">');
   expect(html).not.toContain('class="asana-main"');
+ });
+ it('renders Update All and per-row update buttons for Unset section', async () => {
+  const unsetTask = task('1219921901471557', { name: 'Seller Center Task', status: { gid: null, name: null }, dueOn: '2026-11-06' });
+  const state = {
+   snapshot: {
+    id: 'synthetic',
+    source: 'catalog' as const,
+    retrievedAt: '2026-10-26T00:00:00Z',
+    sourceUpdatedAt: null,
+    tasks: [unsetTask],
+    statusOptions: [],
+    coverage: 'catalog_only' as const,
+   },
+   phase: 'ready' as const,
+   lastAttemptAt: null,
+   lastError: null,
+   preferences: { pinned: [], focusGid: null, savedViews: [] },
+  };
+  const html = renderToStaticMarkup(createElement(AsanaPanel, { state, status: 'all', onStatus: () => {}, timezone: 'UTC', onNotify: () => {} }));
+  expect(html).toContain('data-testid="asana-update-all-unset"');
+  expect(html).toContain('Update All');
+  expect(html).toContain('data-testid="asana-update-row-1219921901471557"');
  });
 });

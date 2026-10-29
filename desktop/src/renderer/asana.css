@@ -65,11 +65,20 @@
 .asana-raw { white-space: pre-wrap; overflow-wrap: anywhere; }
 .asana-list { min-width: 0; }
 .asana-group { margin-bottom: 18px; border: 1px solid var(--border-default); border-radius: 8px; background: var(--bg-surface); overflow: auto; }
-.asana-group > h2 { font-size: 12px; font-weight: 600; background: var(--bg-elevated); border-bottom: 1px solid var(--border-faint); }
-.asana-group > h2 > button { width: 100%; background: transparent; display: flex; align-items: center; gap: 9px; text-align: left; padding: 12px 14px; }
-.asana-group > h2 > button > .asana-raw { flex: 1; min-width: 0; }
-.asana-group > h2 > button > span:last-child { color: var(--text-muted); font-size: 10px; font-weight: 400; flex-shrink: 0; }
-.asana-group > h2 > button:hover { background: var(--bg-strong); }
+.asana-group > h2 { font-size: 12px; font-weight: 600; background: var(--bg-elevated); border-bottom: 1px solid var(--border-faint); display: flex; align-items: center; justify-content: space-between; }
+.asana-group > h2 > button.asana-group-toggle { flex: 1; min-width: 0; background: transparent; display: flex; align-items: center; gap: 9px; text-align: left; padding: 12px 14px; }
+.asana-group > h2 > button.asana-group-toggle > .asana-raw { flex: 1; min-width: 0; }
+.asana-group > h2 > button.asana-group-toggle > span:last-child { color: var(--text-muted); font-size: 10px; font-weight: 400; flex-shrink: 0; }
+.asana-group > h2 > button.asana-group-toggle:hover { background: var(--bg-strong); }
+.asana-unset-update-all { margin-right: 12px; flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; font-size: 11px; font-weight: 600; border-radius: 6px; cursor: pointer; background: var(--accent); color: #fff; border: none; transition: opacity 0.15s ease; }
+.asana-unset-update-all:hover:not(:disabled) { opacity: 0.9; }
+.asana-unset-update-all:disabled { opacity: 0.5; cursor: not-allowed; }
+.asana-action-col { width: 48px; text-align: center; }
+.asana-action-cell { text-align: center; width: 48px; padding: 10px 12px !important; vertical-align: middle !important; }
+.asana-row-update-btn { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border-default); background: var(--bg-surface); color: var(--accent); cursor: pointer; transition: all 0.15s ease; }
+.asana-row-update-btn:hover:not(:disabled) { background: var(--accent); color: #fff; border-color: var(--accent); }
+.asana-row-update-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.asana-card-top-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
 .asana-group table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; min-width: 620px; }
 .asana-group th { color: var(--text-muted); font-weight: 500; font-size: 10px; padding: 9px 13px; border-bottom: 1px solid var(--border-faint); white-space: nowrap; }
 .asana-group td { padding: 14px 13px; border-bottom: 1px solid var(--border-faint); vertical-align: top; color: var(--text-secondary); }
