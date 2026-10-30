@@ -20,6 +20,9 @@ function statusRank(key:string,label:string):number {
 }
 export function statusGroups(tasks:AsanaTask[], options:AsanaSnapshot['statusOptions']=[]) {
  const groups=new Map(options.map(o=>[o.gid,{key:o.gid,label:o.name,count:0}]));
+ if(!groups.has('unset')) {
+  groups.set('unset', { key: 'unset', label: 'Unset', count: 0 });
+ }
  for(const t of uniqueTasks(tasks)){
   if(isUntitledTask(t)) continue;
   const key=t.status.gid ?? 'unset';const group=groups.get(key) ?? {key,label:rawOption(t.status),count:0}; group.count++;groups.set(key,group);

@@ -64,6 +64,20 @@
 .asana-scope-note { font-size: 11px; line-height: 1.7; margin: 10px 0 18px; }
 .asana-raw { white-space: pre-wrap; overflow-wrap: anywhere; }
 .asana-list { min-width: 0; }
+.time-tabs { display: flex; align-items: center; gap: 8px; margin: 18px 0 16px; border-bottom: 1px solid var(--border-faint); padding-bottom: 10px; overflow-x: auto; }
+.time-tab { display: inline-flex; align-items: center; gap: 7px; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 550; color: var(--text-secondary); background: transparent; border: 1px solid transparent; cursor: pointer; transition: all 0.15s ease; white-space: nowrap; }
+.time-tab:hover:not(.active) { background: var(--bg-elevated); color: var(--text-primary); }
+.time-tab.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.time-tab-badge { font-size: 10.5px; padding: 1px 7px; border-radius: 10px; background: var(--bg-elevated); color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.time-tab.active .time-tab-badge { background: var(--accent); color: var(--white-on-accent); font-weight: 700; }
+.time-tab.urgent .time-tab-badge { background: var(--danger-soft); color: var(--danger); }
+.time-tab.active.urgent { border-color: var(--danger); color: var(--danger); background: var(--danger-soft); }
+.time-tab.active.urgent .time-tab-badge { background: var(--danger); color: #fff; }
+
+.asana-table-header { padding: 12px 16px; background: var(--bg-elevated); border-bottom: 1px solid var(--border-faint); display: flex; align-items: center; justify-content: space-between; }
+.asana-table-header-left { display: flex; align-items: center; gap: 9px; }
+.asana-table-header .asana-group-title { font-size: 12px; font-weight: 600; color: var(--text-primary); }
+.asana-table-header .asana-group-badge { font-size: 10px; color: var(--text-muted); }
 .asana-group { margin-bottom: 18px; border: 1px solid var(--border-default); border-radius: 8px; background: var(--bg-surface); overflow: auto; }
 .asana-group > h2 { font-size: 12px; font-weight: 600; background: var(--bg-elevated); border-bottom: 1px solid var(--border-faint); display: flex; align-items: center; justify-content: space-between; }
 .asana-group > h2 > button.asana-group-toggle { flex: 1; min-width: 0; background: transparent; display: flex; align-items: center; gap: 9px; text-align: left; padding: 12px 14px; }

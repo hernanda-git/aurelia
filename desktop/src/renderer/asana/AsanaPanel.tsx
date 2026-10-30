@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ArrowPathIcon, ArrowTopRightOnSquareIcon, ArrowDownTrayIcon, MagnifyingGlassIcon, StarIcon, XMarkIcon, DocumentDuplicateIcon, QueueListIcon, Squares2X2Icon, ChevronDownIcon, ChevronRightIcon, ChevronUpIcon, FunnelIcon } from '@heroicons/react/24/outline';
 import type { AsanaAPI, AsanaState, AsanaTask, AsanaPreferences } from '../../shared/asana-types';
-import { civilDue, defaultQuery, isUntitledTask, queryTasks, rawOption, statusGroups, taskTitle, uniqueTasks, type Query } from './view-model';
+import { civilDay, civilDue, defaultQuery, isUntitledTask, queryTasks, rawOption, statusGroups, taskTitle, uniqueTasks, type Query } from './view-model';
 import '../asana.css';
 
 const api=()=> (window as unknown as {asana:AsanaAPI}).asana;
@@ -77,7 +77,18 @@ export function AsanaPanel({state,status,onStatus,timezone,onNotify}:{state:Asan
  const tasks=useMemo(()=>uniqueTasks(state?.snapshot?.tasks??[]).filter(t=>!isUntitledTask(t)),[state?.snapshot]);
  const preferences=state?.preferences??emptyPreferences;
  const model=useMemo(()=>queryTasks(tasks,{...query,status},timezone),[tasks,query,status,timezone]);
- const groups=statusGroups(model.tasks,state?.snapshot?.statusOptions).filter(g=>g.count>0);
+ const timeCounts=useMemo(()=>{
+  const baseForTime=tasks.filter(t=>(status==='all'||(t.status.gid??'unset')===status)&&(query.completion==='all'||t.completed===(query.completion==='completed'))&&(!query.query.trim()||[t.gid,t.name,t.notes,t.goal,...t.fields.map(f=>f.displayValue??'')].some(s=>s.toLowerCase().includes(query.query.trim().toLowerCase()))));
+  const now=Date.now();const today=civilDay(new Date(),timezone);
+  const overdue=(t:AsanaTask)=>!t.completed&&(t.dueAt&&Number.isFinite(Date.parse(t.dueAt))?Date.parse(t.dueAt)<now:!!civilDue(t,timezone)&&civilDue(t,timezone)!<today);
+  return {
+   all:baseForTime.length,
+   overdue:baseForTime.filter(t=>overdue(t)).length,
+   today:baseForTime.filter(t=>civilDue(t,timezone)===today).length,
+   upcoming:baseForTime.filter(t=>!!civilDue(t,timezone)&&civilDue(t,timezone)!>today).length,
+  };
+ },[tasks,status,query.query,query.completion,timezone]);
+ const groups=statusGroups(model.tasks,state?.snapshot?.statusOptions);
  const active=selected?model.allMatching.find(t=>t.gid===selected):undefined;
  const shown=model.tasks.filter(t=>!collapsed.has(t.status.gid??'unset')).length;
  const close=()=>{setSelected(null);if(lastRow.current?.isConnected)lastRow.current.focus();else root.current?.querySelector<HTMLInputElement>('[data-testid="asana-search"]')?.focus();};
@@ -143,20 +154,24 @@ export function AsanaPanel({state,status,onStatus,timezone,onNotify}:{state:Asan
     <div className="asana-saved"><label><span className="asana-sr-only">Saved view name</span><input data-testid="asana-view-name" placeholder="Name this view" maxLength={80} value={viewName} onChange={e=>setViewName(e.target.value)}/></label><button className="text-button" disabled={busy||!viewName.trim()} onClick={()=>{const name=viewName.trim();savePreferences({savedViews:[...preferences.savedViews.filter(v=>v.name!==name),{name,query:query.query,status,completion:query.completion,progress:query.progress,role:query.role,sort:query.sort}]});}}>Save view locally</button><label><span className="asana-sr-only">Load saved view</span><select data-testid="asana-saved-views" value="" onChange={e=>{const view=preferences.savedViews.find(v=>v.name===e.target.value);if(view){setQuery({...defaultQuery,query:view.query,completion:view.completion,progress:view.progress,role:view.role,sort:view.sort});onStatus(view.status);setViewName(view.name);}}}><option value="">Load saved view…</option>{preferences.savedViews.map(v=><option key={v.name}>{v.name}</option>)}</select></label>{preferences.savedViews.some(v=>v.name===viewName)&&<button className="text-button" disabled={busy} onClick={()=>savePreferences({savedViews:preferences.savedViews.filter(v=>v.name!==viewName)})}>Remove saved view</button>}<span className="asana-muted">Saves search, status, completion, progress, role & sort.</span></div>
    </div>
    <div className="asana-list-toolbar"><p data-testid="asana-count" aria-live="polite">{`Total ${model.total} · Matching ${model.matching} · Showing ${shown}`}</p><div className="asana-actions"><button className="icon-button" aria-label="Grouped list" aria-pressed={mode==='list'} onClick={()=>setMode('list')}><QueueListIcon/></button><button className="icon-button" data-testid="asana-board-toggle" aria-label="Read-only board" aria-pressed={mode==='board'} onClick={()=>setMode('board')}><Squares2X2Icon/></button><button className="text-button" aria-pressed={dense} onClick={()=>setDense(!dense)}>Compact</button><label><span className="asana-sr-only">Export format</span><select value={exportFormat} onChange={e=>setExportFormat(e.target.value as 'csv'|'json')}><option value="csv">CSV</option><option value="json">JSON</option></select></label><button className="button" data-testid="asana-export" disabled={busy||!model.matching} onClick={()=>void action(()=>api().exportTasks(exportFormat,model.allMatching.map(t=>t.gid)),'Matching tasks exported')}><ArrowDownTrayIcon/>Export matching ({model.matching})</button></div></div>
-   <p className="asana-muted asana-scope-note">Navigation counts cover the whole catalog. Matching includes all filters; showing excludes collapsed groups on this page. {mode==='board'?'Read-only board · current page, no drag or writes.':`Due day uses ${timezone}; date-only values never shift timezone.`}</p>
+   <div className="time-tabs" role="tablist" aria-label="Filter berdasarkan waktu">
+    {[
+     {key:'all',label:'Semua',count:timeCounts.all},
+     {key:'overdue',label:'Sudah Lewat',count:timeCounts.overdue,urgent:true},
+     {key:'today',label:'Hari Ini',count:timeCounts.today},
+     {key:'upcoming',label:'Mendatang',count:timeCounts.upcoming},
+    ].map(tab=><button key={tab.key} type="button" role="tab" className={`time-tab ${query.due===tab.key?'active':''} ${tab.urgent&&tab.count>0?'urgent':''}`} aria-selected={query.due===tab.key} data-testid={`asana-tab-${tab.key}`} onClick={()=>change({due:tab.key})}><span>{tab.label}</span><span className="time-tab-badge">{tab.count}</span></button>)}
+   </div>
    <div className={`asana-list ${mode==='board'?'asana-board':''}`} data-testid="asana-list" onKeyDown={e=>{if(!['ArrowDown','ArrowUp','Home','End'].includes(e.key)||(e.target as HTMLElement).dataset.testid?.startsWith('asana-title-')!==true)return;const rows=[...e.currentTarget.querySelectorAll<HTMLButtonElement>('.asana-task-title')];const index=rows.indexOf(e.target as HTMLButtonElement);const next=e.key==='Home'?0:e.key==='End'?rows.length-1:Math.max(0,Math.min(rows.length-1,index+(e.key==='ArrowDown'?1:-1)));rows[next]?.focus();e.preventDefault();}}>
     {!model.matching&&<div className="asana-empty"><h2>{state?.snapshot?'No matching tasks':'No local catalog yet'}</h2><p>{state?.snapshot?'Change filters or reset to see all cached tasks, including completed records.':'Reload the local catalog to begin. No sample data is shown as live.'}</p></div>}
-    {groups.map(group=>{
-     const isUnsetGroup=group.key==='unset'||group.label.toLowerCase()==='unset';
-     const unsetMatching=isUnsetGroup?model.allMatching.filter(t=>(t.status.gid??'unset')===group.key).length:0;
-     return <section className="asana-group" key={group.key}>
-      <h2>
-       <button className="asana-group-toggle" aria-expanded={!collapsed.has(group.key)} data-testid={`asana-group-${group.key}`} onClick={()=>toggle(group.key)}>
-        {collapsed.has(group.key)?<ChevronRightIcon/>:<ChevronDownIcon/>}
-        <span className="asana-raw">{group.label}</span>
-        <span>{model.allMatching.filter(t=>(t.status.gid??'unset')===group.key).length} matching · {group.count} on page</span>
-       </button>
-       {isUnsetGroup&&unsetMatching>0&&(
+    {!!model.matching&&(
+     <section className="asana-group" data-testid="asana-group-main">
+      <div className="asana-table-header">
+       <div className="asana-table-header-left">
+        <span className="asana-group-title">{status==='all'?'ALL TASKS':(rawOption(tasks.find(t=>(t.status.gid??'unset')===status)?.status??{gid:status,name:status})).toUpperCase()}</span>
+        <span className="asana-group-badge">{model.matching} tasks</span>
+       </div>
+       {(status==='unset'||(status==='all'&&model.allMatching.some(t=>(t.status.gid??'unset')==='unset'))||model.allMatching.some(t=>(t.status.gid??'unset')==='unset'))&&(
         <button
          type="button"
          className="button primary asana-unset-update-all"
@@ -169,10 +184,97 @@ export function AsanaPanel({state,status,onStatus,timezone,onNotify}:{state:Asan
          <span>{isUpdatingAll?'Updating all…':'Update All'}</span>
         </button>
        )}
-      </h2>
-      {!collapsed.has(group.key)&&(mode==='list'?<table><caption className="asana-sr-only">{group.label} tasks on current page</caption><thead><tr><th scope="col">Task</th><th scope="col">IT PIC</th><th scope="col">Progress</th><th scope="col">Last Modified Date</th><th scope="col">Due Date</th><th scope="col">IT Start Date</th><th scope="col">IT End Date</th>{isUnsetGroup&&<th scope="col" className="asana-action-col">Aksi</th>}</tr></thead><tbody>{model.tasks.filter(t=>(t.status.gid??'unset')===group.key).map(t=>{const itPic=t.fields.find(f=>f.name==='IT PIC')?.displayValue||'HERNANDA MSS';const isUpdatingThis=updatingGids.has(t.gid);return <tr key={t.gid} data-testid={`asana-row-${t.gid}`} data-selected={t.gid===selected}><td>{titleButton(t)}{taskDesc(t)?<p className="asana-row-desc">{taskDesc(t)}</p>:null}<div className="asana-row-meta"><span className="task-id">{t.gid}</span>{preferences.pinned.includes(t.gid)&&<span>Pinned locally</span>}{preferences.focusGid===t.gid&&<span>Local focus</span>}</div></td><td className="asana-raw">{itPic}</td><td className="asana-raw">{rawOption(t.progress)}</td><td><time>{t.modifiedAt?formatDate(t.modifiedAt,timezone):'—'}</time></td><td><time>{civilDue(t,timezone)??'—'}</time></td><td><time>{t.itStartDate?formatDate(t.itStartDate,timezone):'—'}</time></td><td><time>{t.itEndDate?formatDate(t.itEndDate,timezone):'—'}</time></td>{isUnsetGroup&&<td className="asana-action-cell"><button type="button" className="icon-button asana-row-update-btn" data-testid={`asana-update-row-${t.gid}`} disabled={busy||isUpdatingThis||isUpdatingAll} onClick={()=>void handleUpdateTask(t)} title="Update to In-Progress (Progress: In Progress, Status: In-Progress, IT Start: today, IT End: Due Date)" aria-label={`Update task ${taskTitle(t)} to In-Progress`}><ArrowPathIcon className={isUpdatingThis?'spin':''}/></button></td>}</tr>;})}</tbody></table>:<div className="asana-cards">{model.tasks.filter(t=>(t.status.gid??'unset')===group.key).map(t=>{const isUpdatingThis=updatingGids.has(t.gid);return <article data-testid={`asana-row-${t.gid}`} key={t.gid} data-selected={t.gid===selected}><div className="asana-card-top-row">{titleButton(t)}{isUnsetGroup&&<button type="button" className="icon-button asana-row-update-btn" data-testid={`asana-update-card-${t.gid}`} disabled={busy||isUpdatingThis||isUpdatingAll} onClick={()=>void handleUpdateTask(t)} title="Update to In-Progress" aria-label={`Update task ${taskTitle(t)} to In-Progress`}><ArrowPathIcon className={isUpdatingThis?'spin':''}/></button>}</div>{taskDesc(t)?<p className="asana-row-desc">{taskDesc(t)}</p>:null}<p className="task-id">{t.gid}</p><div className="asana-card-facts">{labels(t)}</div>{preferences.pinned.includes(t.gid)&&<p className="asana-muted">Pinned locally</p>}{preferences.focusGid===t.gid&&<p className="asana-muted">Local focus</p>}</article>;})}</div>)}
-     </section>;
-    })}
+      </div>
+      {mode==='list'?(
+       <table>
+        <caption className="asana-sr-only">Asana tasks on current page</caption>
+        <thead>
+         <tr>
+          <th scope="col" style={{width:'38%'}}>Task</th>
+          <th scope="col">IT PIC</th>
+          <th scope="col">Progress</th>
+          <th scope="col">Status</th>
+          <th scope="col">Last Modified Date</th>
+          <th scope="col">Due Date</th>
+          <th scope="col">IT Start Date</th>
+          <th scope="col">IT End Date</th>
+          <th scope="col" className="asana-action-col">Aksi</th>
+         </tr>
+        </thead>
+        <tbody>
+         {model.tasks.map(t=>{
+          const itPic=t.fields.find(f=>f.name==='IT PIC')?.displayValue||'HERNANDA MSS';
+          const isUnsetRow=(t.status.gid??'unset')==='unset';
+          const isUpdatingThis=updatingGids.has(t.gid);
+          return <tr key={t.gid} data-testid={`asana-row-${t.gid}`} data-selected={t.gid===selected}>
+           <td>
+            {titleButton(t)}
+            {taskDesc(t)?<p className="asana-row-desc">{taskDesc(t)}</p>:null}
+            <div className="asana-row-meta">
+             <span className="task-id">{t.gid}</span>
+             {preferences.pinned.includes(t.gid)&&<span>Pinned locally</span>}
+             {preferences.focusGid===t.gid&&<span>Local focus</span>}
+            </div>
+           </td>
+           <td className="asana-raw">{itPic}</td>
+           <td className="asana-raw">{rawOption(t.progress)}</td>
+           <td className="asana-raw">{rawOption(t.status)}</td>
+           <td><time>{t.modifiedAt?formatDate(t.modifiedAt,timezone):'—'}</time></td>
+           <td><time>{civilDue(t,timezone)??'—'}</time></td>
+           <td><time>{t.itStartDate?formatDate(t.itStartDate,timezone):'—'}</time></td>
+           <td><time>{t.itEndDate?formatDate(t.itEndDate,timezone):'—'}</time></td>
+           <td className="asana-action-cell">
+            {isUnsetRow?(
+             <button
+              type="button"
+              className="icon-button asana-row-update-btn"
+              data-testid={`asana-update-row-${t.gid}`}
+              disabled={busy||isUpdatingThis||isUpdatingAll}
+              onClick={()=>void handleUpdateTask(t)}
+              title="Update to In-Progress"
+              aria-label={`Update task ${taskTitle(t)} to In-Progress`}
+             >
+              <ArrowPathIcon className={isUpdatingThis?'spin':''}/>
+             </button>
+            ):<span className="text-muted">—</span>}
+           </td>
+          </tr>;
+         })}
+        </tbody>
+       </table>
+      ):(
+       <div className="asana-cards">
+        {model.tasks.map(t=>{
+         const isUnsetRow=(t.status.gid??'unset')==='unset';
+         const isUpdatingThis=updatingGids.has(t.gid);
+         return <article data-testid={`asana-row-${t.gid}`} key={t.gid} data-selected={t.gid===selected}>
+          <div className="asana-card-top-row">
+           {titleButton(t)}
+           {isUnsetRow&&(
+            <button
+             type="button"
+             className="icon-button asana-row-update-btn"
+             data-testid={`asana-update-card-${t.gid}`}
+             disabled={busy||isUpdatingThis||isUpdatingAll}
+             onClick={()=>void handleUpdateTask(t)}
+             title="Update to In-Progress"
+             aria-label={`Update task ${taskTitle(t)} to In-Progress`}
+            >
+             <ArrowPathIcon className={isUpdatingThis?'spin':''}/>
+            </button>
+           )}
+          </div>
+          {taskDesc(t)?<p className="asana-row-desc">{taskDesc(t)}</p>:null}
+          <p className="task-id">{t.gid}</p>
+          <div className="asana-card-facts">{labels(t)}</div>
+          {preferences.pinned.includes(t.gid)&&<p className="asana-muted">Pinned locally</p>}
+          {preferences.focusGid===t.gid&&<p className="asana-muted">Local focus</p>}
+         </article>;
+        })}
+       </div>
+      )}
+     </section>
+    )}
    </div>
    <footer className="asana-pagination"><label>Per page <select aria-label="Tasks per page" value={query.pageSize} onChange={e=>change({pageSize:Number(e.target.value)})}>{[25,50,100].map(n=><option key={n}>{n}</option>)}</select></label><div className="asana-actions"><button className="button" data-testid="asana-prev" disabled={model.page<=1} onClick={()=>setQuery(q=>({...q,page:model.page-1}))}>Previous</button><span data-testid="asana-page">Page {model.page} / {model.pages}</span><button className="button" data-testid="asana-next" disabled={model.page>=model.pages} onClick={()=>setQuery(q=>({...q,page:model.page+1}))}>Next</button></div></footer>
   </div>
