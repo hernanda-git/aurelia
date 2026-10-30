@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 import type { Task, Snapshot } from '../shared/types';
 import {
   PortalCompletionDriver,
@@ -39,12 +40,31 @@ export async function stageEvidenceFile(filePath: string): Promise<CompletionSta
   };
 }
 
-export async function createAutoEvidence(task: Task, targetDir: string): Promise<CompletionStagedFile> {
+export async function createAutoEvidence(task: Task, targetDir: string, finishDate?: string): Promise<CompletionStagedFile> {
   fs.mkdirSync(targetDir, { recursive: true });
   const cleanId = task.TaskNo.replace(/[^a-zA-Z0-9_-]/g, '_');
-  const nowIso = new Date().toISOString();
-  const evidencePath = path.join(targetDir, `bukti-penyelesaian-${cleanId}.txt`);
+  const imagePath = path.join(targetDir, `bukti-penyelesaian-${cleanId}.png`);
+  const scriptPath = path.resolve(__dirname, '../../scripts/generate_evidence_image.py');
 
+  try {
+    const res = spawnSync('python', [
+      scriptPath,
+      '--task-no', task.TaskNo,
+      '--task-name', task.TaskName,
+      '--pic', task.Pic || 'MUHAMMAD HERNANDA',
+      '--dept', task.DeptName || 'ITMSS',
+      '--target', task.Target || 'T1',
+      '--due', task.Duedate || '',
+      '--finish-date', finishDate || task.Duedate || '',
+      '--out', imagePath,
+    ], { windowsHide: true });
+    if (res.status === 0 && fs.existsSync(imagePath)) {
+      return stageEvidenceFile(imagePath);
+    }
+  } catch {}
+
+  const textPath = path.join(targetDir, `bukti-penyelesaian-${cleanId}.txt`);
+  const nowIso = new Date().toISOString();
   const content = [
     '================================================================================',
     'BUKTI PENYELESAIAN TASK PES (PORTAL EVALUASI STAF)',
@@ -64,9 +84,8 @@ export async function createAutoEvidence(task: Task, targetDir: string): Promise
     'Status diubah ke Selesai melalui Aurelia Personal Agentic Task Management.',
     '================================================================================',
   ].join('\r\n');
-
-  await fs.promises.writeFile(evidencePath, content, 'utf8');
-  return stageEvidenceFile(evidencePath);
+  await fs.promises.writeFile(textPath, content, 'utf8');
+  return stageEvidenceFile(textPath);
 }
 
 export interface PesCompletionResult {

@@ -30,7 +30,8 @@ describe('PES completion service', () => {
 
       const staged = await createAutoEvidence(task, dir);
       expect(staged.fileName).toContain('bukti-penyelesaian-M03938');
-      expect(staged.mime).toBe('text/plain');
+      expect(staged.fileName).toMatch(/\.png$/);
+      expect(staged.mime).toBe('image/png');
       expect(staged.size).toBeGreaterThan(0);
       expect(staged.sha256).toMatch(/^[a-f0-9]{64}$/);
     } finally {
