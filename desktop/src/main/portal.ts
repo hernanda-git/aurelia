@@ -86,7 +86,7 @@ export class PesPortal {
       const grid=decodeGrid(await this.read(captureGridScript,signal));
       for(const row of grid.rows){if(seen.has(row.task.TaskNo))throw new PortalError('PAGINATION_DUPLICATE');seen.add(row.task.TaskNo);}
       scanned+=grid.rows.length;sourceRows.push(...grid.sourceRows);
-      const selected=grid.rows.filter(r=>['Approval','Open'].includes(r.task.Status));
+      const selected=grid.rows.filter(r=>['Approval','Open','Update Task','Selesai','Solved'].includes(r.task.Status));
       for(let index=0;index<selected.length;index++){
         const {task,infoId}=selected[index];
         progress({phase:'details',message:`Membaca rincian tasks · halaman ${page}`,completed:tasks.length,total:tasks.length+selected.length-index});

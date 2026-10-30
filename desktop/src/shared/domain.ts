@@ -40,7 +40,7 @@ export function validateSnapshot(value: unknown): Snapshot {
     if (key !== key.trim() || keys.has(key)) throw new Error('Duplicate or invalid TaskNo');
     keys.add(key);
     if (fields.Pic !== PIC) throw new Error('Invalid task PIC');
-    if (fields.Status !== 'Approval' && fields.Status !== 'Open') throw new Error('Invalid task status');
+    if (!['Approval', 'Open', 'Update Task', 'Selesai', 'Solved'].includes(fields.Status as string)) throw new Error('Invalid task status');
     const h = record(rawTask.history, 'task history');
     const history: Task['history'] = { text: text(h.text, 'history.text', true) };
     const historyId = history.text.match(/(?:^|\n)\s*TaskNo\s*:\s*([^\r\n]+)/)?.[1].trim();
@@ -63,10 +63,10 @@ export function validateSnapshot(value: unknown): Snapshot {
       const key = row[1];
       if (!key.trim() || key !== key.trim() || rowKeys.has(key) || row[3] !== PIC) throw new Error('Invalid source row identity');
       rowKeys.add(key);
-      if (row[12] === 'Approval' || row[12] === 'Open') {
+      if (detailed.has(key)) {
         activeRows++;
-        const task = detailed.get(key);
-        if (!task || TASK_FIELDS.some((field, i) => task[field] !== row[i + 1]) || (task.Row !== undefined && task.Row !== row[0])) throw new Error('Source row/detail mismatch');
+        const task = detailed.get(key)!;
+        if (TASK_FIELDS.some((field, i) => !['Status', 'TglSelesai', 'Lampiran'].includes(field) && task[field] !== row[i + 1]) || (task.Row !== undefined && task.Row !== row[0])) throw new Error('Source row/detail mismatch');
       }
     }
     if (activeRows !== tasks.length) throw new Error('Source row/active count mismatch');
