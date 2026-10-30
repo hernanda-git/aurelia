@@ -13,6 +13,14 @@ export interface Snapshot {
   /** All captured grid rows, including non-active statuses; absent in legacy snapshots. */
   sourceRows?: string[][];
 }
+export interface TaskCorrelation {
+  issueKey: string;
+  asanaId: string;
+  asanaName: string;
+  pesTaskNo: string;
+  pesStatus: string;
+  role: string;
+}
 export type Theme = 'dark' | 'light' | 'system' | 'pinkish' | 'catppuccin' | 'everforest' | 'solarized' | 'github' | 'nous' | 'nous-alt' | 'midnight' | 'ember' | 'cyberpunk' | 'slate' | 'mono';
 export interface Settings { theme: Theme; timezone: string; compact: boolean }
 export interface TaskPreference { pinned: boolean }
@@ -45,6 +53,7 @@ export interface DesktopAPI {
   finishTask(taskNo: string, finishDate: string, evidenceFilePath?: string): Promise<{ success: boolean; taskNo: string; error?: string }>;
   generateEvidence(taskNo: string): Promise<{ filePath: string; fileName: string; size: number }>;
   selectEvidenceFile(): Promise<string | null>;
+  getCorrelations(): Promise<TaskCorrelation[]>;
   window(action: 'minimize' | 'maximize' | 'close'): Promise<void>;
   onState(listener: (state: AppState) => void): () => void;
 }

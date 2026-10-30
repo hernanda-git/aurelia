@@ -16,6 +16,7 @@ import { asanaTaskContext, asanaTaskUrl, encodeAsanaExport } from './asana-ipc';
 import { executeAsanaTaskUpdate, executeAsanaBatchUpdate, type TaskUpdatePayload } from './asana-mutation';
 import type { AsanaPreferences } from '../shared/asana-types';
 import { executePesCompletion, createAutoEvidence } from './pes-completion-service';
+import { AureliaDb } from './aurelia-db';
 
 app.setName('Aurelia');
 if(process.env.PES_FOCUS_DATA_DIR)app.setPath('userData',path.resolve(process.env.PES_FOCUS_DATA_DIR));
@@ -32,6 +33,7 @@ let agentWorkspaceStatus:AgentWorkspaceInfo|undefined;
 const portalOwner=new PortalCoordinator();
 let completionJournal:CompletionJournal|undefined;
 let asanaStore:AsanaStore|undefined;
+let aureliaDb:AureliaDb|undefined;
 const getAsanaStore=()=>{if(!asanaStore)throw Error('ASANA_STORAGE_UNAVAILABLE');return asanaStore;};
 const broadcastAsana=()=>{if(main&&!main.isDestroyed()&&asanaStore)main.webContents.send('asana:state-changed',asanaStore.getState());};
 const asanaCatalogPath=()=>process.env.PES_FOCUS_DATA_DIR
@@ -43,7 +45,7 @@ function projectWorkspace():void{
  try{agentWorkspace??=new AgentWorkspace(agentWorkspaceRoot);agentWorkspaceStatus=agentWorkspace.write(store.getState());}
  catch{agentWorkspaceStatus={path:path.resolve(agentWorkspaceRoot),lastWrittenAt:agentWorkspace?.info().lastWrittenAt??null,taskCount:agentWorkspace?.info().taskCount??0,error:'Agent workspace belum diperbarui. Data asli tetap aman di profil lokal. Periksa izin dan folder workspace.'};}
 }
-const broadcast=()=>{projectWorkspace();if(main&&!main.isDestroyed())main.webContents.send('pes:state-changed',currentState());};
+const broadcast=()=>{projectWorkspace();try{aureliaDb?.saveState(store.getState());}catch{}if(main&&!main.isDestroyed())main.webContents.send('pes:state-changed',currentState());};
 const localId=(id:unknown):string=>{if(typeof id!=='string'||!id.trim()||id.length>200)throw new Error('Identitas tasks tidak valid.');return id;};
 function register(channel:string,handler:(...args:any[])=>unknown):void{
  ipcMain.handle(channel,async(event,...args)=>{
@@ -181,6 +183,9 @@ function registerApi():void{
   writeFileSync(result.filePath,JSON.stringify(store.getState().activities,null,2),'utf8');
   store.appendEvent({level:'success',category:'export',message:'Riwayat aktivitas diekspor tanpa data autentikasi.'});broadcast();return true;
  });
+ register('pes:correlations',()=>{
+  return aureliaDb?.findCrossSystemCorrelations(asanaCatalogPath())??[];
+ });
 }
 async function start():Promise<void>{
  const file=path.join(app.getPath('userData'),'workspace.json');
@@ -192,6 +197,8 @@ async function start():Promise<void>{
   }
  }catch{asanaStore=undefined;}
  try{
+  const dbFile=path.join(app.getPath('userData'),'aurelia.db');
+  try{aureliaDb=new AureliaDb(dbFile);}catch{aureliaDb=undefined;}
   store=new StateStore(file);
   if(!store.getState().snapshot){
    const seed=path.join(app.getAppPath(),'assets','seed.json');
@@ -200,6 +207,7 @@ async function start():Promise<void>{
     store.appendEvent({level:'info',category:'system',message:'Data tersimpan dari pengambilan 26 Oktober 2026 diimpor. Ini bukan sinkronisasi langsung.'});
    }
   }
+  try{aureliaDb?.saveState(store.getState());}catch{}
  }catch{
   dialog.showErrorBox('PES — data belum dapat dibuka','Data lokal tidak dapat dibaca atau disimpan dengan aman. Berkas lama tidak dihapus. Periksa izin folder data atau cadangkan data sebelum mencoba lagi.');app.quit();return;
  }
@@ -235,5 +243,5 @@ else{
  app.on('second-instance',()=>{if(main){if(main.isMinimized())main.restore();main.show();main.focus();}});
  app.whenReady().then(start).catch(()=>{dialog.showErrorBox('Aurelia','Aplikasi belum dapat dimulai. Periksa instalasi dan dokumentasi lokal.');app.quit();});
  app.on('window-all-closed',()=>app.quit());
- app.on('before-quit',()=>{portalOwner.close();sync?.cancel();portal?.close();completionJournal?.close();});
+ app.on('before-quit',()=>{aureliaDb?.close();portalOwner.close();sync?.cancel();portal?.close();completionJournal?.close();});
 }

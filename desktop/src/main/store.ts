@@ -90,7 +90,6 @@ function appState(value: unknown): AppState {
 // Corrupt files are COPIED to a unique .corrupt-*.bak and startup throws;
 // the original is preserved. Recovery is explicit: inspect/restore the backup.
 // No directory fsync is promised on Windows, nor sudden-power-loss durability
-// beyond the platform's file-fsync/rename guarantees.
 export class Store {
   private state: AppState;
   constructor(private readonly filePath: string, initial?: AppState) {

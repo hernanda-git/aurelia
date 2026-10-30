@@ -9,6 +9,7 @@ const api:DesktopAPI={
  finishTask:(taskNo,finishDate,evidenceFilePath)=>ipcRenderer.invoke('pes:finish-task',taskNo,finishDate,evidenceFilePath),
  generateEvidence:taskNo=>ipcRenderer.invoke('pes:generate-evidence',taskNo),
  selectEvidenceFile:()=>ipcRenderer.invoke('pes:select-evidence-file'),
+ getCorrelations:()=>ipcRenderer.invoke('pes:correlations'),
  onState:listener=>{const handler=(_event:unknown,state:AppState)=>listener(state);ipcRenderer.on('pes:state-changed',handler);return()=>ipcRenderer.removeListener('pes:state-changed',handler);}
 };
 contextBridge.exposeInMainWorld('pes',api);
