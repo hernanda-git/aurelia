@@ -1,8 +1,8 @@
 {
-  "at": "2026-10-26T05:27:17.264Z",
+  "at": "2026-10-30T02:14:02.210Z",
   "status": "PASS",
   "executable": "C:\\Workspace\\pesautomation\\desktop\\node_modules\\electron\\dist\\electron.exe",
-  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\startup-collision-6O2zPr",
+  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\startup-collision-gVSWig",
   "checks": [
     "cached tasks remain available when projection initialization fails",
     "unrelated workspace data is not overwritten",

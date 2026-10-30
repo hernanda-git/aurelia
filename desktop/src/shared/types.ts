@@ -42,6 +42,9 @@ export interface DesktopAPI {
   clearActivity(): Promise<void>; exportTasks(format: 'json' | 'csv', id?: string): Promise<boolean>;
   exportActivity(): Promise<boolean>; copyText(text: string): Promise<void>; openPes(): Promise<void>;
   openAgentWorkspace(taskId?: string): Promise<void>; copyTaskContext(taskId: string): Promise<void>;
+  finishTask(taskNo: string, finishDate: string, evidenceFilePath?: string): Promise<{ success: boolean; taskNo: string; error?: string }>;
+  generateEvidence(taskNo: string): Promise<{ filePath: string; fileName: string; size: number }>;
+  selectEvidenceFile(): Promise<string | null>;
   window(action: 'minimize' | 'maximize' | 'close'): Promise<void>;
   onState(listener: (state: AppState) => void): () => void;
 }

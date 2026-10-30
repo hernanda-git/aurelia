@@ -15,6 +15,7 @@ import { AsanaStore } from './asana-store';
 import { asanaTaskContext, asanaTaskUrl, encodeAsanaExport } from './asana-ipc';
 import { executeAsanaTaskUpdate, executeAsanaBatchUpdate, type TaskUpdatePayload } from './asana-mutation';
 import type { AsanaPreferences } from '../shared/asana-types';
+import { executePesCompletion, createAutoEvidence } from './pes-completion-service';
 
 app.setName('Aurelia');
 if(process.env.PES_FOCUS_DATA_DIR)app.setPath('userData',path.resolve(process.env.PES_FOCUS_DATA_DIR));
@@ -99,6 +100,40 @@ function registerApi():void{
   if(sync.busy)throw new Error('Sinkronisasi sedang berjalan.');
   store.appendEvent({level:'info',category:'connection',message:'Koneksi PES dibuka; masuk langsung di halaman resmi PES.'});broadcast();
   try{await portalOwner.run('connection',()=>portal.openConnection());}catch{store.appendEvent({level:'error',category:'connection',message:'PES tidak dapat dihubungi. Periksa koneksi internet.'});broadcast();throw new Error('PES tidak dapat dihubungi.');}
+ });
+ register('pes:select-evidence-file',async()=>{
+  const result=await dialog.showOpenDialog(main!,{title:'Pilih File Bukti Lampiran PES',properties:['openFile'],filters:[{name:'Format Bukti (PNG, JPG, PDF, TXT, MD, DOCX, ZIP)',extensions:['png','jpg','jpeg','pdf','txt','md','docx','zip']},{name:'Semua File',extensions:['*']}]});
+  if(result.canceled||!result.filePaths.length)return null;
+  return result.filePaths[0];
+ });
+ register('pes:generate-evidence',async(taskNoArg:unknown)=>{
+  if(typeof taskNoArg!=='string'||!taskNoArg.trim())throw new Error('TASK_NO_INVALID');
+  const taskNo=taskNoArg.trim();
+  const task=store.getState().snapshot?.tasks.find(t=>t.TaskNo===taskNo);
+  if(!task)throw new Error('TASK_NOT_FOUND');
+  const targetDir=agentWorkspaceRoot?path.join(agentWorkspaceRoot,'evidence'):path.join(app.getPath('userData'),'evidence');
+  const staged=await createAutoEvidence(task,targetDir);
+  return {filePath:staged.filePath,fileName:staged.fileName,size:staged.size};
+ });
+ register('pes:finish-task',async(taskNoArg:unknown,finishDateArg:unknown,evidencePathArg:unknown)=>{
+  if(typeof taskNoArg!=='string'||!taskNoArg.trim())throw new Error('TASK_NO_INVALID');
+  if(typeof finishDateArg!=='string'||!finishDateArg.trim())throw new Error('FINISH_DATE_INVALID');
+  const taskNo=taskNoArg.trim();const finishDate=finishDateArg.trim();
+  const evidencePath=typeof evidencePathArg==='string'&&evidencePathArg?evidencePathArg:null;
+  if(process.env.PES_FOCUS_DATA_DIR){
+   const s=store.getState().snapshot;
+   if(s){
+    const t=s.tasks.find(item=>item.TaskNo===taskNo);
+    if(t){t.Status='Selesai';t.TglSelesai=finishDate;store.commitSnapshot({...s,tasks:[...s.tasks]});}
+   }
+   store.appendEvent({level:'success',category:'sync',message:`Task PES ${taskNo} diselesaikan pada ${finishDate}`});
+   broadcast();return {success:true,taskNo};
+  }
+  const res=await executePesCompletion({taskNo,finishDate,evidencePath,snapshot:store.getState().snapshot,portal,portalOwner,journal:completionJournal,workspaceRoot:agentWorkspaceRoot});
+  if(!res.success)throw new Error(res.error||'PES_COMPLETION_FAILED');
+  store.appendEvent({level:'success',category:'sync',message:`Task PES ${taskNo} berhasil diselesaikan pada portal PES (Selesai: ${finishDate}, Bukti: ${res.evidenceName})`});
+  broadcast();void sync.sync();
+  return {success:true,taskNo:res.taskNo};
  });
  register('pes:pin',(value:unknown)=>{store.togglePin(localId(value));store.appendEvent({level:'info',category:'local',message:'Sematan pribadi diperbarui. Status PES tidak diubah.'});broadcast();});
  register('pes:focus',(value:unknown)=>{store.setFocus(value===null?null:localId(value));store.appendEvent({level:'info',category:'local',message:value===null?'Fokus pribadi dilepas.':'Fokus berikutnya dipilih. Status PES tidak diubah.'});broadcast();});

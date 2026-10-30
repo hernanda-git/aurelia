@@ -263,5 +263,121 @@ function TaskDetail({ task, state, now, timezone, call }: {task:Task;state:AppSt
   const remaining = Math.abs(deadline.remainingMs ?? 0); const hours = Math.floor(remaining / 3600000), minutes = Math.floor((remaining % 3600000) / 60000);
   const focused = state.focusTaskId === task.TaskNo;
   const workspaceError = workspaceUnavailable(state.agentWorkspace);
-  return <div className="detail-scroll" key={task.TaskNo}><div className="detail-id"><span className="mono">{task.TaskNo}</span><span className="status-pill">{task.Status}</span></div><h2 className="detail-title">{task.TaskName || 'Nama tasks tidak tersedia'}</h2><div className="detail-actions"><button className={`button ${focused ? 'focus-active' : 'primary'}`} onClick={() => void call(() => window.pes.setFocus(focused ? null : task.TaskNo))}><BoltIcon/>{focused ? 'Lepas fokus' : 'Fokus berikutnya'}</button><IconButton label={state.preferences[task.TaskNo]?.pinned ? 'Lepas sematan tasks' : 'Sematkan tasks'} active={!!state.preferences[task.TaskNo]?.pinned} onClick={() => void call(() => window.pes.togglePin(task.TaskNo))}><StarIcon/></IconButton></div><div className={`deadline-card ${deadline.kind}`}><div><ClockIcon/><strong>{deadline.label}</strong></div><span className="countdown">{deadline.kind === 'unknown' ? 'Tanggal belum tersedia' : deadline.kind === 'overdue' ? `${deadline.days} hari kalender melewati tanggal tenggat` : `${hours.toLocaleString('id-ID')} jam ${minutes} menit menuju batas hari`}</span><p>{deadline.kind === 'unknown' ? 'Tidak ada hitung mundur untuk tanggal yang tidak dapat dibaca.' : `Konvensi lokal: akhir tanggal di ${timezone}. PES hanya menyediakan tanggal pada data ini.`}</p></div><section className="detail-section"><h3>Tujuan tasks</h3><p className="source-text">{task.GoalTask || 'Tujuan belum tersedia pada sumber.'}</p></section><section className="detail-section"><h3>Informasi sumber</h3><dl className="source-fields">{fields.map(({key,name}) => <div key={key}><dt>{name}</dt><dd>{String(task[key] ?? '') || '—'}</dd></div>)}</dl></section><section className="detail-section history-section"><h3>Riwayat target</h3><p className="subtle-note">Status riwayat (misalnya Verifikasi) berbeda dari status daftar {task.Status}.</p><pre className="history-text">{task.history?.text || 'Teks riwayat tidak tersedia.'}</pre>{task.history?.tables?.map((table,i) => <div className="history-table-wrap" key={i}><table aria-label={`Tabel riwayat target ${i + 1}`}><tbody>{table.map((row,j) => <tr key={j}>{row.map((cell,k) => <td key={k}>{cell}</td>)}</tr>)}</tbody></table></div>)}</section><section className="detail-section provenance"><ShieldCheckIcon/><div><strong>{state.snapshot?.source === 'imported' ? 'Snapshot historis diimpor' : 'Snapshot hasil sinkronisasi'}</strong><p>{formatDate(state.snapshot?.retrievedAt,timezone,true)}. Teks sumber ditampilkan apa adanya; preferensi lokal disimpan terpisah.</p></div></section><section className="detail-section task-workspace-actions" aria-label="Agent context tasks"><h3>Agent workspace</h3><div className="workspace-actions"><button type="button" className="button" data-testid="task-workspace-open" disabled={!!workspaceError} aria-describedby={workspaceError ? 'task-workspace-status' : undefined} onClick={() => void call(() => window.pes.openAgentWorkspace(task.TaskNo))}><ArrowTopRightOnSquareIcon/>Open task workspace</button><button type="button" className="button" data-testid="copy-agent-context" disabled={!!workspaceError} aria-describedby={workspaceError ? 'task-workspace-status' : undefined} onClick={() => void call(() => window.pes.copyTaskContext(task.TaskNo),'Agent context disalin.')}><DocumentDuplicateIcon/>Copy agent context</button></div>{workspaceError && <p id="task-workspace-status" className={state.agentWorkspace?.error ? 'error-note' : 'subtle-note'} role={state.agentWorkspace?.error ? 'alert' : 'status'}>{workspaceError}</p>}</section><div className="detail-tools"><button className="button" onClick={() => void call(() => window.pes.copyText(task.TaskNo),'Nomor tasks disalin.')}><DocumentDuplicateIcon/>Salin nomor</button><button className="button" onClick={() => void call(() => window.pes.copyText(taskText(task)),'Detail tasks disalin.')}><DocumentDuplicateIcon/>Salin detail</button><button className="button" onClick={() => void call(() => window.pes.exportTasks('json',task.TaskNo))}><ArrowDownTrayIcon/>Ekspor JSON</button><button className="button" onClick={() => void call(() => window.pes.exportTasks('csv',task.TaskNo))}><ArrowDownTrayIcon/>Ekspor CSV</button></div><button className="text-button open-pes" onClick={() => void call(() => window.pes.openPes())}>Buka halaman tasks PES <ArrowTopRightOnSquareIcon/></button><p className="subtle-note">Membuka halaman daftar PES, bukan tautan langsung ke tasks.</p></div>;
+  const [finishDate, setFinishDate] = useState<string>(task.Duedate || '');
+  const [evidencePath, setEvidencePath] = useState<string>('');
+  const [evidenceName, setEvidenceName] = useState<string>('');
+  const [submitting, setSubmitting] = useState<boolean>(false);
+
+  const handleChooseEvidence = async () => {
+    try {
+      const file = await window.pes.selectEvidenceFile();
+      if (file) {
+        setEvidencePath(file);
+        setEvidenceName(file.split(/[/\\]/).pop() || file);
+      }
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      void call(async () => {}, msg);
+    }
+  };
+
+  const handleAutoEvidence = async () => {
+    try {
+      const res = await window.pes.generateEvidence(task.TaskNo);
+      if (res && res.filePath) {
+        setEvidencePath(res.filePath);
+        setEvidenceName(res.fileName);
+        void call(async () => {}, `Bukti otomatis siap: ${res.fileName}`);
+      }
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      void call(async () => {}, msg);
+    }
+  };
+
+  const handleCompleteTask = async () => {
+    if (submitting) return;
+    const targetDate = finishDate.trim() || task.Duedate;
+    if (!targetDate) return;
+    setSubmitting(true);
+    try {
+      await call(async () => {
+        const res = await window.pes.finishTask(task.TaskNo, targetDate, evidencePath || undefined);
+        if (!res.success) throw new Error(res.error || 'Penyelesaian task gagal.');
+      }, `Task ${task.TaskNo} berhasil diselesaikan di PES!`);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      void call(async () => {}, msg);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return <div className="detail-scroll" key={task.TaskNo}>
+    <div className="detail-id"><span className="mono">{task.TaskNo}</span><span className="status-pill">{task.Status}</span></div>
+    <h2 className="detail-title">{task.TaskName || 'Nama tasks tidak tersedia'}</h2>
+    <div className="detail-actions">
+      <button className={`button ${focused ? 'focus-active' : 'primary'}`} onClick={() => void call(() => window.pes.setFocus(focused ? null : task.TaskNo))}><BoltIcon/>{focused ? 'Lepas fokus' : 'Fokus berikutnya'}</button>
+      <IconButton label={state.preferences[task.TaskNo]?.pinned ? 'Lepas sematan tasks' : 'Sematkan tasks'} active={!!state.preferences[task.TaskNo]?.pinned} onClick={() => void call(() => window.pes.togglePin(task.TaskNo))}><StarIcon/></IconButton>
+    </div>
+    <div className={`deadline-card ${deadline.kind}`}>
+      <div><ClockIcon/><strong>{deadline.label}</strong></div>
+      <span className="countdown">{deadline.kind === 'unknown' ? 'Tanggal belum tersedia' : deadline.kind === 'overdue' ? `${deadline.days} hari kalender melewati tanggal tenggat` : `${hours.toLocaleString('id-ID')} jam ${minutes} menit menuju batas hari`}</span>
+      <p>{deadline.kind === 'unknown' ? 'Tidak ada hitung mundur untuk tanggal yang tidak dapat dibaca.' : `Konvensi lokal: akhir tanggal di ${timezone}. PES hanya menyediakan tanggal pada data ini.`}</p>
+    </div>
+    <section className="detail-section pes-completion-section" data-testid="pes-completion-card">
+      <h3>Penyelesaian Portal PES</h3>
+      {task.Status === 'Selesai' || task.Status === 'Solved' ? (
+        <div className="pes-completed-banner">
+          <CheckIcon />
+          <div>
+            <strong>Task ini sudah selesai di PES</strong>
+            <p>Status: {task.Status} · Tanggal selesai: {task.TglSelesai || task.Duedate || 'Tercatat'}</p>
+          </div>
+        </div>
+      ) : (
+        <div className="pes-completion-card">
+          <label className="pes-input-label">
+            <span>Tanggal Selesai</span>
+            <input
+              type="text"
+              className="pes-date-input"
+              data-testid="pes-finish-date-input"
+              value={finishDate}
+              onChange={e => setFinishDate(e.target.value)}
+              placeholder="DD-Mmm-YYYY"
+            />
+          </label>
+          <div className="pes-evidence-row">
+            <span className="pes-field-title">Bukti Lampiran (Wajib di PES)</span>
+            <div className="pes-evidence-display">
+              <span className="mono">{evidenceName || 'Bukti otomatis (disiapkan saat kirim)'}</span>
+            </div>
+            <div className="pes-evidence-btns">
+              <button type="button" className="button" data-testid="pes-choose-file-btn" onClick={handleChooseEvidence}>Pilih File…</button>
+              <button type="button" className="button" data-testid="pes-auto-evidence-btn" onClick={handleAutoEvidence} title="Buat dokumen bukti teks otomatis">Buat Otomatis</button>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="button primary pes-complete-btn"
+            data-testid="pes-submit-complete-btn"
+            disabled={submitting}
+            onClick={handleCompleteTask}
+          >
+            <ArrowPathIcon className={submitting ? 'spin asana-icon-xs' : 'asana-icon-xs'} />
+            <span>{submitting ? 'Mengirim ke PES…' : 'Kirim Selesai ke PES'}</span>
+          </button>
+        </div>
+      )}
+    </section>
+    <section className="detail-section"><h3>Tujuan tasks</h3><p className="source-text">{task.GoalTask || 'Tujuan belum tersedia pada sumber.'}</p></section>
+    <section className="detail-section"><h3>Informasi sumber</h3><dl className="source-fields">{fields.map(({key,name}) => <div key={key}><dt>{name}</dt><dd>{String(task[key] ?? '') || '—'}</dd></div>)}</dl></section>
+    <section className="detail-section history-section"><h3>Riwayat target</h3><p className="subtle-note">Status riwayat (misalnya Verifikasi) berbeda dari status daftar {task.Status}.</p><pre className="history-text">{task.history?.text || 'Teks riwayat tidak tersedia.'}</pre>{task.history?.tables?.map((table,i) => <div className="history-table-wrap" key={i}><table aria-label={`Tabel riwayat target ${i + 1}`}><tbody>{table.map((row,j) => <tr key={j}>{row.map((cell,k) => <td key={k}>{cell}</td>)}</tr>)}</tbody></table></div>)}</section>
+    <section className="detail-section provenance"><ShieldCheckIcon/><div><strong>{state.snapshot?.source === 'imported' ? 'Snapshot historis diimpor' : 'Snapshot hasil sinkronisasi'}</strong><p>{formatDate(state.snapshot?.retrievedAt,timezone,true)}. Teks sumber ditampilkan apa adanya; preferensi lokal disimpan terpisah.</p></div></section>
+    <section className="detail-section task-workspace-actions" aria-label="Agent context tasks"><h3>Agent workspace</h3><div className="workspace-actions"><button type="button" className="button" data-testid="task-workspace-open" disabled={!!workspaceError} aria-describedby={workspaceError ? 'task-workspace-status' : undefined} onClick={() => void call(() => window.pes.openAgentWorkspace(task.TaskNo))}><ArrowTopRightOnSquareIcon/>Open task workspace</button><button type="button" className="button" data-testid="copy-agent-context" disabled={!!workspaceError} aria-describedby={workspaceError ? 'task-workspace-status' : undefined} onClick={() => void call(() => window.pes.copyTaskContext(task.TaskNo),'Agent context disalin.')}><DocumentDuplicateIcon/>Copy agent context</button></div>{workspaceError && <p id="task-workspace-status" className={state.agentWorkspace?.error ? 'error-note' : 'subtle-note'} role={state.agentWorkspace?.error ? 'alert' : 'status'}>{workspaceError}</p>}</section>
+    <div className="detail-tools"><button className="button" onClick={() => void call(() => window.pes.copyText(task.TaskNo),'Nomor tasks disalin.')}><DocumentDuplicateIcon/>Salin nomor</button><button className="button" onClick={() => void call(() => window.pes.copyText(taskText(task)),'Detail tasks disalin.')}><DocumentDuplicateIcon/>Salin detail</button><button className="button" onClick={() => void call(() => window.pes.exportTasks('json',task.TaskNo))}><ArrowDownTrayIcon/>Ekspor JSON</button><button className="button" onClick={() => void call(() => window.pes.exportTasks('csv',task.TaskNo))}><ArrowDownTrayIcon/>Ekspor CSV</button></div>
+    <button className="text-button open-pes" onClick={() => void call(() => window.pes.openPes())}>Buka halaman tasks PES <ArrowTopRightOnSquareIcon/></button>
+    <p className="subtle-note">Membuka halaman daftar PES, bukan tautan langsung ke tasks.</p>
+  </div>;
 }

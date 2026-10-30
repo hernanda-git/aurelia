@@ -3,7 +3,7 @@ const {app,BrowserWindow,session}=require('electron');
 const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');const {createHash}=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const {PortalCompletionDriver}=require(path.join(root,'dist/main/main/portal-completion.js'));
-const scratch=fs.mkdtempSync(path.join(process.env.TMPDIR,'pes-completion-dom-'));
+const scratch=fs.mkdtempSync(path.join(process.env.TMPDIR||process.env.TEMP||require('node:os').tmpdir(),'pes-completion-dom-'));
 app.setPath('userData',path.join(scratch,'profile'));
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 app.whenReady().then(async()=>{

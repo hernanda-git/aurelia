@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-29T09:57:22.426Z",
+  "at": "2026-10-30T02:13:09.822Z",
   "executable": "C:\\Workspace\\pesautomation\\desktop\\node_modules\\electron\\dist\\electron.exe",
   "checks": [
     "Aurelia branding and exact List Tasks heading appear in the actual desktop",
@@ -36,6 +36,6 @@
     "single-task JSON export excludes unrelated raw rows and retains the full-query scan count as provenance"
   ],
   "rendererErrors": [],
-  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\e2e-profile-yqKP6D",
+  "profile": "C:\\Workspace\\pesautomation\\desktop\\verification\\e2e-profile-bFs3OO",
   "livePesSync": false
 }

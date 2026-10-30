@@ -3,6 +3,7 @@ import { randomUUID } from 'node:crypto';
 import type { Scope, Snapshot, SyncState, Task } from '../shared/types';
 import { dateWindow } from '../shared/domain';
 import { captureGridScript, decodeGrid, nextPager, safePortalUrl, validateHistoryIdentity } from './portal-data';
+import type { CompletionBrowserTransport } from './portal-completion';
 
 export const PES_TASK_URL='https://pes.grcboard.com/Modul/ISO/FormInputTask.aspx';
 const sleep=(ms:number)=>new Promise<void>(resolve=>setTimeout(resolve,ms));
@@ -108,5 +109,48 @@ export class PesPortal {
       page=/^Page\$\d+$/.test(next.argument)?Number(next.argument.slice(5)):page+1;
     }
     throw new PortalError('PAGINATION_LIMIT');
+  }
+  getCompletionTransport(): CompletionBrowserTransport {
+    const win = this.window();
+    return {
+      evaluate: async (script: string) => {
+        const res = await win.webContents.executeJavaScript(`(() => {
+          try { return { ok: true, value: (${script}) }; }
+          catch (error) { return { ok: false, error: String(error?.message ?? error) }; }
+        })()`) as { ok: boolean; value?: unknown; error?: string };
+        if (!res.ok) throw new Error(res.error || 'EVALUATE_FAILED');
+        return res.value;
+      },
+      transition: async (action: string, expected: string) => {
+        const ctrl = new AbortController();
+        await this.transition(action, expected, ctrl.signal);
+      },
+      setFileInput: async (filePath: string) => {
+        const dbg = win.webContents.debugger;
+        dbg.attach('1.3');
+        try {
+          const { root: doc } = await dbg.sendCommand('DOM.getDocument') as { root: { nodeId: number } };
+          const { nodeId } = await dbg.sendCommand('DOM.querySelector', {
+            nodeId: doc.nodeId,
+            selector: '#MainContent_fuFileName',
+          }) as { nodeId: number };
+          if (!nodeId) throw new Error('FILE_INPUT_NOT_FOUND');
+          await dbg.sendCommand('DOM.setFileInputFiles', { nodeId, files: [filePath] });
+        } finally {
+          try { dbg.detach(); } catch {}
+        }
+      },
+      list: async () => {
+        const inList = await win.webContents.executeJavaScript("!!document.getElementById('MainContent_btnPreview')") as boolean;
+        if (!inList) {
+          const ctrl = new AbortController();
+          await this.transition("document.getElementById('MainContent_btnList1').click()", "!!document.getElementById('MainContent_btnPreview')", ctrl.signal);
+        }
+        return true;
+      },
+      screenshot: async () => {
+        return { bytes: (await win.webContents.capturePage()).toPNG() };
+      }
+    };
   }
 }

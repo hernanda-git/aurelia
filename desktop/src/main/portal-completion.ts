@@ -102,7 +102,7 @@ export class PortalCompletionDriver {
   async stage(identity:CompletionIdentity, finishDate:string){
     if(this.submitAttempted)throw Error('SUBMIT_ALREADY_ATTEMPTED');
     this.staged=undefined;
-    if(finishDate!==identity.target)throw Error('FINISH_DATE_NOT_TARGET');
+    if(!finishDate)throw Error('FINISH_DATE_REQUIRED');
     const before=await this.inspect(identity);
     if(!['Approval','Open'].includes(before.row.cells[12])||!['T1','Approval','Open'].includes(before.detail.status)||!before.detail.updateEnabled||before.detail.finish!=='')throw Error('TASK_NOT_WRITABLE');
     const base=guard(identity,before.detail.preservedFields);

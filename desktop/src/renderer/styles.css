@@ -39,3 +39,18 @@ body{font-size:14px}.task-row h3{font-size:14px;line-height:1.6}.task-id{font-si
 .brand-hero-subtitle{font-size:11px;font-weight:600;line-height:1.45;color:var(--text-muted);margin-top:5px;padding:0 12px}
 @media(max-width:1190px){.sidebar{width:180px;flex-basis:180px;padding:0 10px 140px}.brand.brand-hero{margin:0 -10px 22px -10px;width:calc(100% + 20px)}}
 @media(max-width:760px){.sidebar{width:166px;flex-basis:166px;padding:0 8px 130px}.brand.brand-hero{margin:0 -8px 20px -8px;width:calc(100% + 16px)}}
+/* PES Completion card styling */
+.pes-completion-section { border: 1px solid var(--border-default); background: var(--bg-surface); border-radius: 8px; padding: 14px; margin-top: 14px; }
+.pes-completion-section h3 { font-size: 13px; font-weight: 600; margin-bottom: 10px; color: var(--text-primary); }
+.pes-completed-banner { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--accent-soft); border-radius: 6px; color: var(--accent); }
+.pes-completed-banner strong { display: block; font-size: 12px; }
+.pes-completed-banner p { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.pes-completion-card { display: flex; flex-direction: column; gap: 12px; }
+.pes-input-label { display: flex; flex-direction: column; gap: 5px; font-size: 11px; color: var(--text-secondary); }
+.pes-date-input { background: var(--bg-root); border: 1px solid var(--border-default); color: var(--text-primary); border-radius: 6px; padding: 7px 10px; font-size: 12px; }
+.pes-evidence-row { display: flex; flex-direction: column; gap: 5px; }
+.pes-field-title { font-size: 11px; color: var(--text-secondary); }
+.pes-evidence-display { background: var(--bg-root); border: 1px solid var(--border-default); padding: 7px 10px; border-radius: 6px; font-size: 11px; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pes-evidence-btns { display: flex; gap: 8px; margin-top: 4px; }
+.pes-evidence-btns .button { flex: 1; font-size: 11px; padding: 6px 10px; justify-content: center; }
+.pes-complete-btn { margin-top: 6px; width: 100%; justify-content: center; padding: 8px; font-weight: 600; gap: 8px; }

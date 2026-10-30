@@ -6,6 +6,9 @@ const api:DesktopAPI={
  togglePin:id=>ipcRenderer.invoke('pes:pin',id),setFocus:id=>ipcRenderer.invoke('pes:focus',id),updateSettings:settings=>ipcRenderer.invoke('pes:settings',settings),clearActivity:()=>ipcRenderer.invoke('pes:clear-activity'),
  exportTasks:(format,id)=>ipcRenderer.invoke('pes:export-tasks',format,id),exportActivity:()=>ipcRenderer.invoke('pes:export-activity'),copyText:text=>ipcRenderer.invoke('pes:copy',text),openPes:()=>ipcRenderer.invoke('pes:open-portal'),window:action=>ipcRenderer.invoke('pes:window',action),
  openAgentWorkspace:taskId=>ipcRenderer.invoke('pes:agent-workspace',taskId),copyTaskContext:taskId=>ipcRenderer.invoke('pes:agent-context',taskId),
+ finishTask:(taskNo,finishDate,evidenceFilePath)=>ipcRenderer.invoke('pes:finish-task',taskNo,finishDate,evidenceFilePath),
+ generateEvidence:taskNo=>ipcRenderer.invoke('pes:generate-evidence',taskNo),
+ selectEvidenceFile:()=>ipcRenderer.invoke('pes:select-evidence-file'),
  onState:listener=>{const handler=(_event:unknown,state:AppState)=>listener(state);ipcRenderer.on('pes:state-changed',handler);return()=>ipcRenderer.removeListener('pes:state-changed',handler);}
 };
 contextBridge.exposeInMainWorld('pes',api);
