@@ -54,3 +54,19 @@ body{font-size:14px}.task-row h3{font-size:14px;line-height:1.6}.task-id{font-si
 .pes-evidence-btns { display: flex; gap: 8px; margin-top: 4px; }
 .pes-evidence-btns .button { flex: 1; font-size: 11px; padding: 6px 10px; justify-content: center; }
 .pes-complete-btn { margin-top: 6px; width: 100%; justify-content: center; padding: 8px; font-weight: 600; gap: 8px; }
+/* PES Section Groups */
+.pes-group { margin-bottom: 22px; border: 1px solid var(--border-default); border-radius: 8px; background: var(--bg-surface); overflow: hidden; }
+.pes-group-header { margin: 0; background: var(--bg-elevated); border-bottom: 1px solid var(--border-faint); }
+.pes-group-toggle { width: 100%; display: flex; align-items: center; gap: 8px; padding: 11px 16px; background: transparent; font-size: 12px; font-weight: 650; color: var(--text-primary); text-align: left; }
+.pes-group-toggle:hover { background: var(--bg-strong); }
+.pes-group-title { flex: 1; letter-spacing: 0.2px; font-size: 12px; }
+.pes-group-badge { font-size: 11px; font-weight: 500; color: var(--text-muted); background: var(--bg-root); padding: 2px 9px; border-radius: 10px; border: 1px solid var(--border-faint); }
+.pes-group-items { display: flex; flex-direction: column; }
+.pes-group.pes-group-update-task .pes-group-header { border-left: 3px solid var(--accent); }
+.pes-group.pes-group-update-task .pes-group-badge { color: var(--accent); border-color: var(--accent); }
+.pes-group.pes-group-completed { opacity: 0.9; }
+.pes-group.pes-group-completed .pes-group-header { border-left: 3px solid var(--text-muted); }
+.status-pill.status-update { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+.status-pill.status-done { background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border-default); }
+.update-task-stat strong { color: var(--accent); }
+.completed-stat strong { color: var(--text-muted); }

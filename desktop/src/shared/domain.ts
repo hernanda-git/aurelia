@@ -63,10 +63,10 @@ export function validateSnapshot(value: unknown): Snapshot {
       const key = row[1];
       if (!key.trim() || key !== key.trim() || rowKeys.has(key) || row[3] !== PIC) throw new Error('Invalid source row identity');
       rowKeys.add(key);
-      if (detailed.has(key)) {
+      if (row[12] === 'Approval' || row[12] === 'Open' || detailed.has(key)) {
         activeRows++;
-        const task = detailed.get(key)!;
-        if (TASK_FIELDS.some((field, i) => !['Status', 'TglSelesai', 'Lampiran'].includes(field) && task[field] !== row[i + 1]) || (task.Row !== undefined && task.Row !== row[0])) throw new Error('Source row/detail mismatch');
+        const task = detailed.get(key);
+        if (!task || TASK_FIELDS.some((field, i) => task[field] !== row[i + 1]) || (task.Row !== undefined && task.Row !== row[0])) throw new Error('Source row/detail mismatch');
       }
     }
     if (activeRows !== tasks.length) throw new Error('Source row/active count mismatch');
