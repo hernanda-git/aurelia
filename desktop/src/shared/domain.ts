@@ -180,3 +180,46 @@ export function deadlineInfo(input: string, now: Date, timezone: string): {
     detail: `Tenggat tanggal ${dueIso}, hingga sebelum tengah malam berikutnya (${timezone}). Berdasarkan jam perangkat, bukan waktu server.`,
   };
 }
+export function taskDeadlineInfo(task: Task, now: Date, timezone: string): {
+  kind: 'overdue' | 'today' | 'upcoming' | 'completed' | 'unknown';
+  days: number;
+  label: string;
+  remainingMs: number | null;
+  dueIso: string | null;
+  detail: string;
+} {
+  const isDone = ['Solved', 'Selesai', 'Update Task'].includes(task.Status);
+  if (isDone) {
+    const finish = task.TglSelesai || task.Duedate || 'Tercatat selesai';
+    const dueIso = parsePesDate(task.Duedate);
+    return {
+      kind: 'completed',
+      days: 0,
+      label: task.Status === 'Update Task' ? 'Update Task (Menunggu Approval)' : `Selesai ${finish}`,
+      remainingMs: 0,
+      dueIso,
+      detail: `Task berstatus ${task.Status}. Selesai dicatat pada ${finish}.`,
+    };
+  }
+  const m = /^T(\d+)$/i.exec((task.Target || '').trim());
+  const targetNum = m ? parseInt(m[1], 10) : 1;
+  const isRetargeted = targetNum >= 2;
+  const base = deadlineInfo(task.Duedate, now, timezone);
+  if (base.kind === 'overdue' && !isRetargeted) {
+    return {
+      ...base,
+      kind: 'upcoming',
+      label: `Target ${task.Target || 'T1'} (${task.Duedate || 'Tepat Waktu'})`,
+      detail: `Target ${task.Target || 'T1'}. Belum re-target ke T2, sehingga tidak dihitung sebagai status terlambat.`,
+    };
+  }
+  if (isRetargeted && base.days > 0) {
+    return {
+      ...base,
+      kind: 'overdue',
+      label: `Terlambat ${base.days} hari (${task.Target})`,
+      detail: `Task dalam target ${task.Target} (Re-target / Terlambat ${base.days} hari dari tenggat asli).`,
+    };
+  }
+  return base;
+}

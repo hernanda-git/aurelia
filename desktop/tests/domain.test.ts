@@ -131,4 +131,35 @@ describe('civil dates', () => {
     expect(result.label).toMatch(/Terlambat/);
     expect(result.detail).toContain('America/New_York');
   });
+  it('evaluates taskDeadlineInfo according to target T1 vs T2+ and completion status', () => {
+    const now = new Date('2026-10-30T10:00:00Z');
+    const baseTask = {
+      TaskNo: 'M03861', TglInput: '14-Okt-2026', Pic: 'MUHAMMAD HERNANDA', Jabatan: 'Programmer Back End',
+      DeptName: 'ITMSS', TaskName: 'CI Task', GoalTask: 'CI Goal', AsalTask: 'Lain-Lain',
+      Bobot: '4', Target: 'T1', Duedate: '14-Okt-2026', Status: 'Solved', TglApproval: '14-Okt-2026',
+      TglSelesai: '14-Okt-2026', Lampiran: 'proof.png', history: { text: '', tables: [] },
+    };
+
+    // 1. Solved task 16 days ago is NOT overdue, but completed
+    const solvedInfo = domain.taskDeadlineInfo(baseTask, now, 'Asia/Jakarta');
+    expect(solvedInfo.kind).toBe('completed');
+    expect(solvedInfo.label).toBe('Selesai 14-Okt-2026');
+    expect(solvedInfo.days).toBe(0);
+
+    // 2. Update Task is completed / awaiting approval
+    const updateInfo = domain.taskDeadlineInfo({ ...baseTask, Status: 'Update Task' }, now, 'Asia/Jakarta');
+    expect(updateInfo.kind).toBe('completed');
+    expect(updateInfo.label).toContain('Update Task');
+
+    // 3. Active task with Target T1 past due date is NOT overdue
+    const t1ActiveInfo = domain.taskDeadlineInfo({ ...baseTask, Status: 'Approval', Target: 'T1', Duedate: '14-Okt-2026' }, now, 'Asia/Jakarta');
+    expect(t1ActiveInfo.kind).toBe('upcoming');
+    expect(t1ActiveInfo.label).toContain('Target T1');
+
+    // 4. Active task with Target T2 past due date IS overdue
+    const t2OverdueInfo = domain.taskDeadlineInfo({ ...baseTask, Status: 'Approval', Target: 'T2', Duedate: '14-Okt-2026' }, now, 'Asia/Jakarta');
+    expect(t2OverdueInfo.kind).toBe('overdue');
+    expect(t2OverdueInfo.label).toMatch(/Terlambat/);
+    expect(t2OverdueInfo.label).toContain('T2');
+  });
 });

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { ArrowPathIcon, ArrowTopRightOnSquareIcon, ArrowDownTrayIcon, Bars3BottomLeftIcon, CheckIcon, ChevronDownIcon, ChevronRightIcon, ClockIcon, Cog6ToothIcon, DocumentDuplicateIcon, ExclamationTriangleIcon, FunnelIcon, MagnifyingGlassIcon, MinusIcon, QueueListIcon, SignalIcon, Square2StackIcon, StarIcon, SunIcon, TrashIcon, XMarkIcon, BoltIcon, ShieldCheckIcon, InboxIcon } from '@heroicons/react/24/outline';
 import type { Activity, AppState, Settings, Task } from '../shared/types';
-import { dateWindow, deadlineInfo } from '../shared/domain';
+import { dateWindow, deadlineInfo, taskDeadlineInfo } from '../shared/domain';
 import { interfaceCopy } from '../shared/ui-copy';
 import { CompletionObserver } from './CompletionObserver';
 import { AsanaNav, AsanaPanel } from './asana/AsanaPanel';
@@ -192,7 +192,7 @@ export default function App() {
   const tz = state?.settings.timezone ?? 'Asia/Jakarta';
   const tasks = state?.snapshot?.tasks ?? [];
   const isUntitledPesTask = (t: Task) => !t.TaskName?.trim() || ['untitled task', 'untitled', 'tanpa judul'].includes(t.TaskName.trim().toLowerCase());
-  const decorated = useMemo(() => tasks.map(task => ({ task, deadline: deadlineInfo(task.Duedate, now, tz) })), [tasks, now, tz]);
+  const decorated = useMemo(() => tasks.map(task => ({ task, deadline: taskDeadlineInfo(task, now, tz) })), [tasks, now, tz]);
   const base = useMemo(() => decorated.filter(({task}) => !isUntitledPesTask(task) && (status === 'all' || task.Status === status) && (!query.trim() || [task.TaskNo,task.TaskName,task.GoalTask,task.Pic,task.DeptName,task.AsalTask,task.Status,task.Target].join(' ').toLocaleLowerCase('id-ID').includes(query.trim().toLocaleLowerCase('id-ID')))), [decorated,query,status]);
   const isFocus = useCallback((id: string) => !!state?.preferences[id]?.pinned || state?.focusTaskId === id, [state?.preferences,state?.focusTaskId]);
   const counts = useMemo(() => {
@@ -202,7 +202,7 @@ export default function App() {
       active: activeTasks.length,
       updateTask: base.filter(t => t.task.Status === 'Update Task').length,
       completed: base.filter(t => ['Solved', 'Selesai'].includes(t.task.Status)).length,
-      overdue: activeTasks.filter(t => t.deadline.kind === 'overdue').length,
+      overdue: base.filter(t => t.deadline.kind === 'overdue').length,
       today: activeTasks.filter(t => t.deadline.kind === 'today').length,
       upcoming: activeTasks.filter(t => t.deadline.kind === 'upcoming').length,
       focus: base.filter(t => isFocus(t.task.TaskNo)).length,
@@ -218,7 +218,7 @@ export default function App() {
     });
   };
   const visible = useMemo(() => {
-    const order = {overdue:0,today:1,upcoming:2,unknown:3};
+    const order = { overdue: 0, today: 1, upcoming: 2, unknown: 3, completed: 4 };
     return base.filter(({task,deadline}) => view === 'all' || (view === 'focus' ? isFocus(task.TaskNo) : deadline.kind === view)).sort((a,b) => {
       if (sort === 'name') return a.task.TaskName.localeCompare(b.task.TaskName,'id') || a.task.TaskNo.localeCompare(b.task.TaskNo);
       if (sort === 'deadline') return order[a.deadline.kind] - order[b.deadline.kind] || (a.deadline.dueIso ?? '9999').localeCompare(b.deadline.dueIso ?? '9999') || a.task.TaskNo.localeCompare(b.task.TaskNo);
@@ -290,7 +290,7 @@ export default function App() {
 }
 
 function TaskDetail({ task, state, now, timezone, call }: {task:Task;state:AppState;now:Date;timezone:string;call:(action:()=>Promise<unknown>,success?:string)=>Promise<void>}) {
-  const deadline = deadlineInfo(task.Duedate,now,timezone);
+  const deadline = taskDeadlineInfo(task, now, timezone);
   const remaining = Math.abs(deadline.remainingMs ?? 0); const hours = Math.floor(remaining / 3600000), minutes = Math.floor((remaining % 3600000) / 60000);
   const focused = state.focusTaskId === task.TaskNo;
   const workspaceError = workspaceUnavailable(state.agentWorkspace);
@@ -353,8 +353,8 @@ function TaskDetail({ task, state, now, timezone, call }: {task:Task;state:AppSt
     </div>
     <div className={`deadline-card ${deadline.kind}`}>
       <div><ClockIcon/><strong>{deadline.label}</strong></div>
-      <span className="countdown">{deadline.kind === 'unknown' ? 'Tanggal belum tersedia' : deadline.kind === 'overdue' ? `${deadline.days} hari kalender melewati tanggal tenggat` : `${hours.toLocaleString('id-ID')} jam ${minutes} menit menuju batas hari`}</span>
-      <p>{deadline.kind === 'unknown' ? 'Tidak ada hitung mundur untuk tanggal yang tidak dapat dibaca.' : `Konvensi lokal: akhir tanggal di ${timezone}. PES hanya menyediakan tanggal pada data ini.`}</p>
+      <span className="countdown">{deadline.kind === 'completed' ? (task.Status === 'Update Task' ? 'Task telah di-submit ke PES dan menunggu approval atasan.' : `Task telah diselesaikan pada ${task.TglSelesai || task.Duedate || 'tanggal tercatat'}.`) : deadline.kind === 'unknown' ? 'Tanggal belum tersedia' : deadline.kind === 'overdue' ? `${deadline.days} hari kalender melewati target (${task.Target})` : `${hours.toLocaleString('id-ID')} jam ${minutes} menit menuju batas hari`}</span>
+      <p>{deadline.detail}</p>
     </div>
     <section className="detail-section pes-completion-section" data-testid="pes-completion-card">
       <h3>Penyelesaian Portal PES</h3>
