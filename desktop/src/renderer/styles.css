@@ -54,20 +54,59 @@ body{font-size:14px}.task-row h3{font-size:14px;line-height:1.6}.task-id{font-si
 .pes-evidence-btns { display: flex; gap: 8px; margin-top: 4px; }
 .pes-evidence-btns .button { flex: 1; font-size: 11px; padding: 6px 10px; justify-content: center; }
 .pes-complete-btn { margin-top: 6px; width: 100%; justify-content: center; padding: 8px; font-weight: 600; gap: 8px; }
-/* PES Section Groups */
-.pes-group { margin-bottom: 22px; border: 1px solid var(--border-default); border-radius: 8px; background: var(--bg-surface); overflow: hidden; }
-.pes-group-header { margin: 0; background: var(--bg-elevated); border-bottom: 1px solid var(--border-faint); }
-.pes-group-toggle { width: 100%; display: flex; align-items: center; gap: 8px; padding: 11px 16px; background: transparent; font-size: 12px; font-weight: 650; color: var(--text-primary); text-align: left; }
+/* PES Section Groups & Table Styling — Clean, structured like Asana */
+.pes-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+.pes-group { margin-bottom: 20px; border: 1px solid var(--border-default); border-radius: 8px; background: var(--bg-surface); overflow: auto; }
+.pes-group-header { margin: 0; background: var(--bg-elevated); border-bottom: 1px solid var(--border-faint); display: flex; align-items: center; justify-content: space-between; }
+.pes-group-toggle { width: 100%; display: flex; align-items: center; gap: 9px; padding: 12px 16px; background: transparent; font-size: 12px; font-weight: 650; color: var(--text-primary); text-align: left; }
 .pes-group-toggle:hover { background: var(--bg-strong); }
-.pes-group-title { flex: 1; letter-spacing: 0.2px; font-size: 12px; }
-.pes-group-badge { font-size: 11px; font-weight: 500; color: var(--text-muted); background: var(--bg-root); padding: 2px 9px; border-radius: 10px; border: 1px solid var(--border-faint); }
-.pes-group-items { display: flex; flex-direction: column; }
+.pes-group-title { flex: 1; min-width: 0; font-size: 12px; font-weight: 650; letter-spacing: 0.3px; }
+.pes-group-badge { font-size: 11px; font-weight: 500; color: var(--text-muted); background: var(--bg-root); padding: 2px 10px; border-radius: 12px; border: 1px solid var(--border-faint); flex-shrink: 0; }
+
+.pes-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; min-width: 720px; }
+.pes-table th { color: var(--text-muted); font-weight: 500; font-size: 10.5px; padding: 10px 14px; border-bottom: 1px solid var(--border-faint); white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; }
+.pes-table td { padding: 12px 14px; border-bottom: 1px solid var(--border-faint); vertical-align: middle; color: var(--text-secondary); font-size: 12px; }
+.pes-table tr.task-row { display: table-row !important; border-bottom: 1px solid var(--border-faint); padding: 0 !important; cursor: pointer; transition: background 0.12s ease; }
+.pes-table tr.task-row:hover { background: var(--bg-elevated) !important; }
+.pes-table tr.task-row.is-selected, .pes-table tr.task-row[data-selected="true"] { background: var(--accent-soft) !important; box-shadow: inset 3px 0 var(--accent); }
+.pes-table tr:last-child td { border-bottom: 0; }
+
+.pes-task-cell { width: 42%; min-width: 240px; }
+.pes-task-btn { display: block; width: 100%; background: transparent !important; border: 0 !important; padding: 0 !important; text-align: left; cursor: pointer; color: inherit; font: inherit; }
+.pes-task-btn h3 { font-size: 13.5px !important; font-weight: 600 !important; line-height: 1.5 !important; color: var(--text-primary); margin: 0 0 3px 0; transition: color 0.15s ease; }
+.pes-task-btn:hover h3 { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.pes-row-desc { font-size: 11px; line-height: 1.5; color: var(--text-muted); margin: 3px 0 4px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; white-space: pre-wrap; word-break: break-word; }
+.pes-row-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-top: 4px; }
+
+.pes-status-cell { width: 130px; white-space: nowrap; }
+.pes-target-cell { width: 110px; white-space: nowrap; }
+.pes-target-wrap { display: inline-flex; align-items: center; gap: 6px; }
+.pes-target-badge { font-weight: 600; font-size: 11px; padding: 2px 7px; border-radius: 4px; background: var(--bg-elevated); border: 1px solid var(--border-default); color: var(--text-primary); }
+.pes-bobot-text { font-size: 10.5px; color: var(--text-muted); }
+
+.pes-due-cell { width: 140px; white-space: nowrap; }
+.pes-due-wrap { display: flex; flex-direction: column; gap: 2px; }
+.pes-due-date { font-size: 11.5px; font-weight: 500; color: var(--text-primary); }
+.pes-deadline-label { font-size: 10.5px; color: var(--text-muted); display: inline-flex; align-items: center; gap: 4px; }
+.pes-deadline-label.overdue { color: var(--danger); font-weight: 600; }
+.pes-deadline-label.today { color: var(--accent); font-weight: 600; }
+.pes-deadline-label.completed { color: var(--text-muted); }
+
+.pes-finish-cell { width: 120px; white-space: nowrap; font-size: 11.5px; color: var(--text-secondary); }
+.pes-lampiran-cell { width: 130px; white-space: nowrap; }
+.pes-lampiran-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; color: var(--accent); max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pes-action-cell { width: 44px; text-align: center; }
+
+/* Group Accents */
 .pes-group.pes-group-update-task .pes-group-header { border-left: 3px solid var(--accent); }
 .pes-group.pes-group-update-task .pes-group-badge { color: var(--accent); border-color: var(--accent); }
-.pes-group.pes-group-completed { opacity: 0.9; }
+.pes-group.pes-group-completed { opacity: 0.92; }
 .pes-group.pes-group-completed .pes-group-header { border-left: 3px solid var(--text-muted); }
-.status-pill.status-update { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); }
+
+.status-pill.status-update { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent); font-weight: 600; }
 .status-pill.status-done { background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border-default); }
+.status-pill.status-open { background: var(--bg-root); color: var(--text-primary); border: 1px solid var(--border-default); }
+.status-pill.status-approval { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--border-default); }
 .update-task-stat strong { color: var(--accent); }
 .completed-stat strong { color: var(--text-muted); }
 .deadline.completed { color: var(--text-muted); }
